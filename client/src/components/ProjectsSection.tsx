@@ -1,12 +1,16 @@
+import { useLocation } from "wouter";
 import ProjectCard from "./ProjectCard";
 import analyticsImage from "@assets/generated_images/Analytics_dashboard_app_interface_851c3d8b.png";
 import ecommerceImage from "@assets/generated_images/E-commerce_app_product_page_f36721cb.png";
-import healthcareImage from "@assets/generated_images/Healthcare_portal_dashboard_interface_f3535674.png";
+import scanPayImage from "@assets/Group 48101464_1761884685041.png";
 
 export default function ProjectsSection() {
+  const [, setLocation] = useLocation();
+
   const projects = [
     {
-      image: healthcareImage,
+      id: "scan-and-pay",
+      image: scanPayImage,
       title: "Scan and Pay: Cashless Insurance",
       company: "Connect and Heal",
       description: "Solved cashless payment failure at non-network hospitals by introducing in-app Scan and Pay feature, eliminating operational risk and boosting revenue.",
@@ -60,7 +64,14 @@ export default function ProjectsSection() {
             <ProjectCard
               key={index}
               {...project}
-              onClick={() => console.log(`Clicked project: ${project.title}`)}
+              onClick={() => {
+                if (project.id) {
+                  console.log(`Opening case study: ${project.id}`);
+                  setLocation(`/case-study/${project.id}`);
+                } else {
+                  console.log(`Clicked project: ${project.title}`);
+                }
+              }}
             />
           ))}
         </div>

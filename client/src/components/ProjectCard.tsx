@@ -8,6 +8,7 @@ interface Metric {
 }
 
 interface ProjectCardProps {
+  id?: string;
   image: string;
   title: string;
   company: string;
@@ -18,6 +19,7 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({
+  id,
   image,
   title,
   company,
