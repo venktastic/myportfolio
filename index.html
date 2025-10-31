@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Venkatesh Murthy | Product Manager Portfolio</title>
-  <meta name="description" content="Product Manager with 8 years of experience building innovative AI-powered products in HealthTech, Sports Tech, and SaaS. Based in Bengaluru." />
+  <meta name="description" content="Product Manager with 7+ years of experience building innovative AI-powered products in HealthTech, Sports Tech, and SaaS. Based in Bengaluru." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -20,7 +20,8 @@
     .container{max-width:1100px;margin:0 auto;padding:24px}
     header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0 20px}
     .brand{display:flex;align-items:center;gap:12px}
-    .logo{display:grid;place-items:center;width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--primary),var(--accent));color:#ffffff;font-weight:800}
+    .logo{display:flex;align-items:center;justify-content:center;width:40px;height:40px}
+    .logo img{width:40px;height:40px;object-fit:contain}
     nav{display:flex;gap:16px;flex-wrap:wrap}
     nav a{color:var(--text);opacity:.95;padding:8px 12px;border-radius:10px}
     nav a:hover{background:rgba(2,6,23,.06);text-decoration:none}
@@ -39,6 +40,9 @@
     .card{border:1px solid var(--border);background:var(--card);border-radius:16px;padding:16px}
     .card h3{margin:0 0 8px;font-size:1.05rem}
     .card p{margin:0 0 10px;color:var(--muted)}
+    .case-study-card{display:block;text-decoration:none;color:inherit;transition:transform .2s ease,box-shadow .2s ease}
+    .case-study-card:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(37,99,235,.15);text-decoration:none}
+    .case-study-card .card-image{width:100%;height:160px;object-fit:cover;border-radius:12px;margin-bottom:12px}
     .tags{display:flex;gap:8px;flex-wrap:wrap}
     .tag{font-size:.8rem;color:#334155;background:#f1f5f9;padding:6px 10px;border:1px solid var(--border);border-radius:999px}
     .twocol{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
@@ -52,11 +56,13 @@
   <div class="container">
     <header>
       <div class="brand">
-        <div class="logo">VM</div>
+        <div class="logo">
+          <img src="attached_assets/vm-logo.svg" alt="VM Logo" />
+        </div>
         <strong>Venkatesh Murthy</strong>
       </div>
       <nav>
-        <a href="#projects">Projects</a>
+        <a href="#projects">Case Studies</a>
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
@@ -65,10 +71,10 @@
 
     <section class="hero">
       <div>
-        <h1>Building ProductsThat Matter</h1>
-        <p class="lead">Results-driven Product Manager with 8 years of experience in Problem Articulation and Solutioning, Roadmap, Strategy, Product Analytics, and 0 to 1 Product Management. I thrive on taking risks and owning outcomes, translating user needs into innovative and compelling products.</p>
+        <h1>Transforming Complexity into Clarity</h1>
+        <p class="lead">Results-driven Product Manager with 7+ years of experience in Problem Articulation and Solutioning, Roadmap, Strategy, Product Analytics, and 0 to 1 Product Management. I thrive on taking risks and owning outcomes, translating user needs into innovative and compelling products.</p>
         <div class="actions">
-          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn primary" href="#projects">View Case Studies</a>
           <a class="btn" href="attached_assets/VenkyPML_1761884036427.pdf" target="_blank" rel="noopener">Download Resume</a>
         </div>
       </div>
@@ -78,36 +84,45 @@
     </section>
 
     <section id="projects" class="section">
-      <h2>Featured Projects</h2>
-      <p class="muted">A selection of impactful products I've built and launched</p>
+      <h2>Featured Case Studies</h2>
+      <p class="muted">A selection of impactful case studies from products I've built and launched</p>
       <div class="grid">
-        <article class="card">
-          <h3><a href="case-study.html">Scan and Pay: Cashless Insurance</a></h3>
-          <p>Connect and Heal — Solved cashless payment failure at non-network hospitals by introducing in-app Scan and Pay feature, eliminating operational risk and boosting revenue.</p>
-          <div class="tags">
-            <span class="tag">HealthTech</span>
-            <span class="tag">Payments</span>
-            <span class="tag">B2C</span>
-          </div>
-        </article>
-        <article class="card">
-          <h3>AI-Powered Safety Platform</h3>
-          <p>Navatech AI — Led end-to-end product lifecycle for AI-driven Safety Tech platform in construction, delivering measurable impact across safety operations and efficiency.</p>
-          <div class="tags">
-            <span class="tag">AI</span>
-            <span class="tag">SafetyTech</span>
-            <span class="tag">B2B</span>
-          </div>
-        </article>
-        <article class="card">
-          <h3>Smart Sports Wearables</h3>
-          <p>Smart Cricket Global — Played crucial role in product strategy and launch of sports tech products including broadcast data systems and smart wearables.</p>
-          <div class="tags">
-            <span class="tag">SportsTech</span>
-            <span class="tag">Hardware</span>
-            <span class="tag">Analytics</span>
-          </div>
-        </article>
+        <a href="case-study.html" class="case-study-card">
+          <article class="card">
+            <img src="attached_assets/scan-pay-core-features.png" alt="Scan and Pay Case Study" class="card-image" />
+            <h3>Scan and Pay: Cashless Insurance</h3>
+            <p>Connect and Heal — Solved cashless payment failure at non-network hospitals by introducing in-app Scan and Pay feature, eliminating operational risk and boosting revenue.</p>
+            <div class="tags">
+              <span class="tag">HealthTech</span>
+              <span class="tag">Payments</span>
+              <span class="tag">B2C</span>
+            </div>
+          </article>
+        </a>
+        <a href="ai-safety-case-study.html" class="case-study-card">
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1600&auto=format&fit=crop" alt="AI Safety Platform Case Study" class="card-image" />
+            <h3>AI-Powered Safety Platform</h3>
+            <p>Navatech AI — Led end-to-end product lifecycle for AI-driven Safety Tech platform in construction, delivering measurable impact across safety operations and efficiency.</p>
+            <div class="tags">
+              <span class="tag">AI</span>
+              <span class="tag">SafetyTech</span>
+              <span class="tag">B2B</span>
+            </div>
+          </article>
+        </a>
+        <a href="sports-wearables-case-study.html" class="case-study-card">
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?q=80&w=1600&auto=format&fit=crop" alt="Smart Sports Wearables Case Study" class="card-image" />
+            <h3>Smart Sports Wearables</h3>
+            <p>Smart Cricket Global — Played crucial role in product strategy and launch of sports tech products including broadcast data systems and smart wearables.</p>
+            <div class="tags">
+              <span class="tag">SportsTech</span>
+              <span class="tag">Hardware</span>
+              <span class="tag">Analytics</span>
+            </div>
+          </article>
+        </a>
       </div>
     </section>
 
@@ -118,55 +133,61 @@
         <div class="card">
           <h3>Product Strategy</h3>
           <ul>
-            <li>Roadmapping</li>
-            <li>OKRs & KPIs</li>
-            <li>Market Research</li>
-            <li>Competitive Analysis</li>
+            <li>Roadmap & Prioritization</li>
+            <li>0 to 1 Product Management</li>
+            <li>User and Market Research</li>
+            <li>Opportunity Sizing</li>
+            <li>GTM Strategy</li>
           </ul>
         </div>
         <div class="card">
-          <h3>Analytics & Metrics</h3>
+          <h3>Product Discovery</h3>
           <ul>
-            <li>Mixpanel</li>
+            <li>User Interviews</li>
+            <li>Product Discovery Sessions</li>
+            <li>Problem Articulation</li>
+            <li>NPS & Feedback Analysis</li>
+            <li>CXO-level Engagement</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Analytics & Data</h3>
+          <ul>
             <li>Amplitude</li>
             <li>Google Analytics</li>
-            <li>SQL</li>
+            <li>MoEngage</li>
+            <li>Data Analysis</li>
+            <li>App Consoles</li>
           </ul>
         </div>
         <div class="card">
-          <h3>Design & UX</h3>
+          <h3>Artificial Intelligence</h3>
           <ul>
-            <li>Figma</li>
-            <li>User Research</li>
-            <li>A/B Testing</li>
-            <li>Wireframing</li>
+            <li>Generative AI</li>
+            <li>Agentic AI</li>
+            <li>Prompt Engineering</li>
+            <li>NLP & Knowledge Base</li>
+            <li>AI Workflow Automation</li>
           </ul>
         </div>
         <div class="card">
-          <h3>Technical Skills</h3>
+          <h3>Technical Execution</h3>
           <ul>
-            <li>API Design</li>
-            <li>Agile/Scrum</li>
-            <li>JIRA</li>
-            <li>Git</li>
+            <li>API Integration</li>
+            <li>JIRA Workflows</li>
+            <li>Model Evaluations & MCPs</li>
+            <li>OTA Updates</li>
+            <li>IoT & Telematics</li>
           </ul>
         </div>
         <div class="card">
-          <h3>Methodologies</h3>
+          <h3>Design & Prototyping</h3>
           <ul>
-            <li>Design Thinking</li>
-            <li>Lean Startup</li>
-            <li>Jobs-to-be-Done</li>
-            <li>Growth Hacking</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Collaboration</h3>
-          <ul>
-            <li>Stakeholder Mgmt</li>
-            <li>Cross-functional</li>
-            <li>Slack</li>
-            <li>Notion</li>
+            <li>Prototyping</li>
+            <li>Wireframing (AI-powered)</li>
+            <li>UX Ownership</li>
+            <li>Product Design Reviews</li>
+            <li>Compliance & Certifications</li>
           </ul>
         </div>
       </div>
@@ -246,7 +267,7 @@
         © <span id="year"></span> Venkatesh Murthy. Built with HTML, CSS, and JavaScript.
       </div>
       <div>
-        <a href="#projects">Projects</a>
+        <a href="#projects">Case Studies</a>
         <span> · </span>
         <a href="#skills">Skills</a>
         <span> · </span>

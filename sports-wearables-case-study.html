@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Smart Sports Wearables | Venkatesh Murthy</title>
+  <meta name="description" content="Product strategy and launch of sports tech products including broadcast data systems and smart wearables for multiple sports." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#f8fafc;--card:#ffffff;--muted:#64748b;--text:#0b1220;--border:#e5e7eb;--primary:#2563eb;--accent:#6366f1}
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:radial-gradient(900px 600px at 80% -10%,rgba(37,99,235,.08),transparent 60%),radial-gradient(700px 500px at 10% 10%,rgba(99,102,241,.08),transparent 50%),var(--bg);color:var(--text);line-height:1.7}
+    a{color:var(--primary);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:900px;margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0 20px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{display:flex;align-items:center;justify-content:center;width:40px;height:40px}
+    .logo img{width:40px;height:40px;object-fit:contain}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid var(--border);background:#ffffff;color:var(--text)}
+    .btn.primary{background:linear-gradient(135deg,#60a5fa,#34d399);color:#0b1220;border-color:transparent}
+    .section{margin:28px 0}
+    h1{font-size:clamp(26px,4.2vw,40px);line-height:1.15;margin:.2rem 0 1rem}
+    h2{font-size:1.35rem;margin:1.25rem 0 .5rem}
+    h3{font-size:1.05rem;margin:1rem 0 .25rem}
+    .card{border:1px solid var(--border);background:var(--card);border-radius:16px;padding:18px}
+    .muted{color:var(--muted)}
+    .img-placeholder{width:100%;height:200px;background:linear-gradient(135deg,#f1f5f9,#e2e8f0);border:2px dashed var(--border);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--muted);margin:1rem 0}
+    footer{border-top:1px solid var(--border);margin-top:36px;padding:16px 0;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">
+          <img src="attached_assets/vm-logo.svg" alt="VM Logo" />
+        </div>
+        <strong>Venkatesh Murthy</strong>
+      </div>
+      <div>
+        <a class="btn" href="index.html">← Back</a>
+        <a class="btn" target="_blank" rel="noopener" href="attached_assets/VenkyPML_1761884036427.pdf">Download Resume</a>
+      </div>
+    </header>
+
+    <article class="section">
+      <h1>Smart Sports Wearables</h1>
+      <div class="img-placeholder">Sports Wearables Product Ecosystem</div>
+    </article>
+
+    <section class="section">
+      <h2>Coming Soon</h2>
+      <div class="card">
+        <p>This case study is currently being developed. It will showcase the product strategy and launch of sports tech products including:</p>
+        <ul>
+          <li><strong>Broadcast Data Systems</strong> - Real-time data capture and analysis for live sports broadcasting</li>
+          <li><strong>Smart Wearables</strong> - IoT devices for player performance tracking across multiple sports</li>
+          <li><strong>20% faster development</strong> - Through market research and rapid prototyping</li>
+          <li><strong>₹5L cost savings</strong> - Fast-tracked product launch through innovative electronics procurement</li>
+          <li><strong>International deployment</strong> - Products launched at domestic and international cricket matches</li>
+        </ul>
+        <p><em>Interested in Learning More?</em> <a href="mailto:venky890@gmail.com">Email</a> or <a href="https://linkedin.com/in/iamvenky" target="_blank" rel="noopener">Connect on LinkedIn</a>.</p>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> Venkatesh Murthy</div>
+      <div>
+        <a href="index.html#projects">Case Studies</a>
+        <span> · </span>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -18,7 +18,8 @@
     .container{max-width:900px;margin:0 auto;padding:24px}
     header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0 20px}
     .brand{display:flex;align-items:center;gap:12px}
-    .logo{display:grid;place-items:center;width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--primary),var(--accent));color:#ffffff;font-weight:800}
+    .logo{display:flex;align-items:center;justify-content:center;width:40px;height:40px}
+    .logo img{width:40px;height:40px;object-fit:contain}
     .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid var(--border);background:#ffffff;color:var(--text)}
     .btn.primary{background:linear-gradient(135deg,#60a5fa,#34d399);color:#0b1220;border-color:transparent}
     .section{margin:28px 0}
@@ -39,7 +40,9 @@
   <div class="container">
     <header>
       <div class="brand">
-        <div class="logo">VM</div>
+        <div class="logo">
+          <img src="attached_assets/vm-logo.svg" alt="VM Logo" />
+        </div>
         <strong>Venkatesh Murthy</strong>
       </div>
       <div>
@@ -50,7 +53,7 @@
 
     <article class="section">
       <h1>Cashless Service via Scan and Pay</h1>
-      <div class="img-placeholder">Before/After User Journey Flow</div>
+      <img src="attached_assets/scan-pay-core-features.png" alt="Core Features of Scan and Pay Solution" style="width:100%;border-radius:12px;border:1px solid var(--border);" />
     </article>
 
     <section class="section">
@@ -233,7 +236,7 @@
     <footer>
       <div>© <span id="year"></span> Venkatesh Murthy</div>
       <div>
-        <a href="index.html#projects">Projects</a>
+        <a href="index.html#projects">Case Studies</a>
         <span> · </span>
         <a href="index.html#contact">Contact</a>
       </div>
