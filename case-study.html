@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scan and Pay Case Study | Venkatesh Murthy</title>
+  <meta name="description" content="Scan and Pay: Bringing Cashless Insurance to Non-Network Hospitals - case study." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0b1020;--card:#0f172a;--muted:#94a3b8;--text:#e5e7eb;--border:#1f2937;--primary:#60a5fa;--accent:#a78bfa}
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:radial-gradient(900px 600px at 80% -10%,rgba(96,165,250,.08),transparent 60%),radial-gradient(700px 500px at 10% 10%,rgba(167,139,250,.08),transparent 50%),var(--bg);color:var(--text);line-height:1.7}
+    a{color:var(--primary);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:900px;margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0 20px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{display:grid;place-items:center;width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--primary),var(--accent));color:#0b1220;font-weight:800}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid var(--border);background:#0f1624;color:var(--text)}
+    .btn.primary{background:linear-gradient(135deg,#60a5fa,#34d399);color:#0b1220;border-color:transparent}
+    .section{margin:28px 0}
+    h1{font-size:clamp(26px,4.2vw,40px);line-height:1.15;margin:.2rem 0 1rem}
+    h2{font-size:1.35rem;margin:1.25rem 0 .5rem}
+    h3{font-size:1.05rem;margin:1rem 0 .25rem}
+    .card{border:1px solid var(--border);background:var(--card);border-radius:16px;padding:18px}
+    .muted{color:var(--muted)}
+    ul{margin:.4rem 0 .8rem 1.1rem}
+    footer{border-top:1px solid var(--border);margin-top:36px;padding:16px 0;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">VM</div>
+        <strong>Venkatesh Murthy</strong>
+      </div>
+      <div>
+        <a class="btn" href="index.html">← Back</a>
+        <a class="btn" target="_blank" rel="noopener" href="attached_assets/VenkyPML_1761884036427.pdf">Download Resume</a>
+      </div>
+    </header>
+
+    <article class="section">
+      <h1>Scan and Pay: Bringing Cashless Insurance to Non-Network Hospitals</h1>
+      <div class="muted">Overview</div>
+      <div class="card">
+        <p><strong>Bridging the Cashless Gap</strong></p>
+        <p>Non-network hospitals historically lacked cashless support, forcing patients to pay upfront and wait for reimbursements. This reduced trust and increased drop-offs.</p>
+        <p><strong>Key Pain Points:</strong></p>
+        <ul>
+          <li>Cashless not available at non-network hospitals</li>
+          <li>High operational risk and fraud potential</li>
+          <li>Poor experience and payment failures</li>
+        </ul>
+      </div>
+    </article>
+
+    <section class="section">
+      <h2>Discovery & Research: Speed, Trust, and Fraud Prevention</h2>
+      <div class="card">
+        <p><strong>Hypothesis & Core Requirement</strong></p>
+        <p>Enable a fast, trustworthy cashless experience by allowing users to scan and pay at any hospital while mitigating fraud and operational risk.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>The Scan and Pay Feature</h2>
+      <div class="card">
+        <ul>
+          <li>In-app Scan and Pay to initiate cashless payment flows at non-network hospitals</li>
+          <li>Automated verification and checks to minimize risk</li>
+          <li>Clear guidance and status updates throughout the flow</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Results & Impact</h2>
+      <div class="card">
+        <ul>
+          <li><strong>Feature Adoption:</strong> 100%</li>
+          <li><strong>Business Growth:</strong> +2% Revenue</li>
+          <li><strong>Customer Retention:</strong> -3.5% Cancellation</li>
+          <li><strong>Operational Efficiency:</strong> Reduced manual overhead with automated checks</li>
+          <li><strong>Consumer Experience:</strong> Reliable cashless experience at more hospitals</li>
+        </ul>
+        <p><em>Interested in Learning More?</em> <a href="mailto:venky890@gmail.com">Email</a> or <a href="https://linkedin.com/in/iamvenky" target="_blank" rel="noopener">Connect on LinkedIn</a>.</p>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> Venkatesh Murthy</div>
+      <div>
+        <a href="index.html#projects">Projects</a>
+        <span> · </span>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

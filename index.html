@@ -1,169 +1,255 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>My Product Portfolio</title>
-    <meta name="description" content="Personal product portfolio" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-      :root {
-        --bg: #0b0f19;
-        --card: #101827;
-        --muted: #94a3b8;
-        --text: #e5e7eb;
-        --primary: #60a5fa;
-        --ring: rgba(96, 165, 250, 0.35);
-        --border: #1f2937;
-      }
-      * { box-sizing: border-box; }
-      html, body { height: 100%; }
-      body {
-        margin: 0;
-        font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-        background: radial-gradient(1200px 800px at 80% -10%, rgba(96,165,250,.08), transparent 60%),
-                    radial-gradient(800px 600px at 10% 10%, rgba(244,114,182,.08), transparent 50%),
-                    var(--bg);
-        color: var(--text);
-        line-height: 1.6;
-      }
-      a { color: var(--primary); text-decoration: none; }
-      a:hover { text-decoration: underline; }
-      .container { max-width: 1100px; margin: 0 auto; padding: 24px; }
-      header { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 0 24px; }
-      .brand { display: flex; align-items: center; gap: 12px; }
-      .avatar { width: 48px; height: 48px; border-radius: 12px; background: linear-gradient(135deg, #60a5fa, #a78bfa); box-shadow: 0 0 0 3px rgba(255,255,255,.03); }
-      .title { font-weight: 700; font-size: 1.25rem; letter-spacing: 0.2px; }
-      nav { display: flex; gap: 16px; flex-wrap: wrap; }
-      nav a { color: var(--text); opacity: .9; padding: 8px 12px; border-radius: 10px; }
-      nav a:hover { background: rgba(255,255,255,.04); text-decoration: none; }
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Venkatesh Murthy | Product Manager Portfolio</title>
+  <meta name="description" content="Product Manager with 8 years of experience building innovative AI-powered products in HealthTech, Sports Tech, and SaaS. Based in Bengaluru." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b1020;--card:#0f172a;--muted:#94a3b8;--text:#e5e7eb;--border:#1f2937;--primary:#60a5fa;--accent:#a78bfa
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:radial-gradient(900px 600px at 80% -10%,rgba(96,165,250,.08),transparent 60%),radial-gradient(700px 500px at 10% 10%,rgba(167,139,250,.08),transparent 50%),var(--bg);color:var(--text);line-height:1.6}
+    a{color:var(--primary);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0 20px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{display:grid;place-items:center;width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--primary),var(--accent));color:#0b1220;font-weight:800}
+    nav{display:flex;gap:16px;flex-wrap:wrap}
+    nav a{color:var(--text);opacity:.95;padding:8px 12px;border-radius:10px}
+    nav a:hover{background:rgba(255,255,255,.06);text-decoration:none}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;padding:24px 0}
+    h1{font-size:clamp(28px,4.6vw,44px);line-height:1.1;margin:0 0 12px}
+    .lead{color:var(--muted);margin:0 0 16px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid var(--border);background:#0f1624;color:var(--text)}
+    .btn.primary{background:linear-gradient(135deg,#60a5fa,#34d399);color:#0b1220;border-color:transparent}
+    .preview{border:1px solid var(--border);border-radius:16px;padding:12px;background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,0)),var(--card)}
+    .preview img{width:100%;height:auto;border-radius:12px;display:block}
+    .section{margin:28px 0}
+    .section h2{margin:0 0 12px;font-size:1.25rem}
+    .muted{color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{border:1px solid var(--border);background:var(--card);border-radius:16px;padding:16px}
+    .card h3{margin:0 0 8px;font-size:1.05rem}
+    .card p{margin:0 0 10px;color:var(--muted)}
+    .tags{display:flex;gap:8px;flex-wrap:wrap}
+    .tag{font-size:.8rem;color:#cbd5e1;background:#0b1220;padding:6px 10px;border:1px solid var(--border);border-radius:999px}
+    .twocol{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    footer{border-top:1px solid var(--border);margin-top:36px;padding:16px 0;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+    @media (max-width:920px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}}
+    @media (max-width:640px){nav{display:none}.grid,.twocol{grid-template-columns:1fr}}
+    html{scroll-behavior:smooth}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">VM</div>
+        <strong>Venkatesh Murthy</strong>
+      </div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
-      .hero { display: grid; grid-template-columns: 1.2fr .8fr; gap: 24px; align-items: center; padding: 28px 0 12px; }
-      .hero h1 { font-size: clamp(28px, 5vw, 44px); line-height: 1.1; margin: 0 0 12px; }
-      .hero p { color: var(--muted); margin: 0 0 16px; }
-      .actions { display: flex; gap: 12px; flex-wrap: wrap; }
-      .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 12px; border: 1px solid var(--border); color: var(--text); background: #0f1624; box-shadow: 0 10px 30px rgba(2,6,23,0.35), inset 0 0 0 1px rgba(255,255,255,.03); }
-      .btn.primary { background: linear-gradient(135deg, #60a5fa, #34d399); color: #0b1220; border-color: transparent; }
-      .btn:hover { box-shadow: 0 12px 36px rgba(2,6,23,0.5), 0 0 0 6px var(--ring); text-decoration: none; }
-
-      .preview { border: 1px solid var(--border); border-radius: 16px; padding: 16px; background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.0)), var(--card); box-shadow: inset 0 1px 0 rgba(255,255,255,.03); }
-      .preview img { width: 100%; height: auto; border-radius: 12px; display: block; }
-
-      .section { margin: 32px 0; }
-      .section h2 { margin: 0 0 16px; font-size: 1.2rem; font-weight: 700; letter-spacing: 0.2px; }
-
-      .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-      .card { border: 1px solid var(--border); background: var(--card); border-radius: 16px; padding: 16px; transition: transform .2s ease, box-shadow .2s ease; }
-      .card:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(2,6,23,0.5), 0 0 0 6px var(--ring); }
-      .card h3 { margin: 0 0 8px; font-size: 1.05rem; }
-      .card p { margin: 0 0 12px; color: var(--muted); font-size: .95rem; }
-      .meta { display: flex; gap: 8px; flex-wrap: wrap; }
-      .tag { font-size: .8rem; color: #cbd5e1; background: #0b1220; padding: 6px 10px; border: 1px solid var(--border); border-radius: 999px; }
-
-      .footer { border-top: 1px solid var(--border); margin-top: 40px; padding: 18px 0; color: var(--muted); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
-
-      @media (max-width: 920px) {
-        .hero { grid-template-columns: 1fr; }
-        .grid { grid-template-columns: 1fr 1fr; }
-      }
-      @media (max-width: 640px) {
-        nav { display: none; }
-        .grid { grid-template-columns: 1fr; }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <div class="brand">
-          <div class="avatar" aria-hidden="true"></div>
-          <div class="title">Your Name</div>
+    <section class="hero">
+      <div>
+        <h1>Building ProductsThat Matter</h1>
+        <p class="lead">Results-driven Product Manager with 8 years of experience in Problem Articulation and Solutioning, Roadmap, Strategy, Product Analytics, and 0 to 1 Product Management. I thrive on taking risks and owning outcomes, translating user needs into innovative and compelling products.</p>
+        <div class="actions">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn" href="attached_assets/VenkyPML_1761884036427.pdf" target="_blank" rel="noopener">Download Resume</a>
         </div>
-        <nav>
-          <a href="#projects">Projects</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </header>
+      </div>
+      <div class="preview">
+        <img src="attached_assets/profile-photo_1761884631575.jpg" alt="Profile" />
+      </div>
+    </section>
 
-      <section class="hero">
-        <div>
-          <h1>Building delightful products that solve real problems</h1>
-          <p>
-            Product builder focused on shipping fast, learning faster, and crafting experiences people love.
-            Currently exploring AI-first productivity tools.
-          </p>
-          <div class="actions">
-            <a class="btn primary" href="#projects">View Projects</a>
-            <a class="btn" href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
-            <a class="btn" href="mailto:you@example.com">Email</a>
+    <section id="projects" class="section">
+      <h2>Featured Projects</h2>
+      <p class="muted">A selection of impactful products I've built and launched</p>
+      <div class="grid">
+        <article class="card">
+          <h3><a href="case-study.html">Scan and Pay: Cashless Insurance</a></h3>
+          <p>Connect and Heal — Solved cashless payment failure at non-network hospitals by introducing in-app Scan and Pay feature, eliminating operational risk and boosting revenue.</p>
+          <div class="tags">
+            <span class="tag">HealthTech</span>
+            <span class="tag">Payments</span>
+            <span class="tag">B2C</span>
           </div>
+        </article>
+        <article class="card">
+          <h3>AI-Powered Safety Platform</h3>
+          <p>Navatech AI — Led end-to-end product lifecycle for AI-driven Safety Tech platform in construction, delivering measurable impact across safety operations and efficiency.</p>
+          <div class="tags">
+            <span class="tag">AI</span>
+            <span class="tag">SafetyTech</span>
+            <span class="tag">B2B</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Smart Sports Wearables</h3>
+          <p>Smart Cricket Global — Played crucial role in product strategy and launch of sports tech products including broadcast data systems and smart wearables.</p>
+          <div class="tags">
+            <span class="tag">SportsTech</span>
+            <span class="tag">Hardware</span>
+            <span class="tag">Analytics</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <h2>Skills & Expertise</h2>
+      <p class="muted">A comprehensive toolkit for driving product excellence</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Product Strategy</h3>
+          <ul>
+            <li>Roadmapping</li>
+            <li>OKRs & KPIs</li>
+            <li>Market Research</li>
+            <li>Competitive Analysis</li>
+          </ul>
         </div>
-        <div class="preview">
-          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1600&auto=format&fit=crop" alt="Project preview" />
+        <div class="card">
+          <h3>Analytics & Metrics</h3>
+          <ul>
+            <li>Mixpanel</li>
+            <li>Amplitude</li>
+            <li>Google Analytics</li>
+            <li>SQL</li>
+          </ul>
         </div>
-      </section>
-
-      <section id="projects" class="section">
-        <h2>Featured Projects</h2>
-        <div class="grid">
-          <article class="card">
-            <h3><a href="https://github.com/yourusername/project-one" target="_blank" rel="noopener">Project One</a></h3>
-            <p>One-liner describing what the product does and who it's for.</p>
-            <div class="meta">
-              <span class="tag">AI</span>
-              <span class="tag">Next.js</span>
-              <span class="tag">SaaS</span>
-            </div>
-          </article>
-          <article class="card">
-            <h3><a href="https://github.com/yourusername/project-two" target="_blank" rel="noopener">Project Two</a></h3>
-            <p>Short description of the problem, solution, and outcome/metrics.</p>
-            <div class="meta">
-              <span class="tag">Automation</span>
-              <span class="tag">Node</span>
-              <span class="tag">Open Source</span>
-            </div>
-          </article>
-          <article class="card">
-            <h3><a href="https://github.com/yourusername/project-three" target="_blank" rel="noopener">Project Three</a></h3>
-            <p>A concise description highlighting your role and key features shipped.</p>
-            <div class="meta">
-              <span class="tag">Design</span>
-              <span class="tag">APIs</span>
-              <span class="tag">Growth</span>
-            </div>
-          </article>
+        <div class="card">
+          <h3>Design & UX</h3>
+          <ul>
+            <li>Figma</li>
+            <li>User Research</li>
+            <li>A/B Testing</li>
+            <li>Wireframing</li>
+          </ul>
         </div>
-      </section>
+        <div class="card">
+          <h3>Technical Skills</h3>
+          <ul>
+            <li>API Design</li>
+            <li>Agile/Scrum</li>
+            <li>JIRA</li>
+            <li>Git</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Methodologies</h3>
+          <ul>
+            <li>Design Thinking</li>
+            <li>Lean Startup</li>
+            <li>Jobs-to-be-Done</li>
+            <li>Growth Hacking</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Collaboration</h3>
+          <ul>
+            <li>Stakeholder Mgmt</li>
+            <li>Cross-functional</li>
+            <li>Slack</li>
+            <li>Notion</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-      <section id="about" class="section">
-        <h2>About</h2>
-        <p>
-          Replace this with a short bio: your focus areas, what you're great at, what you're exploring next.
-          Mention a couple of measurable outcomes (users, revenue, speedups) if you can.
-        </p>
-      </section>
+    <section id="experience" class="section">
+      <h2>Professional Experience</h2>
+      <p class="muted">Building innovative products across different industries</p>
+      <div class="twocol">
+        <div class="card">
+          <h3>Product Lead</h3>
+          <p>Navatech AI</p>
+          <ul>
+            <li>Reduced reporting time from 12 mins to under 3 mins (75% efficiency boost)</li>
+            <li>Launched AI-powered workflow automations preventing 90% of potential incidents and accelerating investigations by 60%+</li>
+            <li>Pioneered Agentic AI applications to automate PRDs, UI wireframes, and JIRA workflows</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Product Manager</h3>
+          <p>Connect and Heal Primary Care</p>
+          <ul>
+            <li>Developed Scan and Pay feature, achieving 2% revenue growth and 3.5% reduction in cancellation rates</li>
+            <li>Increased net revenue by 5% by optimizing sorting logic based on consumer behavior patterns</li>
+            <li>Digitized manual order booking flows reducing request-to-order creation time from 12 mins to 4 mins</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Assistant Manager - Hardware Products</h3>
+          <p>Smart Cricket Global</p>
+          <ul>
+            <li>Led product strategy and launch of sports tech products at domestic and international cricket matches</li>
+            <li>Reduced development time by 20% through market research and rapid prototyping</li>
+            <li>Saved ₹5L and fast-tracked product launch through innovative electronics procurement</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Hardware Design Engineer + PM</h3>
+          <p>Intellicar Telematics</p>
+          <ul>
+            <li>Delivered Keyless entry systems, completing ₹1.5 Cr deal on time</li>
+            <li>Worked in Telematics (CAN, LIN), reverse engineering, and edge computing</li>
+            <li>Saved ₹5+ lakhs through cost-saving initiatives in Wiring Harness design</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-      <section id="contact" class="section">
-        <h2>Contact</h2>
-        <p>
-          DM on <a href="https://x.com/yourhandle" target="_blank" rel="noopener">X/Twitter</a>, connect on
-          <a href="https://www.linkedin.com/in/yourhandle/" target="_blank" rel="noopener">LinkedIn</a>, or email
-          <a href="mailto:you@example.com">you@example.com</a>.
-        </p>
-      </section>
+    <section id="contact" class="section">
+      <h2>Get In Touch</h2>
+      <p class="muted">Interested in working together? Let's connect and discuss opportunities.</p>
+      <div class="twocol">
+        <div class="card">
+          <h3>Ready to Connect?</h3>
+          <p>Fill out a quick form to share your opportunity or project details. I'll get back to you within 24 hours.</p>
+          <p><a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdQGomp1i1GLMJ1em49ru5Lz8jaOkWqkY4DvgYpnMb2keJwCQ/viewform?usp=header" target="_blank" rel="noopener">Fill Contact Form</a></p>
+        </div>
+        <div class="card">
+          <h3>Direct Contact</h3>
+          <p><a href="https://linkedin.com/in/iamvenky" target="_blank" rel="noopener">Connect on LinkedIn</a></p>
+          <p><a href="mailto:venky890@gmail.com">Email</a></p>
+        </div>
+      </div>
+    </section>
 
-      <footer class="footer">
-        <span>© <span id="year"></span> Your Name</span>
-        <span>Built with a single static HTML file</span>
-      </footer>
-    </div>
+    <footer>
+      <div>
+        © <span id="year"></span> Venkatesh Murthy. Built with HTML, CSS, and JavaScript.
+      </div>
+      <div>
+        <a href="#projects">Projects</a>
+        <span> · </span>
+        <a href="#skills">Skills</a>
+        <span> · </span>
+        <a href="#experience">Experience</a>
+        <span> · </span>
+        <a href="#contact">Contact</a>
+      </div>
+    </footer>
+  </div>
 
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-  </body>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
