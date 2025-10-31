@@ -3,23 +3,23 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Scan and Pay Case Study | Venkatesh Murthy</title>
-  <meta name="description" content="Scan and Pay: Bringing Cashless Insurance to Non-Network Hospitals - case study." />
+  <title>Cashless Service via Scan and Pay | Venkatesh Murthy</title>
+  <meta name="description" content="How we transformed non-network hospital payments from manual operations to seamless cashless experience." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root{--bg:#0b1020;--card:#0f172a;--muted:#94a3b8;--text:#e5e7eb;--border:#1f2937;--primary:#60a5fa;--accent:#a78bfa}
+    :root{--bg:#f8fafc;--card:#ffffff;--muted:#64748b;--text:#0b1220;--border:#e5e7eb;--primary:#2563eb;--accent:#6366f1}
     *{box-sizing:border-box}
     html,body{height:100%}
-    body{margin:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:radial-gradient(900px 600px at 80% -10%,rgba(96,165,250,.08),transparent 60%),radial-gradient(700px 500px at 10% 10%,rgba(167,139,250,.08),transparent 50%),var(--bg);color:var(--text);line-height:1.7}
+    body{margin:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:radial-gradient(900px 600px at 80% -10%,rgba(37,99,235,.08),transparent 60%),radial-gradient(700px 500px at 10% 10%,rgba(99,102,241,.08),transparent 50%),var(--bg);color:var(--text);line-height:1.7}
     a{color:var(--primary);text-decoration:none}
     a:hover{text-decoration:underline}
     .container{max-width:900px;margin:0 auto;padding:24px}
     header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0 20px}
     .brand{display:flex;align-items:center;gap:12px}
-    .logo{display:grid;place-items:center;width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--primary),var(--accent));color:#0b1220;font-weight:800}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid var(--border);background:#0f1624;color:var(--text)}
+    .logo{display:grid;place-items:center;width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--primary),var(--accent));color:#ffffff;font-weight:800}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid var(--border);background:#ffffff;color:var(--text)}
     .btn.primary{background:linear-gradient(135deg,#60a5fa,#34d399);color:#0b1220;border-color:transparent}
     .section{margin:28px 0}
     h1{font-size:clamp(26px,4.2vw,40px);line-height:1.15;margin:.2rem 0 1rem}
@@ -28,6 +28,10 @@
     .card{border:1px solid var(--border);background:var(--card);border-radius:16px;padding:18px}
     .muted{color:var(--muted)}
     ul{margin:.4rem 0 .8rem 1.1rem}
+    table{width:100%;border-collapse:collapse;margin:1rem 0}
+    th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--border)}
+    th{background:var(--bg);font-weight:600}
+    .img-placeholder{width:100%;height:200px;background:linear-gradient(135deg,#f1f5f9,#e2e8f0);border:2px dashed var(--border);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--muted);margin:1rem 0}
     footer{border-top:1px solid var(--border);margin-top:36px;padding:16px 0;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   </style>
 </head>
@@ -45,49 +49,183 @@
     </header>
 
     <article class="section">
-      <h1>Scan and Pay: Bringing Cashless Insurance to Non-Network Hospitals</h1>
-      <div class="muted">Overview</div>
-      <div class="card">
-        <p><strong>Bridging the Cashless Gap</strong></p>
-        <p>Non-network hospitals historically lacked cashless support, forcing patients to pay upfront and wait for reimbursements. This reduced trust and increased drop-offs.</p>
-        <p><strong>Key Pain Points:</strong></p>
-        <ul>
-          <li>Cashless not available at non-network hospitals</li>
-          <li>High operational risk and fraud potential</li>
-          <li>Poor experience and payment failures</li>
-        </ul>
-      </div>
+      <h1>Cashless Service via Scan and Pay</h1>
+      <div class="img-placeholder">Before/After User Journey Flow</div>
     </article>
+
+    <section class="section">
+      <h2>Problem at Scale</h2>
+      <div class="card">
+        <p>The core promise of our health insurance product is cashless service. X% of in-clinic consultations were conducted through non-network hospitals. These providers could not offer our credit line, forcing us into complex workarounds that destroyed the customer experience and burdened our operations.</p>
+        
+        <p>Prior to the Scan and Pay initiative, we were facing three critical issues:</p>
+        
+        <h3>High Operational Dependency & Cost</h3>
+        <p>For bookings with non-network providers, our system took the consultation request for free. However, our internal Operations team had to manually call the hospital, book the slot, and use company funds via UPI/wallet to pay for the service on the customer's behalf. This process was manual, non-scalable, and costly.</p>
+        
+        <h3>Credit/Payment Scrambles</h3>
+        <p>In other scenarios, our operations agent was forced to ask the patient—who was already at the clinic—to send a payment QR code so the agent could pay remotely. This introduced risk and frustration.</p>
+        
+        <h3>The 90-Second Failure Point</h3>
+        <p>The most critical issue was that the hospital's dynamic QR code, typically generated by a Point-of-Sale (POS) machine, had an expiration window of just 90 seconds. This often resulted in the payment failing, leaving the customer agitated and the agent scrambling, completely defeating the purpose of a seamless, cashless experience.</p>
+        
+        <table>
+          <tr>
+            <th>Problem Area</th>
+            <th>Current State</th>
+            <th>Impact</th>
+          </tr>
+          <tr>
+            <td>Payment Processing</td>
+            <td>Manual agent intervention</td>
+            <td>High operational cost, scalability issues</td>
+          </tr>
+          <tr>
+            <td>QR Code Expiry</td>
+            <td>90-second window</td>
+            <td>Payment failures, customer frustration</td>
+          </tr>
+          <tr>
+            <td>User Experience</td>
+            <td>Complex workarounds</td>
+            <td>Poor satisfaction, cancellations</td>
+          </tr>
+        </table>
+        
+        <p><strong>Target Metric to Improve:</strong> Time to Successful Payment at Non-Network Clinics (currently unreliable and high) and Operations Team Effort per Booking (currently high).</p>
+      </div>
+    </section>
 
     <section class="section">
       <h2>Discovery & Research: Speed, Trust, and Fraud Prevention</h2>
       <div class="card">
-        <p><strong>Hypothesis & Core Requirement</strong></p>
-        <p>Enable a fast, trustworthy cashless experience by allowing users to scan and pay at any hospital while mitigating fraud and operational risk.</p>
+        <h3>Hypothesis & Core Requirement</h3>
+        <p>The initial hypothesis was that the operational overhead and poor UX could be solved by transferring the payment action directly to the user at the point of service. However, the critical challenge was the 90-second expiration window of the hospital's dynamic QR code.</p>
+        
+        <p><strong>The core product requirement:</strong> A seamless, in-app "Scan and Pay" feature that allows the user to successfully scan a UPI QR code and authorize payment within the 90-second window, without alarming the patient that funds were being deducted from their personal account.</p>
+        
+        <h3>Addressing Technical and Fraud Hurdles</h3>
+        <p>To achieve speed and maintain trust, two major technical hurdles were identified:</p>
+        
+        <ul>
+          <li><strong>The Dynamic Payment Failure:</strong> The hospital's POS dynamic QR codes frequently failed if the exact amount wasn't entered or if the payment was slightly delayed. The solution required simplifying the payment flow while making the payment reliable for the specific, latest consultation price.</li>
+          <li><strong>Fraud Prevention:</strong> Since any hospital could accept any amount through a generic QR, we implemented a crucial fraud preventive measure: The system was updated to fetch the latest, verified consultation price directly from the hospital's records and would only authorize a payment for that precise, pre-approved amount.</li>
+        </ul>
+        
+        <h3>Stakeholder Alignment</h3>
+        <p>Extensive research and scoping were conducted across four key departments:</p>
+        
+        <table>
+          <tr>
+            <th>Department</th>
+            <th>Key Insights</th>
+            <th>Action Items</th>
+          </tr>
+          <tr>
+            <td>Operations Team</td>
+            <td>Edge cases and failure scenarios</td>
+            <td>Map payment failures, partial payments, cancellation flows</td>
+          </tr>
+          <tr>
+            <td>Customer Support</td>
+            <td>User sentiment and anxiety points</td>
+            <td>Define reassurance messaging around money deduction</td>
+          </tr>
+          <tr>
+            <td>Finance Team</td>
+            <td>Legal constraints and compliance</td>
+            <td>Payment gateway architecture, vendor onboarding</td>
+          </tr>
+          <tr>
+            <td>Design Team</td>
+            <td>Low-anxiety interface needs</td>
+            <td>Clear visual cues for insurance credit vs bank account</td>
+          </tr>
+        </table>
       </div>
     </section>
 
     <section class="section">
-      <h2>The Scan and Pay Feature</h2>
+      <h2>The Solution & Execution: The Scan and Pay Feature</h2>
       <div class="card">
+        <div class="img-placeholder">Scan and Pay Feature Interface & Flow</div>
+        
+        <p>The solution was the development and launch of an integrated "Scan and Pay" feature within the mobile application, transforming a manual, costly operational flow into a direct, scalable, and cashless digital service for non-network hospitals.</p>
+        
+        <h3>The New Cashless Flow Architecture</h3>
+        <ol>
+          <li><strong>Booking and Pre-verification:</strong> The user books the consultation slot via the app. The system immediately pre-fetches the validated price and sets the payment amount.</li>
+          <li><strong>Point-of-Service Action:</strong> On the day of the appointment, the in-app Scan and Pay feature is activated. The user can scan the hospital's UPI QR code. The payment amount is locked to the pre-verified consultation fee.</li>
+          <li><strong>Payment and Confirmation:</strong> The payment is processed instantly via the integrated gateway. The user receives a clear, non-alarming success message confirming the amount was credited to the hospital.</li>
+        </ol>
+        
+        <h3>Prioritization and Scope Management</h3>
+        <p>Given the urgent need for a solution and the sensitive nature of financial transactions, the prioritization strategy focused intensely on reliability and speed to market:</p>
+        
         <ul>
-          <li>In-app Scan and Pay to initiate cashless payment flows at non-network hospitals</li>
-          <li>Automated verification and checks to minimize risk</li>
-          <li>Clear guidance and status updates throughout the flow</li>
+          <li><strong>Focus on Core Reliability:</strong> We consciously de-prioritized secondary features like geo-location-enabled payment locking or complex real-time fraud checks.</li>
+          <li><strong>Vendor and MVP Integration:</strong> Vendor selection and API integration were the highest priority, focusing on the 90-second transaction window requirement.</li>
+          <li><strong>Iterative Error Handling:</strong> Initial release solved top failure scenarios, with long-tail error codes addressed in subsequent sprints.</li>
         </ul>
       </div>
     </section>
 
     <section class="section">
-      <h2>Results & Impact</h2>
+      <h2>Results & Impact: Delivering Seamless Cashless Service</h2>
       <div class="card">
+        <p>The launch of the "Scan and Pay" feature successfully achieved its primary goal: transforming a high-friction, high-cost operational workflow into a smooth, scalable, customer-driven cashless experience.</p>
+        
+        <h3>Key Measurable Outcomes</h3>
+        <table>
+          <tr>
+            <th>Metric Category</th>
+            <th>Impact & Measurement</th>
+          </tr>
+          <tr>
+            <td>Feature Adoption</td>
+            <td>100% of all users engaging in in-clinic consultations at non-network hospitals immediately adopted the new Scan and Pay feature</td>
+          </tr>
+          <tr>
+            <td>Business Growth</td>
+            <td>2% increase in overall revenue growth from non-network services</td>
+          </tr>
+          <tr>
+            <td>Customer Retention</td>
+            <td>3.5% reduction in consultation cancellation percentage</td>
+          </tr>
+        </table>
+        
+        <h3>Operational and Experience Gains</h3>
+        
+        <h4>Operational Efficiency</h4>
         <ul>
-          <li><strong>Feature Adoption:</strong> 100%</li>
-          <li><strong>Business Growth:</strong> +2% Revenue</li>
-          <li><strong>Customer Retention:</strong> -3.5% Cancellation</li>
-          <li><strong>Operational Efficiency:</strong> Reduced manual overhead with automated checks</li>
-          <li><strong>Consumer Experience:</strong> Reliable cashless experience at more hospitals</li>
+          <li><strong>Eliminated Financial Risk:</strong> Dependency on individual agent bank accounts for company payments was completely averted</li>
+          <li><strong>Data Integrity:</strong> Supply price data in the Corporate Network Hospital Database was updated accurately and in real-time</li>
+          <li><strong>Automated Documentation:</strong> System began capturing essential prescriptions and documentation in a timely manner</li>
         </ul>
+        
+        <h4>Consumer Experience (CX)</h4>
+        <ul>
+          <li><strong>Zero-Touch Payment:</strong> Payment experience became genuinely seamless</li>
+          <li><strong>Reduced Friction and Anxiety:</strong> Escalations to Operations and Customer Support teams drastically reduced</li>
+          <li><strong>Time Savings:</strong> Patient wait time at hospital due to agent intervention eliminated</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Learnings & Next Steps: Reflection and Strategy</h2>
+      <div class="card">
+        <h3>Key Lessons Learned</h3>
+        <ul>
+          <li><strong>Prioritizing Speed Over Perfection in FinTech:</strong> For critical user problems involving real money, focus on robust guardrails and loss limits rather than waiting for a "perfect" system</li>
+          <li><strong>Mapping Cross-Functional Dependency:</strong> A seemingly simple solution required deep involvement of Operations, Finance, Legal, Customer Support, and Engineering</li>
+          <li><strong>Building Trust and Respect:</strong> Successful execution and measurable impact resulted in strong relationships with founders, end-users, and core stakeholders</li>
+        </ul>
+        
+        <h3>Future Product Strategy</h3>
+        <p><strong>Next Step:</strong> The "Scan and Pay" capability will be extended to other offsite services that currently rely on manual, non-cashless payments, such as diagnostic labs, pharmacies, and specialty healthcare services.</p>
+        
         <p><em>Interested in Learning More?</em> <a href="mailto:venky890@gmail.com">Email</a> or <a href="https://linkedin.com/in/iamvenky" target="_blank" rel="noopener">Connect on LinkedIn</a>.</p>
       </div>
     </section>

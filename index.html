@@ -10,25 +10,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#0b1020;--card:#0f172a;--muted:#94a3b8;--text:#e5e7eb;--border:#1f2937;--primary:#60a5fa;--accent:#a78bfa
+      --bg:#f8fafc;--card:#ffffff;--muted:#64748b;--text:#0b1220;--border:#e5e7eb;--primary:#2563eb;--accent:#6366f1
     }
     *{box-sizing:border-box}
     html,body{height:100%}
-    body{margin:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:radial-gradient(900px 600px at 80% -10%,rgba(96,165,250,.08),transparent 60%),radial-gradient(700px 500px at 10% 10%,rgba(167,139,250,.08),transparent 50%),var(--bg);color:var(--text);line-height:1.6}
+    body{margin:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:radial-gradient(900px 600px at 80% -10%,rgba(37,99,235,.08),transparent 60%),radial-gradient(700px 500px at 10% 10%,rgba(99,102,241,.08),transparent 50%),var(--bg);color:var(--text);line-height:1.6}
     a{color:var(--primary);text-decoration:none}
     a:hover{text-decoration:underline}
     .container{max-width:1100px;margin:0 auto;padding:24px}
     header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0 20px}
     .brand{display:flex;align-items:center;gap:12px}
-    .logo{display:grid;place-items:center;width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--primary),var(--accent));color:#0b1220;font-weight:800}
+    .logo{display:grid;place-items:center;width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--primary),var(--accent));color:#ffffff;font-weight:800}
     nav{display:flex;gap:16px;flex-wrap:wrap}
     nav a{color:var(--text);opacity:.95;padding:8px 12px;border-radius:10px}
-    nav a:hover{background:rgba(255,255,255,.06);text-decoration:none}
+    nav a:hover{background:rgba(2,6,23,.06);text-decoration:none}
     .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;padding:24px 0}
     h1{font-size:clamp(28px,4.6vw,44px);line-height:1.1;margin:0 0 12px}
     .lead{color:var(--muted);margin:0 0 16px}
     .actions{display:flex;gap:12px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid var(--border);background:#0f1624;color:var(--text)}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid var(--border);background:#ffffff;color:var(--text)}
     .btn.primary{background:linear-gradient(135deg,#60a5fa,#34d399);color:#0b1220;border-color:transparent}
     .preview{border:1px solid var(--border);border-radius:16px;padding:12px;background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,0)),var(--card)}
     .preview img{width:100%;height:auto;border-radius:12px;display:block}
@@ -40,7 +40,7 @@
     .card h3{margin:0 0 8px;font-size:1.05rem}
     .card p{margin:0 0 10px;color:var(--muted)}
     .tags{display:flex;gap:8px;flex-wrap:wrap}
-    .tag{font-size:.8rem;color:#cbd5e1;background:#0b1220;padding:6px 10px;border:1px solid var(--border);border-radius:999px}
+    .tag{font-size:.8rem;color:#334155;background:#f1f5f9;padding:6px 10px;border:1px solid var(--border);border-radius:999px}
     .twocol{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
     footer{border-top:1px solid var(--border);margin-top:36px;padding:16px 0;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
     @media (max-width:920px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}}
@@ -178,7 +178,7 @@
       <div class="twocol">
         <div class="card">
           <h3>Product Lead</h3>
-          <p>Navatech AI</p>
+          <p>Navatech AI · October 2024 – Current</p>
           <ul>
             <li>Reduced reporting time from 12 mins to under 3 mins (75% efficiency boost)</li>
             <li>Launched AI-powered workflow automations preventing 90% of potential incidents and accelerating investigations by 60%+</li>
@@ -187,7 +187,7 @@
         </div>
         <div class="card">
           <h3>Product Manager</h3>
-          <p>Connect and Heal Primary Care</p>
+          <p>Connect and Heal Primary Care · June 2022 – Sep 2024</p>
           <ul>
             <li>Developed Scan and Pay feature, achieving 2% revenue growth and 3.5% reduction in cancellation rates</li>
             <li>Increased net revenue by 5% by optimizing sorting logic based on consumer behavior patterns</li>
@@ -196,7 +196,7 @@
         </div>
         <div class="card">
           <h3>Assistant Manager - Hardware Products</h3>
-          <p>Smart Cricket Global</p>
+          <p>Smart Cricket Global · Jan 2021 – Jun 2022</p>
           <ul>
             <li>Led product strategy and launch of sports tech products at domestic and international cricket matches</li>
             <li>Reduced development time by 20% through market research and rapid prototyping</li>
@@ -205,11 +205,20 @@
         </div>
         <div class="card">
           <h3>Hardware Design Engineer + PM</h3>
-          <p>Intellicar Telematics</p>
+          <p>Intellicar Telematics · Jan 2019 – Dec 2020</p>
           <ul>
             <li>Delivered Keyless entry systems, completing ₹1.5 Cr deal on time</li>
             <li>Worked in Telematics (CAN, LIN), reverse engineering, and edge computing</li>
             <li>Saved ₹5+ lakhs through cost-saving initiatives in Wiring Harness design</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Intellicar Telematics</h3>
+          <p>Dec 2017 – Dec 2018</p>
+          <ul>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+            <li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
+            <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</li>
           </ul>
         </div>
       </div>
