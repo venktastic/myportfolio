@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <title>Venkatesh Murthy | Product Manager Portfolio</title>
@@ -8,13 +8,621 @@
     <meta property="og:title" content="Venkatesh Murthy | Product Manager Portfolio" />
     <meta property="og:description" content="Product Manager with 8 years of experience building innovative AI-powered products in HealthTech, Sports Tech, and SaaS. Based in Bengaluru." />
     <meta property="og:type" content="website" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fira+Code:wght@300..700&family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Oxanium:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        border: 'hsl(var(--border))',
+                        background: 'hsl(var(--background))',
+                        foreground: 'hsl(var(--foreground))',
+                        primary: {
+                            DEFAULT: 'hsl(var(--primary))',
+                            foreground: 'hsl(var(--primary-foreground))',
+                        },
+                        secondary: {
+                            DEFAULT: 'hsl(var(--secondary))',
+                            foreground: 'hsl(var(--secondary-foreground))',
+                        },
+                        muted: {
+                            DEFAULT: 'hsl(var(--muted))',
+                            foreground: 'hsl(var(--muted-foreground))',
+                        },
+                        card: {
+                            DEFAULT: 'hsl(var(--card))',
+                            foreground: 'hsl(var(--card-foreground))',
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-foreground">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="flex h-16 items-center justify-between">
+                <a href="index.html" class="flex items-center gap-2">
+                    <div class="h-8 w-8 rounded-md bg-primary flex items-center justify-center text-primary-foreground font-bold">
+                        VM
+                    </div>
+                    <span class="font-bold text-lg">Venkatesh Murthy</span>
+                </a>
+                
+                <nav class="hidden md:flex items-center gap-6">
+                    <a href="#projects" class="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors" data-testid="link-projects">Projects</a>
+                    <a href="#skills" class="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors" data-testid="link-skills">Skills</a>
+                    <a href="#experience" class="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors" data-testid="link-experience">Experience</a>
+                    <a href="#contact" class="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors" data-testid="link-contact">Contact</a>
+                    <button id="theme-toggle" class="rounded-md p-2 hover:bg-muted" data-testid="button-theme-toggle">
+                        <svg id="sun-icon" class="h-5 w-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                        <svg id="moon-icon" class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                        </svg>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-1">
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden py-16 md:py-24">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="grid gap-12 lg:grid-cols-5 lg:gap-16 items-center">
+                    <div class="lg:col-span-3 space-y-8">
+                        <div class="space-y-4">
+                            <h1 class="text-5xl md:text-7xl font-bold tracking-tight">
+                                Building Products<br />That Matter
+                            </h1>
+                            <p class="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
+                                Results-driven Product Manager with 8 years of experience in Problem Articulation and Solutioning, Roadmap, Strategy, Product Analytics, and 0 to 1 Product Management. I thrive on taking risks and owning outcomes, translating user needs into innovative and compelling products.
+                            </p>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#projects" class="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity" data-testid="button-view-projects">
+                                View Projects
+                                <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                            <a href="attached_assets/VenkyPML_1761884036427.pdf" download class="inline-flex items-center justify-center rounded-md border border-border bg-background px-6 py-3 text-sm font-medium hover:bg-muted transition-colors" data-testid="button-download-resume">
+                                <svg class="mr-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                                </svg>
+                                Download Resume
+                            </a>
+                        </div>
+
+                        <div class="flex flex-wrap gap-6 text-sm font-medium uppercase tracking-wide text-muted-foreground">
+                            <div data-testid="text-experience">8 Years PM Experience</div>
+                            <div class="hidden sm:block">•</div>
+                            <div data-testid="text-launches">AI-Driven Innovation</div>
+                            <div class="hidden sm:block">•</div>
+                            <div data-testid="text-impact">75% Efficiency Gains</div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-2">
+                        <div class="relative">
+                            <div class="aspect-[3/4] overflow-hidden rounded-md border border-border">
+                                <img src="attached_assets/profile-photo_1761884631575.jpg" alt="Professional product manager" class="h-full w-full object-cover" data-testid="img-hero" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-16 md:py-24 bg-muted/30">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="mx-auto max-w-2xl text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4" data-testid="text-projects-title">Featured Projects</h2>
+                    <p class="text-lg text-muted-foreground">A selection of impactful products I've built and launched</p>
+                </div>
+
+                <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                    <!-- Project 1: Scan and Pay -->
+                    <a href="case-study.html" class="block group">
+                        <div class="overflow-hidden rounded-md border border-border bg-card hover:shadow-lg transition-all duration-300 cursor-pointer h-full">
+                            <div class="aspect-video overflow-hidden bg-muted">
+                                <img src="attached_assets/Group 48101464_1761884685041.png" alt="Scan and Pay: Cashless Insurance" class="h-full w-full object-contain group-hover:scale-105 transition-transform duration-300" />
+                            </div>
+                            <div class="p-6 space-y-4">
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="inline-flex items-center rounded-md bg-secondary px-2 py-1 text-xs font-medium">HealthTech</span>
+                                    <span class="inline-flex items-center rounded-md bg-secondary px-2 py-1 text-xs font-medium">Payments</span>
+                                    <span class="inline-flex items-center rounded-md bg-secondary px-2 py-1 text-xs font-medium">B2C</span>
+                                </div>
+                                <div class="space-y-2">
+                                    <h3 class="font-semibold text-lg group-hover:text-primary transition-colors">Scan and Pay: Cashless Insurance</h3>
+                                    <p class="text-sm text-muted-foreground">Connect and Heal</p>
+                                    <p class="text-sm text-muted-foreground leading-relaxed">Solved cashless payment failure at non-network hospitals by introducing in-app Scan and Pay feature, eliminating operational risk and boosting revenue.</p>
+                                </div>
+                                <div class="grid grid-cols-3 gap-4 pt-4 border-t border-border">
+                                    <div class="text-center">
+                                        <div class="text-lg font-bold text-primary">100%</div>
+                                        <div class="text-xs text-muted-foreground">Adoption</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-lg font-bold text-primary">+2%</div>
+                                        <div class="text-xs text-muted-foreground">Revenue</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-lg font-bold text-primary">-3.5%</div>
+                                        <div class="text-xs text-muted-foreground">Cancellation</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Project 2: AI-Powered Safety Platform -->
+                    <div class="overflow-hidden rounded-md border border-border bg-card hover:shadow-lg transition-all duration-300 cursor-pointer h-full">
+                        <div class="aspect-video overflow-hidden bg-muted">
+                            <img src="attached_assets/generated_images/Analytics_dashboard_app_interface_851c3d8b.png" alt="AI-Powered Safety Platform" class="h-full w-full object-cover hover:scale-105 transition-transform duration-300" />
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-flex items-center rounded-md bg-secondary px-2 py-1 text-xs font-medium">AI/ML</span>
+                                <span class="inline-flex items-center rounded-md bg-secondary px-2 py-1 text-xs font-medium">B2B</span>
+                                <span class="inline-flex items-center rounded-md bg-secondary px-2 py-1 text-xs font-medium">SaaS</span>
+                            </div>
+                            <div class="space-y-2">
+                                <h3 class="font-semibold text-lg hover:text-primary transition-colors">AI-Powered Safety Platform</h3>
+                                <p class="text-sm text-muted-foreground">Navatech AI</p>
+                                <p class="text-sm text-muted-foreground leading-relaxed">Led end-to-end product lifecycle for AI-driven Safety Tech platform in construction, delivering measurable impact across safety operations and efficiency.</p>
+                            </div>
+                            <div class="grid grid-cols-3 gap-4 pt-4 border-t border-border">
+                                <div class="text-center">
+                                    <div class="text-lg font-bold text-primary">75%</div>
+                                    <div class="text-xs text-muted-foreground">Efficiency</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-lg font-bold text-primary">-90%</div>
+                                    <div class="text-xs text-muted-foreground">Incidents</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-lg font-bold text-primary">60%+</div>
+                                    <div class="text-xs text-muted-foreground">Faster Ops</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Smart Sports Wearables -->
+                    <div class="overflow-hidden rounded-md border border-border bg-card hover:shadow-lg transition-all duration-300 cursor-pointer h-full">
+                        <div class="aspect-video overflow-hidden bg-muted">
+                            <img src="attached_assets/generated_images/E-commerce_app_product_page_f36721cb.png" alt="Smart Sports Wearables" class="h-full w-full object-cover hover:scale-105 transition-transform duration-300" />
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-flex items-center rounded-md bg-secondary px-2 py-1 text-xs font-medium">IoT</span>
+                                <span class="inline-flex items-center rounded-md bg-secondary px-2 py-1 text-xs font-medium">Sports Tech</span>
+                                <span class="inline-flex items-center rounded-md bg-secondary px-2 py-1 text-xs font-medium">Hardware</span>
+                            </div>
+                            <div class="space-y-2">
+                                <h3 class="font-semibold text-lg hover:text-primary transition-colors">Smart Sports Wearables</h3>
+                                <p class="text-sm text-muted-foreground">Smart Cricket Global</p>
+                                <p class="text-sm text-muted-foreground leading-relaxed">Played crucial role in product strategy and launch of sports tech products including broadcast data systems and smart wearables for multiple sports.</p>
+                            </div>
+                            <div class="grid grid-cols-3 gap-4 pt-4 border-t border-border">
+                                <div class="text-center">
+                                    <div class="text-lg font-bold text-primary">20%</div>
+                                    <div class="text-xs text-muted-foreground">Time Saved</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-lg font-bold text-primary">₹5L</div>
+                                    <div class="text-xs text-muted-foreground">Cost Saved</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-lg font-bold text-primary">Intl</div>
+                                    <div class="text-xs text-muted-foreground">Deployments</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-16 md:py-24">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="mx-auto max-w-2xl text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4" data-testid="text-skills-title">Skills & Expertise</h2>
+                    <p class="text-lg text-muted-foreground">A comprehensive toolkit for driving product excellence</p>
+                </div>
+
+                <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    <div class="rounded-md border border-border bg-card p-6 hover:shadow-md transition-shadow">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 rounded-md bg-primary/10 p-3 text-primary">
+                                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h3 class="font-semibold mb-3">Product Strategy</h3>
+                                <ul class="space-y-2 text-sm text-muted-foreground">
+                                    <li>Roadmapping</li>
+                                    <li>OKRs & KPIs</li>
+                                    <li>Market Research</li>
+                                    <li>Competitive Analysis</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rounded-md border border-border bg-card p-6 hover:shadow-md transition-shadow">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 rounded-md bg-primary/10 p-3 text-primary">
+                                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h3 class="font-semibold mb-3">Analytics & Metrics</h3>
+                                <ul class="space-y-2 text-sm text-muted-foreground">
+                                    <li>Mixpanel</li>
+                                    <li>Amplitude</li>
+                                    <li>Google Analytics</li>
+                                    <li>SQL</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rounded-md border border-border bg-card p-6 hover:shadow-md transition-shadow">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 rounded-md bg-primary/10 p-3 text-primary">
+                                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h3 class="font-semibold mb-3">Design & UX</h3>
+                                <ul class="space-y-2 text-sm text-muted-foreground">
+                                    <li>Figma</li>
+                                    <li>User Research</li>
+                                    <li>A/B Testing</li>
+                                    <li>Wireframing</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rounded-md border border-border bg-card p-6 hover:shadow-md transition-shadow">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 rounded-md bg-primary/10 p-3 text-primary">
+                                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h3 class="font-semibold mb-3">Technical Skills</h3>
+                                <ul class="space-y-2 text-sm text-muted-foreground">
+                                    <li>API Design</li>
+                                    <li>Agile/Scrum</li>
+                                    <li>JIRA</li>
+                                    <li>Git</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rounded-md border border-border bg-card p-6 hover:shadow-md transition-shadow">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 rounded-md bg-primary/10 p-3 text-primary">
+                                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h3 class="font-semibold mb-3">Methodologies</h3>
+                                <ul class="space-y-2 text-sm text-muted-foreground">
+                                    <li>Design Thinking</li>
+                                    <li>Lean Startup</li>
+                                    <li>Jobs-to-be-Done</li>
+                                    <li>Growth Hacking</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rounded-md border border-border bg-card p-6 hover:shadow-md transition-shadow">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 rounded-md bg-primary/10 p-3 text-primary">
+                                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h3 class="font-semibold mb-3">Collaboration</h3>
+                                <ul class="space-y-2 text-sm text-muted-foreground">
+                                    <li>Stakeholder Mgmt</li>
+                                    <li>Cross-functional</li>
+                                    <li>Slack</li>
+                                    <li>Notion</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-16 md:py-24 bg-muted/30">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="mx-auto max-w-2xl text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4" data-testid="text-experience-title">Professional Experience</h2>
+                    <p class="text-lg text-muted-foreground">Building innovative products across different industries</p>
+                </div>
+
+                <div class="mx-auto max-w-4xl space-y-8">
+                    <!-- Experience 1 -->
+                    <div class="rounded-md border border-border bg-card p-6 md:p-8 relative">
+                        <div class="flex flex-col md:flex-row md:items-start gap-6">
+                            <div class="flex-shrink-0">
+                                <div class="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center text-primary font-bold">N</div>
+                            </div>
+                            <div class="flex-1 space-y-4">
+                                <div>
+                                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
+                                        <h3 class="text-xl font-semibold">Product Lead</h3>
+                                        <span class="text-sm font-medium text-muted-foreground">Sep 2024 - Present</span>
+                                    </div>
+                                    <p class="text-primary font-medium">Navatech AI</p>
+                                </div>
+                                <ul class="space-y-2">
+                                    <li class="flex gap-3 text-muted-foreground">
+                                        <span class="text-primary mt-1.5">•</span>
+                                        <span>Drove end-to-end product lifecycle for AI-driven Safety Tech platform, reducing reporting time from 12 mins to under 3 mins (75% efficiency boost)</span>
+                                    </li>
+                                    <li class="flex gap-3 text-muted-foreground">
+                                        <span class="text-primary mt-1.5">•</span>
+                                        <span>Launched AI-powered workflow automations preventing 90% of potential incidents and accelerating investigations by 60%+</span>
+                                    </li>
+                                    <li class="flex gap-3 text-muted-foreground">
+                                        <span class="text-primary mt-1.5">•</span>
+                                        <span>Pioneered Agentic AI applications to automate PRDs, UI wireframes, and JIRA workflows, enhancing team velocity</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience 2 -->
+                    <div class="rounded-md border border-border bg-card p-6 md:p-8 relative">
+                        <div class="flex flex-col md:flex-row md:items-start gap-6">
+                            <div class="flex-shrink-0">
+                                <div class="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center text-primary font-bold">C</div>
+                            </div>
+                            <div class="flex-1 space-y-4">
+                                <div>
+                                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
+                                        <h3 class="text-xl font-semibold">Product Manager</h3>
+                                        <span class="text-sm font-medium text-muted-foreground">Jun 2022 - Sep 2024</span>
+                                    </div>
+                                    <p class="text-primary font-medium">Connect and Heal Primary Care</p>
+                                </div>
+                                <ul class="space-y-2">
+                                    <li class="flex gap-3 text-muted-foreground">
+                                        <span class="text-primary mt-1.5">•</span>
+                                        <span>Developed Scan and Pay cashless payment feature, achieving 2% revenue growth and 3.5% reduction in cancellation rates</span>
+                                    </li>
+                                    <li class="flex gap-3 text-muted-foreground">
+                                        <span class="text-primary mt-1.5">•</span>
+                                        <span>Increased net revenue by 5% by optimizing sorting logic based on consumer behavior patterns</span>
+                                    </li>
+                                    <li class="flex gap-3 text-muted-foreground">
+                                        <span class="text-primary mt-1.5">•</span>
+                                        <span>Digitized manual order booking flows reducing request-to-order creation time from 12 mins to 4 mins</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience 3 -->
+                    <div class="rounded-md border border-border bg-card p-6 md:p-8 relative">
+                        <div class="flex flex-col md:flex-row md:items-start gap-6">
+                            <div class="flex-shrink-0">
+                                <div class="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center text-primary font-bold">S</div>
+                            </div>
+                            <div class="flex-1 space-y-4">
+                                <div>
+                                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
+                                        <h3 class="text-xl font-semibold">Assistant Manager - Hardware Products</h3>
+                                        <span class="text-sm font-medium text-muted-foreground">Jan 2021 - Jun 2022</span>
+                                    </div>
+                                    <p class="text-primary font-medium">Smart Cricket Global</p>
+                                </div>
+                                <ul class="space-y-2">
+                                    <li class="flex gap-3 text-muted-foreground">
+                                        <span class="text-primary mt-1.5">•</span>
+                                        <span>Led product strategy and launch of sports tech products at domestic and international cricket matches</span>
+                                    </li>
+                                    <li class="flex gap-3 text-muted-foreground">
+                                        <span class="text-primary mt-1.5">•</span>
+                                        <span>Reduced development time by 20% through market research and rapid prototyping</span>
+                                    </li>
+                                    <li class="flex gap-3 text-muted-foreground">
+                                        <span class="text-primary mt-1.5">•</span>
+                                        <span>Saved ₹5L and fast-tracked product launch through innovative electronics procurement solutions</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience 4 -->
+                    <div class="rounded-md border border-border bg-card p-6 md:p-8 relative">
+                        <div class="flex flex-col md:flex-row md:items-start gap-6">
+                            <div class="flex-shrink-0">
+                                <div class="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center text-primary font-bold">I</div>
+                            </div>
+                            <div class="flex-1 space-y-4">
+                                <div>
+                                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
+                                        <h3 class="text-xl font-semibold">Hardware Design Engineer + PM</h3>
+                                        <span class="text-sm font-medium text-muted-foreground">Jan 2019 - Dec 2020</span>
+                                    </div>
+                                    <p class="text-primary font-medium">Intellicar Telematics</p>
+                                </div>
+                                <ul class="space-y-2">
+                                    <li class="flex gap-3 text-muted-foreground">
+                                        <span class="text-primary mt-1.5">•</span>
+                                        <span>Led production team delivering Keyless entry systems, completing ₹1.5 Cr deal on time</span>
+                                    </li>
+                                    <li class="flex gap-3 text-muted-foreground">
+                                        <span class="text-primary mt-1.5">•</span>
+                                        <span>Worked extensively in Telematics (CAN, LIN protocols), reverse engineering, and edge computing</span>
+                                    </li>
+                                    <li class="flex gap-3 text-muted-foreground">
+                                        <span class="text-primary mt-1.5">•</span>
+                                        <span>Saved ₹5+ lakhs through cost-saving initiatives in Wiring Harness design</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 md:py-24">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="mx-auto max-w-2xl text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4" data-testid="text-contact-title">Get In Touch</h2>
+                    <p class="text-lg text-muted-foreground">Interested in working together? Let's connect and discuss opportunities.</p>
+                </div>
+
+                <div class="grid gap-8 lg:grid-cols-5">
+                    <div class="rounded-md border border-border bg-card p-8 lg:col-span-3 flex flex-col items-center justify-center text-center space-y-6">
+                        <div class="space-y-4 max-w-md">
+                            <h3 class="text-2xl font-semibold">Ready to Connect?</h3>
+                            <p class="text-muted-foreground">Fill out a quick form to share your opportunity or project details. I'll get back to you within 24 hours.</p>
+                        </div>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdQGomp1i1GLMJ1em49ru5Lz8jaOkWqkY4DvgYpnMb2keJwCQ/viewform?usp=header" target="_blank" class="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity" data-testid="button-contact-form">
+                            Fill Contact Form
+                            <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="lg:col-span-2 space-y-6">
+                        <div class="rounded-md border border-border bg-card p-6">
+                            <div class="space-y-4">
+                                <h3 class="font-semibold text-lg">Direct Contact</h3>
+                                <div class="space-y-3">
+                                    <div class="flex items-center justify-between gap-3">
+                                        <div class="flex items-center gap-3 flex-1 min-w-0">
+                                            <svg class="h-5 w-5 text-muted-foreground flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                            </svg>
+                                            <span class="text-sm truncate" data-testid="text-email">venky890@gmail.com</span>
+                                        </div>
+                                        <button onclick="copyEmail()" class="inline-flex items-center justify-center rounded-md border border-border bg-background px-3 py-2 text-sm hover:bg-muted transition-colors" data-testid="button-copy-email">
+                                            <svg id="copy-icon" class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                            </svg>
+                                            <svg id="check-icon" class="h-4 w-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <a href="https://linkedin.com/in/iamvenky" target="_blank" class="w-full inline-flex items-center justify-start rounded-md border border-border bg-background px-4 py-2 text-sm hover:bg-muted transition-colors" data-testid="button-linkedin">
+                                        <svg class="mr-2 h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                        </svg>
+                                        Connect on LinkedIn
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="rounded-md border border-border bg-muted/50 p-6">
+                            <div class="space-y-2">
+                                <h3 class="font-semibold">Open to Opportunities</h3>
+                                <p class="text-sm text-muted-foreground">Currently exploring PM roles in AI-driven products, HealthTech, and B2B SaaS. Based in Bengaluru, open to remote opportunities.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-border bg-muted/30">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8 py-12">
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                <div class="space-y-4">
+                    <h3 class="font-bold text-lg">Venkatesh Murthy</h3>
+                    <p class="text-sm text-muted-foreground max-w-xs">Product Manager focused on building impactful products that solve real user problems through AI-driven innovation.</p>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="font-semibold text-sm">Navigation</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#projects" class="text-muted-foreground hover:text-foreground transition-colors">Projects</a></li>
+                        <li><a href="#skills" class="text-muted-foreground hover:text-foreground transition-colors">Skills</a></li>
+                        <li><a href="#experience" class="text-muted-foreground hover:text-foreground transition-colors">Experience</a></li>
+                        <li><a href="#contact" class="text-muted-foreground hover:text-foreground transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="font-semibold text-sm">Connect</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="https://linkedin.com/in/iamvenky" target="_blank" class="text-muted-foreground hover:text-foreground transition-colors">LinkedIn</a></li>
+                        <li><a href="mailto:venky890@gmail.com" class="text-muted-foreground hover:text-foreground transition-colors">Email</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="font-semibold text-sm">Social</h4>
+                    <div class="flex gap-3">
+                        <a href="https://linkedin.com/in/iamvenky" target="_blank" class="h-10 w-10 rounded-md border border-border flex items-center justify-center hover:bg-muted transition-colors">
+                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:venky890@gmail.com" class="h-10 w-10 rounded-md border border-border flex items-center justify-center hover:bg-muted transition-colors">
+                            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 pt-8 border-t border-border text-center text-sm text-muted-foreground">
+                <p>© 2025 Venkatesh Murthy. Built with HTML, CSS, and JavaScript.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
