@@ -1,0 +1,5 @@
+title: My Product Portfolio
+baseurl: "/myportfolio"
+url: "https://venktastic.github.io"
+# Keep Jekyll processing minimal; we’re serving a simple index.html
+permalink: pretty
