@@ -10,33 +10,43 @@ interface Experience {
 export default function ExperienceTimeline() {
   const experiences: Experience[] = [
     {
-      company: "TechCorp",
-      role: "Senior Product Manager",
-      period: "2021 - Present",
+      company: "Navatech AI",
+      role: "Product Lead",
+      period: "Sep 2024 - Present",
       achievements: [
-        "Led product strategy for $20M ARR analytics platform, achieving 150% YoY growth",
-        "Shipped 12 major features that increased user engagement by 45%",
-        "Built and mentored team of 3 associate PMs",
+        "Drove end-to-end product lifecycle for AI-driven Safety Tech platform, reducing reporting time from 12 mins to under 3 mins (75% efficiency boost)",
+        "Launched AI-powered workflow automations preventing 90% of potential incidents and accelerating investigations by 60%+",
+        "Pioneered Agentic AI applications to automate PRDs, UI wireframes, and JIRA workflows, enhancing team velocity",
       ],
     },
     {
-      company: "ShopFlow",
+      company: "Connect and Heal Primary Care",
       role: "Product Manager",
-      period: "2018 - 2021",
+      period: "Jun 2022 - Sep 2024",
       achievements: [
-        "Launched mobile commerce app that generated $15M in first year revenue",
-        "Reduced checkout abandonment by 35% through conversion optimization",
-        "Managed cross-functional team of 15 engineers and designers",
+        "Developed Scan and Pay cashless payment feature, achieving 2% revenue growth and 3.5% reduction in cancellation rates",
+        "Increased net revenue by 5% by optimizing sorting logic based on consumer behavior patterns",
+        "Digitized manual order booking flows reducing request-to-order creation time from 12 mins to 4 mins",
       ],
     },
     {
-      company: "HealthTech Solutions",
-      role: "Associate Product Manager",
-      period: "2016 - 2018",
+      company: "Smart Cricket Global",
+      role: "Assistant Manager - Hardware Products",
+      period: "Jan 2021 - Jun 2022",
       achievements: [
-        "Designed patient portal used by 50K+ users with 4.8 star rating",
-        "Conducted 100+ user interviews to identify key pain points",
-        "Improved onboarding completion rate from 45% to 78%",
+        "Led product strategy and launch of sports tech products at domestic and international cricket matches",
+        "Reduced development time by 20% through market research and rapid prototyping",
+        "Saved ₹5L and fast-tracked product launch through innovative electronics procurement solutions",
+      ],
+    },
+    {
+      company: "Intellicar Telematics",
+      role: "Hardware Design Engineer + PM",
+      period: "Jan 2019 - Dec 2020",
+      achievements: [
+        "Led production team delivering Keyless entry systems, completing ₹1.5 Cr deal on time",
+        "Worked extensively in Telematics (CAN, LIN protocols), reverse engineering, and edge computing",
+        "Saved ₹5+ lakhs through cost-saving initiatives in Wiring Harness design",
       ],
     },
   ];

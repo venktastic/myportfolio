@@ -6,40 +6,40 @@ import healthcareImage from "@assets/generated_images/Healthcare_portal_dashboar
 export default function ProjectsSection() {
   const projects = [
     {
-      image: analyticsImage,
-      title: "Analytics Dashboard Redesign",
-      company: "TechCorp",
-      description: "Redesigned enterprise analytics platform to improve data accessibility and drive user engagement across 10,000+ business users.",
+      image: healthcareImage,
+      title: "Scan and Pay: Cashless Insurance",
+      company: "Connect and Heal",
+      description: "Solved cashless payment failure at non-network hospitals by introducing in-app Scan and Pay feature, eliminating operational risk and boosting revenue.",
       metrics: [
-        { value: "+45%", label: "Engagement" },
-        { value: "3.2x", label: "Daily Usage" },
-        { value: "92%", label: "Satisfaction" },
+        { value: "100%", label: "Adoption" },
+        { value: "+2%", label: "Revenue" },
+        { value: "-3.5%", label: "Cancellation" },
       ],
-      tags: ["B2B", "SaaS", "Analytics"],
+      tags: ["HealthTech", "Payments", "B2C"],
+    },
+    {
+      image: analyticsImage,
+      title: "AI-Powered Safety Platform",
+      company: "Navatech AI",
+      description: "Led end-to-end product lifecycle for AI-driven Safety Tech platform in construction, delivering measurable impact across safety operations and efficiency.",
+      metrics: [
+        { value: "75%", label: "Efficiency" },
+        { value: "-90%", label: "Incidents" },
+        { value: "60%+", label: "Faster Ops" },
+      ],
+      tags: ["AI/ML", "B2B", "SaaS"],
     },
     {
       image: ecommerceImage,
-      title: "Mobile Commerce Platform",
-      company: "ShopFlow",
-      description: "Led end-to-end development of mobile-first shopping experience that drove significant revenue growth and conversion improvements.",
+      title: "Smart Sports Wearables",
+      company: "Smart Cricket Global",
+      description: "Played crucial role in product strategy and launch of sports tech products including broadcast data systems and smart wearables for multiple sports.",
       metrics: [
-        { value: "$15M", label: "First Year" },
-        { value: "-35%", label: "Abandonment" },
-        { value: "4.8★", label: "App Rating" },
+        { value: "20%", label: "Time Saved" },
+        { value: "₹5L", label: "Cost Saved" },
+        { value: "Intl", label: "Deployments" },
       ],
-      tags: ["B2C", "Mobile", "E-commerce"],
-    },
-    {
-      image: healthcareImage,
-      title: "Patient Portal Experience",
-      company: "HealthTech Solutions",
-      description: "Designed intuitive patient portal improving healthcare access and engagement for 50,000+ patients across multiple hospitals.",
-      metrics: [
-        { value: "50K+", label: "Active Users" },
-        { value: "+33%", label: "Completion" },
-        { value: "4.8★", label: "User Rating" },
-      ],
-      tags: ["Healthcare", "B2C", "Accessibility"],
+      tags: ["IoT", "Sports Tech", "Hardware"],
     },
   ];
 

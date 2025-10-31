@@ -38,7 +38,7 @@ export default function Header({ onNavigate }: HeaderProps) {
             className="text-xl font-bold hover-elevate active-elevate-2 px-3 py-2 rounded-md -ml-3"
             data-testid="button-logo"
           >
-            Sarah Chen
+            Venkatesh Murthy
           </button>
         </div>
 

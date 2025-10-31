@@ -1,52 +1,26 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
-import { Mail, Linkedin, Copy, Check } from "lucide-react";
+import { Mail, Linkedin, Copy, Check, ExternalLink } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { contactFormSchema, type ContactForm } from "@shared/schema";
 
 export default function ContactSection() {
   const [copied, setCopied] = useState(false);
   const { toast } = useToast();
 
-  const form = useForm<ContactForm>({
-    resolver: zodResolver(contactFormSchema),
-    defaultValues: {
-      name: "",
-      email: "",
-      message: "",
-    },
-  });
-
-  const onSubmit = (data: ContactForm) => {
-    console.log("Form submitted:", data);
-    toast({
-      title: "Message sent!",
-      description: "Thanks for reaching out. I'll get back to you soon.",
-    });
-    form.reset();
-  };
-
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText("sarah.chen@example.com");
+    navigator.clipboard.writeText("venky890@gmail.com");
     setCopied(true);
     toast({
       title: "Email copied!",
       description: "Email address copied to clipboard.",
     });
     setTimeout(() => setCopied(false), 2000);
+  };
+
+  const handleContactFormClick = () => {
+    console.log("Opening contact form");
+    window.open("https://docs.google.com/forms/d/e/1FAIpQLSdQGomp1i1GLMJ1em49ru5Lz8jaOkWqkY4DvgYpnMb2keJwCQ/viewform?usp=header", "_blank");
   };
 
   return (
@@ -62,75 +36,22 @@ export default function ContactSection() {
         </div>
 
         <div className="grid gap-8 lg:grid-cols-5">
-          <Card className="p-8 lg:col-span-3">
-            <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                <FormField
-                  control={form.control}
-                  name="name"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Name</FormLabel>
-                      <FormControl>
-                        <Input 
-                          placeholder="Your name" 
-                          {...field} 
-                          data-testid="input-name"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Email</FormLabel>
-                      <FormControl>
-                        <Input 
-                          type="email" 
-                          placeholder="your.email@example.com" 
-                          {...field}
-                          data-testid="input-email"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="message"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Message</FormLabel>
-                      <FormControl>
-                        <Textarea 
-                          placeholder="Tell me about your opportunity or project..."
-                          rows={5}
-                          {...field}
-                          data-testid="input-message"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <Button 
-                  type="submit" 
-                  size="lg" 
-                  className="w-full"
-                  data-testid="button-submit-contact"
-                >
-                  Send Message
-                </Button>
-              </form>
-            </Form>
+          <Card className="p-8 lg:col-span-3 flex flex-col items-center justify-center text-center space-y-6">
+            <div className="space-y-4 max-w-md">
+              <h3 className="text-2xl font-semibold">Ready to Connect?</h3>
+              <p className="text-muted-foreground">
+                Fill out a quick form to share your opportunity or project details. I'll get back to you within 24 hours.
+              </p>
+            </div>
+            
+            <Button 
+              size="lg"
+              onClick={handleContactFormClick}
+              data-testid="button-contact-form"
+            >
+              Fill Contact Form
+              <ExternalLink className="ml-2 h-4 w-4" />
+            </Button>
           </Card>
 
           <div className="lg:col-span-2 space-y-6">
@@ -143,7 +64,7 @@ export default function ContactSection() {
                     <div className="flex items-center gap-3 flex-1 min-w-0">
                       <Mail className="h-5 w-5 text-muted-foreground flex-shrink-0" />
                       <span className="text-sm truncate" data-testid="text-email">
-                        sarah.chen@example.com
+                        venky890@gmail.com
                       </span>
                     </div>
                     <Button
@@ -165,7 +86,7 @@ export default function ContactSection() {
                     className="w-full justify-start"
                     onClick={() => {
                       console.log("LinkedIn clicked");
-                      window.open("https://linkedin.com", "_blank");
+                      window.open("https://linkedin.com/in/iamvenky", "_blank");
                     }}
                     data-testid="button-linkedin"
                   >
@@ -180,7 +101,7 @@ export default function ContactSection() {
               <div className="space-y-2">
                 <h3 className="font-semibold">Open to Opportunities</h3>
                 <p className="text-sm text-muted-foreground">
-                  Currently exploring senior PM roles in B2B SaaS, healthcare tech, and fintech. Remote or SF Bay Area.
+                  Currently exploring PM roles in AI-driven products, HealthTech, and B2B SaaS. Based in Bengaluru, open to remote opportunities.
                 </p>
               </div>
             </Card>

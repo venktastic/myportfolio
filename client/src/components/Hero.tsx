@@ -24,7 +24,7 @@ export default function Hero() {
                 That Matter
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
-                Experienced Product Manager specializing in data-driven strategy, user-centric design, and cross-functional team leadership. I transform complex challenges into elegant solutions that drive measurable business impact.
+                Results-driven Product Manager with 8 years of experience in Problem Articulation and Solutioning, Roadmap, Strategy, Product Analytics, and 0 to 1 Product Management. I thrive on taking risks and owning outcomes, translating user needs into innovative and compelling products.
               </p>
             </div>
             
@@ -49,11 +49,11 @@ export default function Hero() {
             </div>
 
             <div className="flex flex-wrap gap-6 text-sm font-medium uppercase tracking-wide text-muted-foreground">
-              <div data-testid="text-experience">8+ Years PM Experience</div>
+              <div data-testid="text-experience">8 Years PM Experience</div>
               <div className="hidden sm:block">•</div>
-              <div data-testid="text-launches">15+ Product Launches</div>
+              <div data-testid="text-launches">AI-Driven Innovation</div>
               <div className="hidden sm:block">•</div>
-              <div data-testid="text-impact">$50M+ Revenue Impact</div>
+              <div data-testid="text-impact">75% Efficiency Gains</div>
             </div>
           </div>
 
