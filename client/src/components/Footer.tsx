@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8 py-12">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4">
-            <h3 className="font-bold text-lg">Venkatesh Murthy</h3>
+            <h3 className="font-bold text-lg">Venkatesh Murthy N S</h3>
             <p className="text-sm text-muted-foreground max-w-xs">
               Product Manager focused on building impactful products that solve real user problems through AI-driven innovation.
             </p>
@@ -120,7 +120,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t text-center text-sm text-muted-foreground">
-          <p>© 2025 Venkatesh Murthy. Built with React, TypeScript, and Tailwind CSS.</p>
+          <p>© 2025 Venkatesh Murthy N S. Built with React, TypeScript, and Tailwind CSS.</p>
         </div>
       </div>
     </footer>

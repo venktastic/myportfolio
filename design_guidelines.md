@@ -1,13 +1,13 @@
 # Product Manager Portfolio - Design Guidelines
 
 ## Design Approach
-**Reference-Based Approach** drawing from professional portfolio best practices and modern SaaS aesthetics. Primary inspiration: Linear (typography/polish), Notion (clarity/structure), and leading PM portfolio sites. The design should feel sophisticated, data-driven, and results-oriented - reflecting PM thinking.
+Reference-Based Approach drawing from professional portfolio best practices and modern SaaS aesthetics. Primary inspiration: Linear (typography/polish), Notion (clarity/structure), and leading PM portfolio sites. The design should feel sophisticated, data-driven, and results-oriented - reflecting PM thinking.
 
 ## Typography System
-**Primary Font**: Inter or Manrope (Google Fonts) - modern, professional, excellent at multiple weights
-**Secondary Font**: Crimson Pro or Lora for pull quotes and testimonials (optional accent)
+Primary Font: Inter or Manrope (Google Fonts) - modern, professional, excellent at multiple weights
+Secondary Font: Crimson Pro or Lora for pull quotes and testimonials (optional accent)
 
-**Hierarchy**:
+Hierarchy:
 - Hero headline: text-5xl md:text-7xl, font-bold, tracking-tight
 - Section headers: text-3xl md:text-4xl, font-bold
 - Project titles: text-2xl md:text-3xl, font-semibold
@@ -16,7 +16,7 @@
 - Captions/metadata: text-sm, font-medium, uppercase tracking-wide
 
 ## Layout System
-**Spacing Units**: Use Tailwind units of 4, 6, 8, 12, 16, 20, 24
+Spacing Units: Use Tailwind units of 4, 6, 8, 12, 16, 20, 24
 - Section padding: py-16 md:py-24
 - Component spacing: gap-8 md:gap-12
 - Container max-width: max-w-7xl
@@ -86,13 +86,13 @@ Comprehensive footer with:
 
 ## Images
 
-**Hero Section**: Professional headshot or workspace photo showing you in a professional PM context (meeting room, whiteboard session, or studio portrait). High-quality, well-lit, neutral background. Aspect ratio 3:4 or 4:5 portrait orientation.
+Hero Section: Professional headshot or workspace photo showing you in a professional PM context (meeting room, whiteboard session, or studio portrait). High-quality, well-lit, neutral background. Aspect ratio 3:4 or 4:5 portrait orientation.
 
-**Project Showcases**: Product screenshots, app interfaces, dashboards, user flows, or prototype mockups. Each project needs 1 main hero image plus 2-3 supporting images for case studies. Images should show actual product work - favor real screenshots over generic stock photos.
+Project Showcases: Product screenshots, app interfaces, dashboards, user flows, or prototype mockups. Each project needs 1 main hero image plus 2-3 supporting images for case studies. Images should show actual product work - favor real screenshots over generic stock photos.
 
-**Company Logos**: Include authentic company/brand logos for credibility (make sure you have rights to use them).
+Company Logos: Include authentic company/brand logos for credibility (make sure you have rights to use them).
 
-**Background Elements**: Optional subtle pattern overlays or gradient meshes in hero section - keep very understated.
+Background Elements: Optional subtle pattern overlays or gradient meshes in hero section - keep very understated.
 
 ## Animation Strategy
 Minimal, purposeful animations:
@@ -111,10 +111,10 @@ Minimal, purposeful animations:
 - Semantic HTML structure (header, main, section, footer)
 
 ## Key Principles
-1. **Metrics-Driven**: Quantify impact wherever possible - numbers build credibility
-2. **Visual Proof**: Show actual product work, not just descriptions
-3. **Scannable**: Recruiters skim - make key info jump out
-4. **Professional Polish**: Pixel-perfect spacing, consistent patterns, refined details
-5. **Story Arc**: Guide visitors from introduction → projects → credibility → action
+1. Metrics-Driven: Quantify impact wherever possible - numbers build credibility
+2. Visual Proof: Show actual product work, not just descriptions
+3. Scannable: Recruiters skim - make key info jump out
+4. Professional Polish: Pixel-perfect spacing, consistent patterns, refined details
+5. Story Arc: Guide visitors from introduction → projects → credibility → action
 
 This portfolio should feel like a product itself - well-designed, user-centric, and results-oriented.

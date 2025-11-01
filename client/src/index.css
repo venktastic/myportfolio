@@ -246,7 +246,7 @@
   }
 }
 
-/**
+/
  * Using the elevate system.
  * Automatic contrast adjustment.
  *
@@ -288,7 +288,7 @@
   .no-default-active-elevate {}
 
 
-  /**
+  /
    * Toggleable backgrounds go behind the content. Hoverable/active goes on top.
    * This way they can stack/compound. Both will overlap the parent's borders!
    * So borders will be automatically adjusted both on toggle, and hover/active,

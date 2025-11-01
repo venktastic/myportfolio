@@ -5,9 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Venkatesh Murthy N S | Product Manager Portfolio</title>
   <meta name="description" content="Product Manager with 7+ years of experience building innovative AI-powered products in HealthTech, Sports Tech, and SaaS. Based in Bengaluru." />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://venktastic.github.io/myportfolio/" />
+  <meta property="og:title" content="Venkatesh Murthy N S | Product Manager Portfolio" />
+  <meta property="og:description" content="Results-driven Product Manager with 7+ years of experience turning complex problems into scalable solutions. Specializing in AI, HealthTech, and 0→1 product development." />
+  <meta property="og:image" content="https://venkatesh-murthy.com/attached_assets/profile-photo_1761884631575.jpg" />
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://venktastic.github.io/myportfolio/" />
+  <meta property="twitter:title" content="Venkatesh Murthy N S | Product Manager Portfolio" />
+  <meta property="twitter:description" content="Results-driven Product Manager with 7+ years of experience turning complex problems into scalable solutions." />
+  <meta property="twitter:image" content="https://venkatesh-murthy.com/attached_assets/profile-photo_1761884631575.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="attached_assets/vm-logo.svg">
+  <link rel="icon" type="image/png" href="attached_assets/vm-logo.png">
+  
+  <!-- Framer Motion -->
+  <script src="https://unpkg.com/framer-motion@11/dist/framer-motion.js"></script>
   <style>
     :root{
       --bg:#f8fafc;--card:#ffffff;--muted:#64748b;--text:#0b1220;--border:#e5e7eb;--primary:#2563eb;--accent:#6366f1
@@ -38,10 +59,15 @@
     .muted{color:var(--muted)}
     .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
     .card{border:1px solid var(--border);background:var(--card);border-radius:16px;padding:16px}
-    .card h3{margin:0 0 8px;font-size:1.05rem}
+    .card h3{margin:0 0 8px;font-size:1.05rem;display:flex;align-items:center;gap:8px}
+    .skill-icon{width:20px;height:20px;opacity:0.8}
+    .company-logo{width:24px;height:24px;border-radius:4px;margin-right:8px}
     .card p{margin:0 0 10px;color:var(--muted)}
     .case-study-card{display:block;text-decoration:none;color:inherit;transition:transform .2s ease,box-shadow .2s ease}
     .case-study-card:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(37,99,235,.15);text-decoration:none}
+    .case-study-cta{display:inline-flex;align-items:center;gap:8px;margin-top:12px;padding:10px 14px;border-radius:12px;border:1px solid var(--border);background:#ffffff;color:var(--text);font-size:0.9rem;font-weight:500;transition:all 0.2s ease}
+    .case-study-cta:hover{background:var(--bg);text-decoration:none;transform:translateY(-1px)}
+    .case-study-cta svg{width:16px;height:16px}
     .case-study-card .card-image{width:100%;height:160px;object-fit:cover;border-radius:12px;margin-bottom:12px}
     .tags{display:flex;gap:8px;flex-wrap:wrap}
     .tag{font-size:.8rem;color:#334155;background:#f1f5f9;padding:6px 10px;border:1px solid var(--border);border-radius:999px}
@@ -50,6 +76,15 @@
     @media (max-width:920px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}}
     @media (max-width:640px){nav{display:none}.grid,.twocol{grid-template-columns:1fr}}
     html{scroll-behavior:smooth}
+    .animate-fade-in{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease}
+    .animate-fade-in.visible{opacity:1;transform:translateY(0)}
+    .animate-slide-up{opacity:0;transform:translateY(30px);transition:opacity 0.8s ease,transform 0.8s ease}
+    .animate-slide-up.visible{opacity:1;transform:translateY(0)}
+    .animate-scale{opacity:0;transform:scale(0.95);transition:opacity 0.6s ease,transform 0.6s ease}
+    .animate-scale.visible{opacity:1;transform:scale(1)}
+    /* Focus states for accessibility */
+    .btn:focus,.case-study-card:focus{outline:2px solid var(--primary);outline-offset:2px}
+    nav a:focus{outline:2px solid var(--primary);outline-offset:2px;border-radius:8px}
   </style>
 </head>
 <body>
@@ -57,9 +92,9 @@
     <header>
       <div class="brand">
         <div class="logo">
-          <img src="attached_assets/vm-logo.svg" alt="VM Logo" />
+          <img src="attached_assets/vm-logo.svg" alt="Venkatesh Murthy initials logo - VM in stylized design" />
         </div>
-        <strong>Venkatesh Murthy N S</strong>
+        <strong><a href="index.html" style="color:inherit;text-decoration:none;">Venkatesh Murthy N S</a></strong>
       </div>
       <nav>
         <a href="#projects">Case Studies</a>
@@ -69,65 +104,100 @@
       </nav>
     </header>
 
-    <section class="hero">
+    <section class="hero animate-fade-in">
       <div>
         <h1>Transforming Complexity into Clarity</h1>
-        <p class="lead">Results-driven Product Manager with 7+ years of experience in Problem Articulation and Solutioning, Roadmap, Strategy, Product Analytics, and 0 to 1 Product Management. I thrive on taking risks and owning outcomes, translating user needs into innovative and compelling products.</p>
+        <p class="lead">Results-driven Product Manager with 7+ years of experience turning complex, ambiguous problems into clear, scalable solutions. I specialize in product strategy, roadmap design, analytics, and 0→1 execution — translating user insights into impactful, data-backed products that deliver measurable business outcomes.</p>
         <div class="actions">
           <a class="btn primary" href="#projects">View Case Studies</a>
           <a class="btn" href="attached_assets/VenkyPML_1761884036427.pdf" target="_blank" rel="noopener">Download Resume</a>
         </div>
       </div>
       <div class="preview">
-        <img src="attached_assets/profile-photo_1761884631575.jpg" alt="Profile" />
+        <img src="attached_assets/profile-photo_1761884631575.jpg" alt="Professional headshot of Venkatesh Murthy N S, Product Manager, smiling in business attire" />
       </div>
     </section>
 
-    <section id="skills" class="section">
+    <section id="skills" class="section animate-slide-up">
       <h2>Skills & Expertise</h2>
       <p class="muted">A comprehensive toolkit for driving product excellence</p>
       <div class="grid">
         <div class="card">
-          <h3>Product Strategy</h3>
+          <h3>
+            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 12l2 2 4-4"/>
+              <path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"/>
+              <path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"/>
+              <path d="M12 3c0 1-1 3-3 3s-3-2-3-3 1-3 3-3 3 2 3 3"/>
+              <path d="M12 21c0-1 1-3 3-3s3 2 3 3-1 3-3 3-3-2-3-3"/>
+            </svg>
+            Product Strategy
+          </h3>
           <ul>
+            <li>Product Vision & Strategy</li>
             <li>Roadmap & Prioritization</li>
             <li>0 to 1 Product Management</li>
             <li>User and Market Research</li>
-            <li>Opportunity Sizing</li>
-            <li>GTM Strategy</li>
           </ul>
         </div>
         <div class="card">
-          <h3>Product Discovery</h3>
+          <h3>
+            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/>
+              <path d="m21 21-4.35-4.35"/>
+            </svg>
+            Product Discovery
+          </h3>
           <ul>
             <li>User Interviews</li>
             <li>Product Discovery Sessions</li>
             <li>Problem Articulation</li>
+            <li>Opportunity Sizing</li>
             <li>NPS & Feedback Analysis</li>
           </ul>
         </div>
         <div class="card">
-          <h3>Analytics & Data</h3>
+          <h3>
+            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="20" x2="18" y2="10"/>
+              <line x1="12" y1="20" x2="12" y2="4"/>
+              <line x1="6" y1="20" x2="6" y2="14"/>
+            </svg>
+            Analytics & Data
+          </h3>
           <ul>
-            <li>Amplitude</li>
-            <li>Google Analytics</li>
-            <li>MoEngage</li>
+            <li>Define and Track Metircs</li>
+            <li>User behavior analysis</li>
             <li>Data Analysis</li>
-            <li>Datadog</li>
+            <li>Tools: Amplitude, MoEngage, Google Analytics, New Relic, Datadog</li>
           </ul>
         </div>
         <div class="card">
-          <h3>Artificial Intelligence</h3>
+          <h3>
+            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path d="M2 17l10 5 10-5"/>
+              <path d="M2 12l10 5 10-5"/>
+            </svg>
+            Artificial Intelligence
+          </h3>
           <ul>
             <li>Generative AI</li>
             <li>Agentic AI</li>
             <li>Prompt Engineering</li>
+            <li>Experimenting and Prototyping</li>
             <li>NLP & Knowledge Base</li>
-            <li>AI Workflow Automation</li>
+            <li>Workflow Automation with Agents</li>
           </ul>
         </div>
         <div class="card">
-          <h3>Technical Execution</h3>
+          <h3>
+            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="16 18 22 12 16 6"/>
+              <polyline points="8 6 2 12 8 18"/>
+            </svg>
+            Technical Execution
+          </h3>
           <ul>
             <li>Vendor API Evaluation</li>
             <li>JIRA Workflows</li>
@@ -137,7 +207,15 @@
           </ul>
         </div>
         <div class="card">
-          <h3>Design & Prototyping</h3>
+          <h3>
+            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+              <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+              <path d="M2 2l7.586 7.586"/>
+              <circle cx="11" cy="11" r="2"/>
+            </svg>
+            Design & Prototyping
+          </h3>
           <ul>
             <li>Prototyping</li>
             <li>Wireframing (AI-powered)</li>
@@ -148,14 +226,14 @@
       </div>
     </section>
 
-    <section id="projects" class="section">
+    <section id="projects" class="section animate-slide-up">
       <h2>Featured Case Studies</h2>
       <p class="muted">A selection of impactful case studies from products I've built and launched</p>
       <div class="grid">
         
         <a href="ai-safety-case-study.html" class="case-study-card">
           <article class="card">
-            <img src="attached_assets/HSEObs.png" alt="AI Safety Platform Case Study" class="card-image" />
+            <img src="attached_assets/HSEObs.png" alt="Screenshot of AI Safety Platform dashboard showing safety metrics, incident reporting interface, and real-time monitoring tools for construction sites" class="card-image" />
             <h3>AI-Powered Safety Platform</h3>
             <p>Navatech AI — Led end-to-end product lifecycle for AI-driven Safety Tech platform in construction, delivering measurable impact across safety operations and efficiency.</p>
             <div class="tags">
@@ -163,11 +241,14 @@
               <span class="tag">AI</span>
               <span class="tag">B2B</span>
             </div>
+            <div class="case-study-cta">
+              Read Case Study →
+            </div>
           </article>
         </a>
         <a href="case-study.html" class="case-study-card">
           <article class="card">
-            <img src="attached_assets/QRCodeScanner.png" alt="QR Code Scanner" class="card-image" />
+            <img src="attached_assets/QRCodeScanner.png" alt="Mobile app interface showing QR code scanner for cashless insurance payments at hospitals, with scan frame and payment confirmation screen" class="card-image" />
             <h3>Scan and Pay: Cashless Insurance</h3>
             <p>Connect and Heal — Solved cashless payment at non-network hospitals by introducing in-app Scan and Pay feature, eliminating operational risk and enhancing user experience.</p>
             <div class="tags">
@@ -175,11 +256,14 @@
               <span class="tag">Payments</span>
               <span class="tag">B2B2C</span>
             </div>
+            <div class="case-study-cta">
+              Read Case Study →
+            </div>
           </article>
         </a>
         <a href="sports-wearables-case-study.html" class="case-study-card">
           <article class="card">
-            <img src="attached_assets/CricketBroad.png" alt="Smart Sports Wearables Case Study" class="card-image" />
+            <img src="attached_assets/CricketBroad.png" alt="Cricket broadcast system interface displaying real-time player statistics, smart wearable data visualization, and match analytics dashboard" class="card-image" />
             <h3>Smart Sports Wearables</h3>
             <p>Smart Cricket Global — Played crucial role in product strategy and launch of sports tech products including broadcast data systems and smart wearables.</p>
             <div class="tags">
@@ -187,17 +271,23 @@
               <span class="tag">Hardware</span>
               <span class="tag">Product Launch</span>
             </div>
+            <div class="case-study-cta">
+              Read Case Study →
+            </div>
           </article>
         </a>
       </div>
     </section>
 
-    <section id="experience" class="section">
+    <section id="experience" class="section animate-slide-up">
       <h2>Professional Experience</h2>
       <p class="muted">Building innovative products across different industries</p>
       <div class="twocol">
         <div class="card">
-          <h3>Product Lead</h3>
+          <h3>
+            <img src="https://logo.clearbit.com/navatech.ai" alt="Navatech AI logo" class="company-logo" onerror="this.style.display='none'" />
+            Product Manager
+          </h3>
           <p>Navatech AI | October 2024 – Current</p>
           <ul>
             <li>Reduced reporting time from 12 mins to under 3 mins (75% efficiency boost)</li>
@@ -206,7 +296,10 @@
           </ul>
         </div>
         <div class="card">
-          <h3>Product Manager</h3>
+          <h3>
+            <img src="https://logo.clearbit.com/connectandheal.com" alt="Connect and Heal logo" class="company-logo" onerror="this.style.display='none'" />
+            Product Manager
+          </h3>
           <p>Connect and Heal Primary Care | June 2022 – Sep 2024</p>
           <ul>
             <li>Developed Scan and Pay feature, achieving 2% revenue growth and 3.5% reduction in cancellation rates</li>
@@ -215,7 +308,10 @@
           </ul>
         </div>
         <div class="card">
-          <h3>Assistant Manager - Hardware Products</h3>
+          <h3>
+            <img src="attached_assets/smartcricket.png" alt="Smart Cricket Global logo" class="company-logo" onerror="this.style.display='none'" />
+            Assistant Manager - Hardware Products
+          </h3>
           <p>Smart Cricket Global | Jan 2021 – Jun 2022</p>
           <ul>
             <li>Led product strategy and launch of sports tech products at domestic and international cricket matches</li>
@@ -224,7 +320,10 @@
           </ul>
         </div>
         <div class="card">
-          <h3>Hardware Design Engineer + PM</h3>
+          <h3>
+            <img src="https://logo.clearbit.com/intellicar.in" alt="Intellicar Telematics logo" class="company-logo" onerror="this.style.display='none'" />
+            Hardware Design Engineer
+          </h3>
           <p>Intellicar Telematics | Jan 2019 – Dec 2020</p>
           <ul>
             <li>Delivered Keyless entry systems, completing ₹1.5 Cr deal on time</li>
@@ -233,7 +332,10 @@
           </ul>
         </div>
         <div class="card">
-          <h3>Business Operations</h3>
+          <h3>
+            <img src="https://logo.clearbit.com/intellicar.in" alt="Intellicar Telematics logo" class="company-logo" onerror="this.style.display='none'" />
+            Business Operations
+          </h3>
           <p>Intellicar Telematics | Dec 2017 – Dec 2018</p>
           <ul>
             <li>Reduced inventory by 20% through inventory optimization</li>
@@ -243,7 +345,7 @@
       </div>
     </section>
 
-    <section id="contact" class="section">
+    <section id="contact" class="section animate-scale">
       <h2>Get In Touch</h2>
       <p class="muted">I'm always interested in discussing new opportunities, collaborations, or simply connecting with fellow product professionals. Whether you're looking for product leadership, want to share insights, or explore potential partnerships, I'd love to hear from you.</p>
       <div class="twocol">
@@ -283,8 +385,61 @@
     </footer>
   </div>
 
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Venkatesh Murthy N S",
+    "jobTitle": "Product Manager",
+    "description": "Results-driven Product Manager with 7+ years of experience turning complex, ambiguous problems into clear, scalable solutions.",
+    "url": "https://venkatesh-murthy.com",
+    "image": "https://venkatesh-murthy.com/attached_assets/profile-photo_1761884631575.jpg",
+    "sameAs": [
+      "https://linkedin.com/in/iamvenky"
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Navatech AI"
+    },
+    "alumniOf": {
+      "@type": "Organization",
+      "name": "Connect and Heal Primary Care"
+    },
+    "knowsAbout": [
+      "Product Management",
+      "Artificial Intelligence",
+      "Product Strategy",
+      "Data Analytics",
+      "HealthTech",
+      "SafetyTech",
+      "SportsTech"
+    ]
+  }
+  </script>
+  
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // Intersection Observer for animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+    
+    // Observe all animated elements
+    document.addEventListener('DOMContentLoaded', () => {
+      const animatedElements = document.querySelectorAll('.animate-fade-in, .animate-slide-up, .animate-scale');
+      animatedElements.forEach(el => observer.observe(el));
+    });
   </script>
 </body>
 </html>
