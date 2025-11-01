@@ -27,8 +27,15 @@
   <link rel="icon" type="image/svg+xml" href="attached_assets/vm-logo.svg">
   <link rel="icon" type="image/png" href="attached_assets/vm-logo.png">
   
-  <!-- Framer Motion -->
-  <script src="https://unpkg.com/framer-motion@11/dist/framer-motion.js"></script>
+  <!-- React and ReactDOM -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  
+  <!-- Babel for JSX transformation -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  
+  <!-- Lucide React Icons -->
+  <script src="https://unpkg.com/lucide-react@latest/dist/umd/lucide-react.js"></script>
   <style>
     :root{
       --bg:#f8fafc;--card:#ffffff;--muted:#64748b;--text:#0b1220;--border:#e5e7eb;--primary:#2563eb;--accent:#6366f1
@@ -85,6 +92,27 @@
     /* Focus states for accessibility */
     .btn:focus,.case-study-card:focus{outline:2px solid var(--primary);outline-offset:2px}
     nav a:focus{outline:2px solid var(--primary);outline-offset:2px;border-radius:8px}
+    
+    /* Apple Glass UI Styles */
+    .glass-btn{background:rgba(255,255,255,0.1);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.2);box-shadow:0 8px 32px rgba(0,0,0,0.1);transition:all 0.3s ease}
+    .glass-btn:hover{background:rgba(255,255,255,0.2);transform:translateY(-2px);box-shadow:0 12px 40px rgba(0,0,0,0.15)}
+    .case-study-cta{display:inline-flex;align-items:center;gap:8px;margin-top:12px;padding:10px 14px;border-radius:12px;border:1px solid var(--border);background:#ffffff;color:var(--text);font-size:0.9rem;font-weight:500;transition:all 0.2s ease}
+    .case-study-cta:hover{background:var(--bg);text-decoration:none;transform:translateY(-1px)}
+    
+    /* How I Work Overlay Styles */
+    .how-i-work-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.8);backdrop-filter:blur(10px);z-index:1000;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:all 0.3s ease}
+    .how-i-work-overlay.active{opacity:1;visibility:visible}
+    .how-i-work-content{background:rgba(255,255,255,0.1);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.2);border-radius:24px;padding:2rem;max-width:800px;width:90%;max-height:80vh;overflow-y:auto;transform:scale(0.9);transition:transform 0.3s ease}
+    .how-i-work-overlay.active .how-i-work-content{transform:scale(1)}
+    .skill-btn{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:white;padding:0.75rem 1rem;border-radius:12px;transition:all 0.2s ease;cursor:pointer}
+    .skill-btn:hover{background:rgba(255,255,255,0.2)}
+    .skill-btn.active{background:rgba(59,130,246,0.3);border-color:rgba(59,130,246,0.5)}
+    .profile-image-container{position:relative;width:100%;height:100%;cursor:pointer}
+    .profile-hover-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.4);display:flex;align-items:flex-end;justify-content:center;padding-bottom:20px;opacity:0;transition:opacity 0.3s ease;border-radius:12px}
+    .how-i-work-btn{background:rgba(255,255,255,0.9);color:#1f2937;padding:12px 24px;border-radius:25px;font-weight:600;font-size:16px;border:none;cursor:pointer;transition:all 0.3s ease;box-shadow:0 4px 15px rgba(0,0,0,0.2)}
+    .how-i-work-btn:hover{background:rgba(255,255,255,1);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,0.3)}
+    .close-btn{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:white;padding:8px;border-radius:50%;cursor:pointer;transition:all 0.2s ease;display:flex;align-items:center;justify-content:center;width:40px;height:40px}
+    .close-btn:hover{background:rgba(255,255,255,0.2);transform:rotate(90deg)}
   </style>
 </head>
 <body>
@@ -114,7 +142,12 @@
         </div>
       </div>
       <div class="preview">
-        <img src="attached_assets/profile-photo_1761884631575.jpg" alt="Professional headshot of Venkatesh Murthy N S, Product Manager, smiling in business attire" />
+        <div class="profile-image-container" onmouseenter="showProfileHover()" onmouseleave="hideProfileHover()" onclick="showHowIWork()">
+          <img src="attached_assets/profile-photo_1761884631575.jpg" alt="Professional headshot of Venkatesh Murthy N S, Product Manager, smiling in business attire" />
+          <div class="profile-hover-overlay" id="profile-hover">
+            <button class="how-i-work-btn">How I Work</button>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -125,11 +158,9 @@
         <div class="card">
           <h3>
             <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M9 12l2 2 4-4"/>
-              <path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"/>
-              <path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"/>
-              <path d="M12 3c0 1-1 3-3 3s-3-2-3-3 1-3 3-3 3 2 3 3"/>
-              <path d="M12 21c0-1 1-3 3-3s3 2 3 3-1 3-3 3-3-2-3-3"/>
+              <circle cx="12" cy="12" r="10" />
+<circle cx="12" cy="12" r="6" />
+<circle cx="12" cy="12" r="2" />
             </svg>
             Product Strategy
           </h3>
@@ -418,6 +449,35 @@
   }
   </script>
   
+  <!-- How I Work Overlay -->
+  <div id="how-i-work-overlay" class="how-i-work-overlay">
+    <div class="how-i-work-content">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem;">
+        <h2 style="color:white;font-size:2rem;font-weight:bold;margin:0;">How I Work</h2>
+        <button onclick="hideHowIWork()" class="close-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0.75rem;margin-bottom:2rem;" id="skills-grid">
+        <button class="skill-btn active" onclick="showSkill('philosophy')" id="btn-philosophy">My Philosophy</button>
+        <button class="skill-btn" onclick="showSkill('ui-ux')" id="btn-ui-ux">UI/UX Design</button>
+        <button class="skill-btn" onclick="showSkill('ai-integration')" id="btn-ai-integration">AI Integration</button>
+        <button class="skill-btn" onclick="showSkill('roadmap')" id="btn-roadmap">Roadmap Planning</button>
+        <button class="skill-btn" onclick="showSkill('analytics')" id="btn-analytics">Data Analytics</button>
+        <button class="skill-btn" onclick="showSkill('agile')" id="btn-agile">Agile Methodology</button>
+      </div>
+      
+      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:1.5rem;" id="skill-content">
+        <h3 style="color:white;font-size:1.5rem;margin:0 0 1rem 0;" id="skill-title">My Product Philosophy</h3>
+        <p style="color:rgba(255,255,255,0.9);line-height:1.6;margin:0;" id="skill-description">I believe great products are born from deep user empathy and relentless execution. My approach centers on understanding the real problems users face, not just what they say they want. I combine data-driven insights with intuitive design to create solutions that feel inevitable once users experience them.</p>
+      </div>
+    </div>
+  </div>
+
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
     
@@ -439,6 +499,69 @@
     document.addEventListener('DOMContentLoaded', () => {
       const animatedElements = document.querySelectorAll('.animate-fade-in, .animate-slide-up, .animate-scale');
       animatedElements.forEach(el => observer.observe(el));
+    });
+    
+    // How I Work functionality
+    const skills = {
+      'philosophy': {
+        title: 'My Product Philosophy',
+        description: 'I believe great products are born from deep user empathy and relentless execution. My approach centers on understanding the real problems users face, not just what they say they want. I combine data-driven insights with intuitive design to create solutions that feel inevitable once users experience them. Every feature should have a clear purpose, measurable impact, and contribute to the overall product narrative.'
+      },
+      'ui-ux': {
+        title: 'UI/UX Design',
+        description: 'I leverage design thinking principles to create intuitive user experiences. Using tools like Figma, I prototype and wireframe solutions that balance user needs with business objectives. My approach involves user research, persona development, and iterative design based on feedback and analytics.'
+      },
+      'ai-integration': {
+        title: 'AI Integration',
+        description: 'I have extensive experience integrating AI APIs into products. This includes prompt engineering, response optimization, and building AI-powered workflows that enhance user productivity. I focus on creating seamless AI experiences that feel natural and add genuine value.'
+      },
+      'roadmap': {
+        title: 'Roadmap Planning',
+        description: 'I develop strategic product roadmaps that align with business goals and user needs. My process involves stakeholder alignment, priority frameworks (like RICE), and continuous iteration based on market feedback. I ensure roadmaps are flexible yet focused on delivering measurable outcomes.'
+      },
+      'analytics': {
+        title: 'Data Analytics',
+        description: 'I use tools like Amplitude, MoEngage, and Google Analytics to drive product decisions. My approach involves setting up proper tracking, creating meaningful dashboards, and translating data insights into actionable product improvements. I focus on metrics that matter for business growth.'
+      },
+      'agile': {
+        title: 'Agile Methodology',
+        description: 'I implement agile practices that optimize team productivity and product delivery. This includes sprint planning, backlog management, and continuous improvement processes. I adapt agile frameworks to fit team needs while maintaining focus on delivering value to users.'
+      }
+    };
+    
+    function showHowIWork() {
+      document.getElementById('how-i-work-overlay').classList.add('active');
+    }
+    
+    function hideHowIWork() {
+      document.getElementById('how-i-work-overlay').classList.remove('active');
+    }
+    
+    function showSkill(skillKey) {
+      // Update active button
+      document.querySelectorAll('.skill-btn').forEach(btn => btn.classList.remove('active'));
+      document.getElementById('btn-' + skillKey).classList.add('active');
+      
+      // Update content
+      const skill = skills[skillKey];
+      document.getElementById('skill-title').textContent = skill.title;
+      document.getElementById('skill-description').textContent = skill.description;
+    }
+    
+    // Profile hover functions
+    function showProfileHover() {
+      document.getElementById('profile-hover').style.opacity = '1';
+    }
+    
+    function hideProfileHover() {
+      document.getElementById('profile-hover').style.opacity = '0';
+    }
+    
+    // Close overlay when clicking outside
+    document.getElementById('how-i-work-overlay').addEventListener('click', function(e) {
+      if (e.target === this) {
+        hideHowIWork();
+      }
     });
   </script>
 </body>
