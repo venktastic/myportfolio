@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>n8n RAG Workflow Automation | Venkatesh Murthy N S</title>
+  <meta name="description" content="Building intelligent document processing workflows using n8n, RAG architecture, and AI to automate knowledge extraction and response generation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="attached_assets/vm-logo.svg">
+  <style>
+    :root{--bg:#f8fafc;--card:#ffffff;--muted:#64748b;--text:#0b1220;--border:#e5e7eb;--primary:#2563eb;--accent:#6366f1}
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:radial-gradient(900px 600px at 80% -10%,rgba(37,99,235,.08),transparent 60%),radial-gradient(700px 500px at 10% 10%,rgba(99,102,241,.08),transparent 50%),var(--bg);color:var(--text);line-height:1.7}
+    a{color:var(--primary);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:900px;margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0 20px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{display:flex;align-items:center;justify-content:center;width:40px;height:40px}
+    .logo img{width:40px;height:40px;object-fit:contain}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid var(--border);background:#ffffff;color:var(--text)}
+    .btn.primary{background:linear-gradient(135deg,#60a5fa,#34d399);color:#0b1220;border-color:transparent}
+    .section{margin:28px 0}
+    h1{font-size:clamp(26px,4.2vw,40px);line-height:1.15;margin:.2rem 0 1rem}
+    h2{font-size:1.35rem;margin:1.25rem 0 .5rem}
+    h3{font-size:1.05rem;margin:1rem 0 .25rem}
+    .card{border:1px solid var(--border);background:var(--card);border-radius:16px;padding:18px}
+    .muted{color:var(--muted)}
+    ul{margin:.4rem 0 .8rem 1.1rem}
+    table{width:100%;border-collapse:collapse;margin:1rem 0}
+    th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--border)}
+    th{background:var(--bg);font-weight:600}
+    .img-placeholder{width:100%;height:200px;background:linear-gradient(135deg,#f1f5f9,#e2e8f0);border:2px dashed var(--border);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--muted);margin:1rem 0}
+    footer{border-top:1px solid var(--border);margin-top:36px;padding:16px 0;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+    .impact-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin:1.5rem 0}
+    .impact-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px;border-left:4px solid var(--primary);position:relative}
+    .impact-card .icon{width:24px;height:24px;margin-bottom:16px;color:#10b981}
+    .impact-card .metric{font-size:2.5rem;font-weight:800;color:var(--primary);line-height:1;margin:8px 0 12px}
+    .impact-card .description{color:var(--text);font-size:0.95rem;line-height:1.5;margin:0}
+    .impact-card.chart{border-left-color:#10b981}
+    .impact-card.lightning{border-left-color:#f59e0b}
+    .impact-card.check{border-left-color:#10b981}
+    .impact-card.clock{border-left-color:#6b7280}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">
+          <img src="attached_assets/vm-logo.svg" alt="VM Logo" />
+        </div>
+        <strong><a href="index.html" style="color:inherit;text-decoration:none;">Venkatesh Murthy N S</a></strong>
+      </div>
+      <div>
+        <a class="btn" href="index.html">← Back</a>
+        <a class="btn" target="_blank" rel="noopener" href="attached_assets/VenkyPML_1761884036427.pdf">Download Resume</a>
+      </div>
+    </header>
+
+    <article class="section">
+      <h1>n8n RAG Workflow Automation</h1>
+      <table>
+          <tr>
+            <th>Detail</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>The Big Picture</td>
+            <td>Built a complete Retrieval Augmented Generation (RAG) system using n8n to understand how AI agents retrieve and generate context-aware responses. Created a personal knowledge base that transforms saved articles, posts, and notes into an intelligent chat interface—going from concept to working prototype in one weekend to deeply understand AI product architecture and tradeoffs.</td>
+          </tr>
+          <tr>
+            <td>Key Skills Showcased</td>
+            <td>Workflow Automation, RAG Architecture, AI Integration, Vector Databases, Prompt Engineering</td>
+          </tr>
+        </table>
+         <img src="attached_assets/n8nWork.png" alt="n8n RAG workflow architecture showing document ingestion, vector processing, and query response pipeline" style="width:100%;border-radius:12px;border:1px solid var(--border);" /> 
+    </article>
+
+    <section class="section">
+      <h2>The Challenge</h2>
+      <div class="card">
+        <h3>🎯 Why Build This?</h3>
+        <p><strong>The Product Manager's Dilemma:</strong> As a PM working on AI products, I was making decisions about RAG systems, vector databases, chunking strategies, and embedding models—but only understanding them conceptually. I could read documentation and talk to engineers, but I didn't truly grasp the constraints, tradeoffs, and technical realities that impact product decisions.</p>
+        
+        <h3>The Learning Goal</h3>
+        <p>I wanted to answer critical product questions that can't be learned from documentation alone:</p>
+        <ul>
+          <li><strong>How do token limits actually constrain user experience? </strong>What happens when a user's query context exceeds limits?</li>
+          <li><strong>What's the real tradeoff between chunk size and retrieval accuracy? </strong>How does this affect response quality?</li>
+          <li><strong>How expensive are embedding operations at scale?</strong>What does this mean for product pricing and margins?</li>
+          <li><strong>Why do engineers push back on certain feature requests? </strong>What are the technical guardrails I need to respect?</li>
+          <li><strong>How fast can a RAG system actually respond?</strong>What's realistic for user expectations?</li>
+        </ul>
+        <p><strong>The Personal Use Case: </strong>"What if I could chat with all those LinkedIn posts, Medium blogs, and subreddit answers I've saved over the years? For me, this wasn't just a tech experiment—it was a way to understand how AI systems really work behind the scenes so I can make better product decisions."</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>The Solution</h2>
+      <div class="card">
+        <p>Built a complete RAG pipeline using n8n (low-code automation platform) that ingests documents from Google Drive, processes them into semantic vectors, stores them in a vector database, and enables natural language querying with AI-generated responses grounded in my personal knowledge base.</p>
+        <h3>What is RAG?</h3>
+        <p><strong>Retrieval Augmented Generation (RAG)</strong> combines large language models with a retrieval system that fetches relevant external data in real-time, feeding it into the model to generate accurate, context-aware responses. Instead of relying solely on the LLM's training data, RAG grounds responses in your specific documents.</p>  
+        <h3>RAG Pipeline Architecture</h3>
+        <img src="attached_assets/n8nworkflow.png" alt="n8n RAG workflow architecture showing document ingestion, vector processing, and query response pipeline" style="width:100%;border-radius:12px;border:1px solid var(--border);" /> 
+        <p><strong>1. Data Ingestion & Trigger:</strong> Google Drive files trigger the workflow automatically when added or updated. The system monitors specified folders and kicks off processing for new documents.</p>
+        <p><strong>2. Text Extraction:</strong> n8n nodes extract text from various file formats (PDFs, docs, markdown, text files). Metadata like filename, creation date, and source are preserved for context.</p>
+        <p><strong>3. Chunking Strategy:</strong> Recursive character splitting breaks large documents into manageable chunks. Each chunk maintains semantic coherence while staying within token limits for embeddings. Chunk overlap ensures context isn't lost at boundaries.</p>
+        <p><strong>4. Embeddings Generation:</strong> Google's embedding model converts text chunks into high-dimensional semantic vectors (768 dimensions). These vectors capture meaning, allowing similarity search based on concepts rather than keywords.</p>
+        <p><strong>5. Vector Storage:</strong> Embeddings are stored in Supabase with pgvector extension, enabling fast similarity search. Each vector is linked to its source chunk and metadata for retrieval.</p>
+        <p><strong>6. Query & Similarity Match:</strong> User query is vectorized using the same embedding model. Supabase performs cosine similarity search to find the most relevant chunks from the knowledge base. Top-K results are retrieved based on similarity scores.</p>
+        <p><strong>7. Context-Aware Response:</strong> Retrieved chunks are injected into Gemini's context window as grounding information. The LLM generates a response that synthesizes the retrieved knowledge, citing sources and providing relevant context from the original documents.</p>
+        <p><strong>Why n8n?: </strong>Speed to prototype mattered more than perfect architecture. As a PM, I needed to test ideas and understand concepts quickly without deep coding. n8n's visual workflow editor let me focus on understanding RAG mechanics rather than debugging infrastructure. The lesson: in early product stages, choose tools that maximize learning velocity, not engineering purity.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>What I Learned</h2>
+      <div class="card">
+        <h3>💡 Hands-On Building Demystifies Complex Concepts</h3>
+        <p>Reading about RAG in documentation versus building one are completely different experiences. Building forced me to understand: How do embeddings actually work? Why does chunk size matter? What's the real latency in vector search? These aren't academic questions—they directly impact product decisions about features, UX, and performance expectations.</p>
+        <h3>💡 Technical Constraints Shape Product Decisions</h3>
+        <p>Token limits, embedding costs, chunking rules, and memory constraints aren't just engineering problems—they're product constraints. When engineers say "we can't do that," it's often because of real limitations I now understand viscerally. This experience makes me a better partner to engineering teams because I can anticipate constraints and design within guardrails.</p>
+        <h3>💡 Mapping Before Building Prevents Chaos</h3>
+        <p>I sketched out the entire pipeline workflow before building—identifying each step, data transformation, and integration point. This upfront mapping prevented last-minute surprises and architectural backtracking. The parallel to PM work is obvious: scoping features clearly before development keeps projects focused and teams sane.</p>
+        <h3>💡 Real-World Tradeoffs Require Ruthless Prioritization</h3>
+        <p>Every decision had tradeoffs: Larger chunks = better context but slower search. More embeddings = better recall but higher costs. Higher K in retrieval = more comprehensive but noisier. These forced prioritization decisions based on the use case—exactly like balancing user needs, technical realities, and business constraints in product work.</p>
+        <h3>💡 Prototype Speed > Perfect Architecture (Early Stage)</h3>
+        <p>Using n8n meant I could build and test in hours rather than days. The system isn't production-ready, but it taught me more in one weekend than weeks of reading documentation. As a PM, this reinforces that early-stage validation requires speed, not perfection. Build to learn, then architect for scale.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Key Technical Insights for Product Decisions</h2>
+      <div class="card">
+        <h3>What This Means for AI Product Management</h3>
+        <ul>
+          <li><strong>Chunk Size Strategy: </strong>Learned that 500-1000 token chunks balance context preservation with retrieval precision. Too small = loss of context; too large = irrelevant information in retrieval.</li>
+          <li><strong>Embedding Costs: </strong>Embedding generation is the expensive operation—affects product pricing. Retrieval (similarity search) is cheap. Design features accordingly.</li>
+          <li><strong>Latency Expectations: </strong>End-to-end response takes 2-5 seconds (embedding query + vector search + LLM generation). Can't promise instant responses—set user expectations correctly.</li>
+          <li><strong>Quality vs. Quantity: </strong>More retrieved chunks ≠ better responses. Top 3-5 most relevant chunks usually outperform top 10. Quality of retrieval matters more than quantity.</li>
+          <li><strong>Cold Start Problem: </strong>RAG systems need sufficient content to be useful. Minimum viable corpus size is a real product constraint for launch planning.</li>
+          </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Outcome & Impact</h2>
+      <div class="card">
+        
+        <h3>What I Built</h3>
+        <p>A working RAG system that can intelligently search and synthesize information from my personal knowledge base—answering questions by retrieving relevant context from years of saved articles, posts, and notes.</p> 
+        <h3>✅ Technical Achievements</h3>
+        <ul>
+          <li>Processed 100+ documents into searchable vector embeddings</li>
+          <li>Implemented semantic similarity search with 90%+ relevance in top results</li>
+          <li>Built end-to-end RAG pipeline with 2-3 second average response time</li>
+          <li>Learned practical constraints around token limits, chunking, and embedding costs</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <h2>Impact on My Product Work</h2>
+        <p>This hands-on experience fundamentally changed how I approach AI product decisions:</p>
+        <h3>🎯 More Effective Product Conversations</h3>
+        <ul>
+          <li><strong>With Engineers:</strong> Can discuss technical tradeoffs intelligently—understand why certain features are expensive or slow</li>
+          <li><strong>With Designers:</strong> Can set realistic UX expectations based on actual system latency and capabilities</li>
+          <li><strong>With Stakeholders:</strong> Explain technical constraints and tradeoffs in business terms they understand</li>
+          <li><strong>With Customers:</strong> Demonstrate and explain AI features with confidence because I've built them myself</li>
+        </ul>
+<p><em>"Building this pipeline practically demystified RAG concepts and workflows. I went from conceptual understanding to visceral knowledge of how these systems actually work—and more importantly, where they struggle and why."</em></p>
+
+   <h2>Personal Knowledge Base Use Case</h2>
+   <p>Beyond the learning, I now have a functional tool that helps me:</p>
+        <ul>
+          <li>Quickly find insights from articles I saved months or years ago</li>
+          <li>Get synthesized answers that pull from multiple sources in my collection</li>
+          <li>Rediscover forgotten knowledge by asking questions instead of keyword searching</li>
+          <li>Test new RAG techniques and optimizations on real data I care about</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Key Takeaways for Product Managers</h2>
+      <div class="card">
+        <h3>💡 Build to Understand, Not Just to Ship</h3>
+        <p>The goal wasn't to create a production system—it was to deeply understand how RAG works. This learning-focused building gave me insights that reading documentation never could. As PMs, we should regularly build prototypes to maintain technical intuition and credibility with engineering teams.</p>
+        <h3>💡 Technical Empathy Creates Better Products</h3>
+        <p>Understanding real constraints (token limits, embedding costs, latency) makes me a better product partner. I can design features that work with technical realities rather than against them. This empathy for engineering challenges improves collaboration and reduces friction.</p>
+        <h3>💡 Low-Code Tools Accelerate PM Learning</h3>
+        <p>You don't need to be a senior engineer to build AI systems anymore. Tools like n8n, Make, or Zapier let PMs prototype and validate ideas quickly. The barrier to hands-on AI learning has never been lower—take advantage of it.</p>
+        <h3>💡 Every AI Product Has the Same Core Challenges</h3>
+        <p>Through building this, I recognized patterns that apply to any RAG-based product: data quality matters more than model size; retrieval precision beats recall; user expectations need careful management; cold start is always a challenge. These insights transfer directly to commercial product decisions.</p>
+        <h2>📚 Recommendation for PMs Working on AI Products</h2>
+        <p>Build something yourself. It doesn't need to be production-ready or even good. The act of building forces you to confront real constraints and make real tradeoffs. Your conversations with engineering will be better, your product decisions will be sharper, and you'll spot opportunities others miss.</p>
+        <p>Start small: Build a simple RAG system, fine-tune an open-source model, or create a basic AI agent. The technical depth you gain will compound across every AI product you work on.</p>
+        
+        <p class="muted" style="margin-top: 20px;"><em>Interested in Learning More?</em> <a href="mailto:venky890@gmail.com">Email</a> or <a href="https://linkedin.com/in/iamvenky" target="_blank" rel="noopener">Connect on LinkedIn</a>.</p>
+      </div>
+    </section>
+    <footer>
+      <div>© <span id="year"></span> Venkatesh Murthy N S</div>
+      <div>
+        <a href="index.html#projects">Case Studies</a>
+        <span> · </span>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

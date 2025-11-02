@@ -1,0 +1,31 @@
+[build]
+  publish = "."
+  command = "echo 'Static site - no build required'"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  conditions = {Role = ["admin"]}
+
+# Handle case study routes
+[[redirects]]
+  from = "/ai-safety-case-study"
+  to = "/ai-safety-case-study.html"
+  status = 200
+
+[[redirects]]
+  from = "/n8n-rag-workflow-case-study"
+  to = "/n8n-rag-workflow-case-study.html"
+  status = 200
+
+[[redirects]]
+  from = "/case-study"
+  to = "/case-study.html"
+  status = 200
+
+# Default fallback
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 404

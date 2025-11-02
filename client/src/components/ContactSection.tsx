@@ -40,7 +40,7 @@ export default function ContactSection() {
             <div className="space-y-4 max-w-md">
               <h3 className="text-2xl font-semibold">Ready to Connect?</h3>
               <p className="text-muted-foreground">
-                Fill out a quick form to share your opportunity or project details. I'll get back to you within 24 hours.
+                Fill out a quick form to share your opportunity or details. I'll get back to you within 24 hours.
               </p>
             </div>
             
