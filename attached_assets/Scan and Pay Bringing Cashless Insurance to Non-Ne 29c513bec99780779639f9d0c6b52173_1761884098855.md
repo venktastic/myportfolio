@@ -5,12 +5,12 @@
 | Case Study Title | Scan and Pay: Bringing Cashless Insurance to Non-Network Hospitals |
 | Role | Product Manager |
 | Timeline | X Months (or X Sprints) |
-| The Big Picture | Solved the critical pain point of cashless payment failure at non-network hospitals by introducing a customer-driven, in-app Scan and Pay feature, which eliminated operational risk, boosted revenue by X%, and secured 100% feature adoption among target users. |
+| The Big Picture | Solved the critical pain point of cashless payment failure at non-network hospitals by introducing a customer-driven, in-app Scan and Pay feature, which eliminated operational risk, boosted revenue by 2%, and secured 100% feature adoption among target users. |
 | Key Skills Showcased | MVP Definition, Fraud Prevention (Guardrails), Stakeholder Management, User Experience Design, Payment Gateway Integration. |
 
 ## 🚀 The Challenge: Bridging the Cashless Gap
 
-The core promise of our health insurance product is cashless service. However, a significant portion of our services, specifically X% of in-clinic consultations, were conducted through non-network hospitals. These providers could not offer our credit line, forcing us into complex workarounds that destroyed the customer experience and burdened our operations.
+The core promise of our health insurance product is cashless service. However, a significant portion of our services, measurable number of in-clinic consultations, were conducted through non-network hospitals. These providers could not offer our credit line, forcing us into complex workarounds that destroyed the customer experience and burdened our operations.
 
 ### The Painful Status Quo
 
@@ -68,7 +68,7 @@ The launch successfully eliminated a critical friction point, generating signifi
 | Metric Category | Impact & Measurement |
 | --- | --- |
 | Feature Adoption | 100% of all users engaging in in-clinic consultations at non-network hospitals used the feature. |
-| Business Growth | Contributed to a X% increase in overall revenue growth from non-network services. |
+| Business Growth | Contributed to a 2% increase in overall revenue growth from non-network services. |
 | Customer Retention | The reduction in payment anxiety led to a 3.5% reduction in consultation cancellation percentage. |
 | Operational Efficiency | Eliminated Agent Financial Risk (no more using personal accounts) and Automated Documentation (prescriptions and claims settlement data were instantly captured). |
 | Consumer Experience | Drastically reduced escalations to Operations and Customer Support teams regarding payment failures and wait times. |
