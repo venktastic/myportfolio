@@ -1,626 +1,1498 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Venkatesh Murthy N S | Product Manager Portfolio</title>
-  <meta name="description" content="Product Manager with 7+ years of experience building innovative AI-powered products in HealthTech, Sports Tech, and SaaS. Based in Bengaluru." />
-  
-  <!-- Open Graph / Facebook -->
+  <meta name="description"
+    content="Product Manager with 8+ years of experience building innovative AI-powered products in HealthTech, Sports Tech, and SaaS. Based in Bengaluru." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://venktastic.github.io/myportfolio/" />
   <meta property="og:title" content="Venkatesh Murthy N S | Product Manager Portfolio" />
-  <meta property="og:description" content="Results-driven Product Manager with 7+ years of experience turning complex problems into scalable solutions. Specializing in AI, HealthTech, and 0→1 product development." />
+  <meta property="og:description"
+    content="Results-driven Product Manager with 8+ years of experience turning complex problems into scalable solutions." />
   <meta property="og:image" content="https://venkatesh-murthy.com/attached_assets/profile-photo_1761884631575.jpg" />
-  
-  <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://venktastic.github.io/myportfolio/" />
   <meta property="twitter:title" content="Venkatesh Murthy N S | Product Manager Portfolio" />
-  <meta property="twitter:description" content="Results-driven Product Manager with 7+ years of experience turning complex problems into scalable solutions." />
-  <meta property="twitter:image" content="https://venkatesh-murthy.com/attached_assets/profile-photo_1761884631575.jpg" />
+  <meta property="twitter:description"
+    content="Results-driven Product Manager with 8+ years of experience turning complex problems into scalable solutions." />
+  <meta property="twitter:image"
+    content="https://venkatesh-murthy.com/attached_assets/profile-photo_1761884631575.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Favicon -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="attached_assets/vm-logo.svg">
-
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-92BB47H19H"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-92BB47H19H');
-  </script>
-
-  <!-- React and ReactDOM -->
-  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-  
-  <!-- Babel for JSX transformation -->
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  
-  <!-- Lucide React Icons -->
-  <script src="https://unpkg.com/lucide-react@latest/dist/umd/lucide-react.js"></script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments) } gtag('js', new Date()); gtag('config', 'G-92BB47H19H');</script>
   <style>
-    :root{
-      --bg:#f8fafc;--card:#ffffff;--muted:#64748b;--text:#0b1220;--border:#e5e7eb;--primary:#2563eb;--accent:#6366f1
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{margin:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:radial-gradient(900px 600px at 80% -10%,rgba(37,99,235,.08),transparent 60%),radial-gradient(700px 500px at 10% 10%,rgba(99,102,241,.08),transparent 50%),var(--bg);color:var(--text);line-height:1.6}
-    a{color:var(--primary);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .container{max-width:1100px;margin:0 auto;padding:24px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0 20px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{display:flex;align-items:center;justify-content:center;width:40px;height:40px}
-    .logo img{width:40px;height:40px;object-fit:contain}
-    nav{display:flex;gap:16px;flex-wrap:wrap}
-    nav a{color:var(--text);opacity:.95;padding:8px 12px;border-radius:10px}
-    nav a:hover{background:rgba(2,6,23,.06);text-decoration:none}
-    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;padding:24px 0}
-    h1{font-size:clamp(28px,4.6vw,44px);line-height:1.1;margin:0 0 12px}
-    .lead{color:var(--muted);margin:0 0 16px}
-    .actions{display:flex;gap:12px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid var(--border);background:#ffffff;color:var(--text)}
-    .btn.primary{background:linear-gradient(135deg,#60a5fa,#34d399);color:#0b1220;border-color:transparent}
-    .preview{border:1px solid var(--border);border-radius:16px;padding:12px;background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,0)),var(--card)}
-    .preview img{width:100%;height:auto;border-radius:12px;display:block}
-    .section{margin:28px 0}
-    .section h2{margin:0 0 12px;font-size:1.25rem}
-    .muted{color:var(--muted)}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .card{border:1px solid var(--border);background:var(--card);border-radius:16px;padding:16px}
-    .card h3{margin:0 0 8px;font-size:1.05rem;display:flex;align-items:center;gap:8px}
-    .skill-icon{width:20px;height:20px;opacity:0.8}
-    .company-logo{width:24px;height:24px;border-radius:4px;margin-right:8px}
-    .card p{margin:0 0 10px;color:var(--muted)}
-    .case-study-card{display:block;text-decoration:none;color:inherit;transition:transform .2s ease,box-shadow .2s ease}
-    .case-study-card:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(37,99,235,.15);text-decoration:none}
-    .case-study-cta{display:inline-flex;align-items:center;gap:8px;margin-top:12px;padding:10px 14px;border-radius:12px;border:1px solid var(--border);background:#ffffff;color:var(--text);font-size:0.9rem;font-weight:500;transition:all 0.2s ease}
-    .case-study-cta:hover{background:var(--bg);text-decoration:none;transform:translateY(-1px)}
-    .case-study-cta svg{width:16px;height:16px}
-    .case-study-card .card-image{width:100%;height:160px;object-fit:cover;border-radius:12px;margin-bottom:12px}
-    .tags{display:flex;gap:8px;flex-wrap:wrap}
-    .tag{font-size:.8rem;color:#334155;background:#f1f5f9;padding:6px 10px;border:1px solid var(--border);border-radius:999px}
-    .twocol{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-    footer{border-top:1px solid var(--border);margin-top:36px;padding:16px 0;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
-    @media (max-width:920px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}}
-    @media (max-width:640px){nav{display:none}.grid,.twocol{grid-template-columns:1fr}}
-    html{scroll-behavior:smooth}
-    .animate-fade-in{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease}
-    .animate-fade-in.visible{opacity:1;transform:translateY(0)}
-    .animate-slide-up{opacity:0;transform:translateY(30px);transition:opacity 0.8s ease,transform 0.8s ease}
-    .animate-slide-up.visible{opacity:1;transform:translateY(0)}
-    .animate-scale{opacity:0;transform:scale(0.95);transition:opacity 0.6s ease,transform 0.6s ease}
-    .animate-scale.visible{opacity:1;transform:scale(1)}
-    /* Focus states for accessibility */
-    .btn:focus,.case-study-card:focus{outline:2px solid var(--primary);outline-offset:2px}
-    nav a:focus{outline:2px solid var(--primary);outline-offset:2px;border-radius:8px}
-    
-    /* Apple Glass UI Styles */
-    .glass-btn{background:rgba(255,255,255,0.1);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.2);box-shadow:0 8px 32px rgba(0,0,0,0.1);transition:all 0.3s ease}
-    .glass-btn:hover{background:rgba(255,255,255,0.2);transform:translateY(-2px);box-shadow:0 12px 40px rgba(0,0,0,0.15)}
-    .case-study-cta{display:inline-flex;align-items:center;gap:8px;margin-top:12px;padding:10px 14px;border-radius:12px;border:1px solid var(--border);background:#ffffff;color:var(--text);font-size:0.9rem;font-weight:500;transition:all 0.2s ease}
-    .case-study-cta:hover{background:var(--bg);text-decoration:none;transform:translateY(-1px)}
-    
-    /* How I Work Overlay Styles */
-    .how-i-work-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.8);backdrop-filter:blur(10px);z-index:1000;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:all 0.3s ease}
-    .how-i-work-overlay.active{opacity:1;visibility:visible}
-    .how-i-work-content{background:rgba(255,255,255,0.1);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.2);border-radius:24px;padding:2rem;max-width:800px;width:90%;max-height:80vh;overflow-y:auto;transform:scale(0.9);transition:transform 0.3s ease}
-    .how-i-work-overlay.active .how-i-work-content{transform:scale(1)}
-    .skill-btn{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:white;padding:0.75rem 1rem;border-radius:12px;transition:all 0.2s ease;cursor:pointer}
-    .skill-btn:hover{background:rgba(255,255,255,0.2)}
-    .skill-btn.active{background:rgba(59,130,246,0.3);border-color:rgba(59,130,246,0.5)}
-    .profile-image-container{position:relative;width:100%;height:100%;cursor:pointer}
-    .profile-hover-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.4);display:flex;align-items:flex-end;justify-content:center;padding-bottom:20px;opacity:0;transition:opacity 0.3s ease;border-radius:12px}
-    .how-i-work-btn{background:rgba(255,255,255,0.9);color:#1f2937;padding:12px 24px;border-radius:25px;font-weight:600;font-size:16px;border:none;cursor:pointer;transition:all 0.3s ease;box-shadow:0 4px 15px rgba(0,0,0,0.2)}
-    .how-i-work-btn:hover{background:rgba(255,255,255,1);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,0.3)}
-    .close-btn{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:white;padding:8px;border-radius:50%;cursor:pointer;transition:all 0.2s ease;display:flex;align-items:center;justify-content:center;width:40px;height:40px}
-    .close-btn:hover{background:rgba(255,255,255,0.2);transform:rotate(90deg)}
+
+    :root {
+      --bg: #F9F8F6;
+      --card: #FFFFFF;
+      --surface: #F2F0EC;
+      --border: #E5E2DC;
+      --accent: #0F4C81;
+      --accent-lt: #DBEAFE;
+      --accent2: #5B4FCF;
+      --accent2-lt: #EAE8FA;
+      --text: #1A1A1A;
+      --text2: #4A4A4A;
+      --muted: #8A8A8A;
+      --amber: #F59E0B;
+      --amber-lt: #FEF3C7;
+      --amber-dk: #B45309
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color .2s
+    }
+
+    a:hover {
+      color: #1D4ED8
+    }
+
+    img {
+      max-width: 100%;
+      display: block
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px
+    }
+
+    /* NAV */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(249, 248, 246, .92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border)
+    }
+
+    header .inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text)
+    }
+
+    .brand strong {
+      font-size: 1rem;
+      font-weight: 700
+    }
+
+    .brand img {
+      width: 32px;
+      height: 32px
+    }
+
+    nav {
+      display: flex;
+      gap: 4px
+    }
+
+    nav a {
+      color: var(--text2);
+      font-size: .88rem;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 6px;
+      position: relative;
+      transition: color .2s, background .2s
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      left: 12px;
+      right: 12px;
+      height: 2px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transition: transform .2s
+    }
+
+    nav a:hover {
+      color: var(--text);
+      background: var(--surface);
+      text-decoration: none
+    }
+
+    nav a:hover::after {
+      transform: scaleX(1)
+    }
+
+    /* HERO */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.3fr .7fr;
+      gap: 40px;
+      align-items: center;
+      padding: 28px 0 20px
+    }
+
+    .hero h1 {
+      font-family: 'Lora', serif;
+      font-weight: 700;
+      font-size: clamp(34px, 4.5vw, 56px);
+      line-height: 1.12;
+      margin-bottom: 16px;
+      color: var(--text);
+      letter-spacing: -.5px
+    }
+
+    .hero h1 .accent {
+      color: var(--accent)
+    }
+
+    .hero .lead {
+      color: var(--text2);
+      font-size: 1rem;
+      margin-bottom: 24px;
+      max-width: 520px;
+      line-height: 1.65
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: .88rem;
+      font-weight: 600;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--text);
+      cursor: pointer;
+      transition: all .2s;
+      font-family: inherit
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, .08);
+      text-decoration: none;
+      color: var(--text)
+    }
+
+    .btn.primary {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent)
+    }
+
+    .btn.primary:hover {
+      background: #1D4ED8;
+      box-shadow: 0 4px 20px rgba(37, 99, 235, .25)
+    }
+
+    .hero-img {
+      position: relative;
+      padding: 0
+    }
+
+    .hero-img img {
+      width: 100%;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 24px rgba(0, 0, 0, .06);
+      object-fit: cover;
+      object-position: top center
+    }
+
+    .profile-wrap {
+      position: relative;
+      cursor: pointer
+    }
+
+    .profile-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(26, 26, 26, .35);
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: 20px;
+      opacity: 0;
+      transition: opacity .25s;
+      border-radius: 14px
+    }
+
+    .profile-wrap:hover .profile-overlay {
+      opacity: 1
+    }
+
+    .hiw-btn {
+      background: #fff;
+      color: var(--text);
+      padding: 10px 24px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: .85rem;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, .15);
+      transition: transform .2s
+    }
+
+    .hiw-btn:hover {
+      transform: translateY(-2px)
+    }
+
+    /* STATS BAR */
+    .stats-bar {
+      display: flex;
+      align-items: center;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 32px;
+      margin: 0 auto 8px;
+      max-width: 1100px;
+      flex-wrap: wrap;
+      gap: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, .04)
+    }
+
+    .stat-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex: 0 0 auto
+    }
+
+    .stat-number {
+      font-family: 'Lora', serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1
+    }
+
+    .stat-suffix {
+      font-family: 'Lora', serif;
+      font-size: 26px;
+      color: var(--accent);
+      font-weight: 700;
+      margin-left: -3px
+    }
+
+    .stat-label {
+      font-size: .82rem;
+      color: var(--text2);
+      font-weight: 500;
+      line-height: 1.3;
+      max-width: 110px
+    }
+
+    .stat-divider {
+      width: 1px;
+      height: 40px;
+      background: var(--border);
+      flex-shrink: 0
+    }
+
+    .stat-domains {
+      flex: 1;
+      flex-wrap: wrap;
+      align-items: center
+    }
+
+    .domains-title {
+      font-size: .72rem;
+      color: var(--muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      margin-right: 8px;
+      white-space: nowrap
+    }
+
+    .domain-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px
+    }
+
+    .domain-tags span {
+      background: var(--accent2-lt);
+      color: var(--accent2);
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-size: .75rem;
+      font-weight: 600
+    }
+
+    /* SECTIONS */
+    .section {
+      padding: 48px 0
+    }
+
+    .section-alt {
+      background: var(--surface)
+    }
+
+    .section-hd {
+      margin-bottom: 32px
+    }
+
+    .section-hd h2 {
+      font-family: 'Lora', serif;
+      font-weight: 600;
+      font-size: clamp(26px, 3vw, 34px);
+      margin-bottom: 6px
+    }
+
+    .section-hd p {
+      color: var(--muted);
+      font-size: .95rem
+    }
+
+    /* CARDS */
+    .grid2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform .2s, box-shadow .2s, border-color .2s;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, .05)
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, .1);
+      border-color: var(--accent)
+    }
+
+    .card-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover
+    }
+
+    .card-body {
+      padding: 24px
+    }
+
+    .card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--text)
+    }
+
+    .card p {
+      color: var(--text2);
+      font-size: .88rem;
+      margin-bottom: 10px;
+      line-height: 1.55
+    }
+
+    .tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 10px
+    }
+
+    .tag {
+      background: var(--accent2-lt);
+      color: var(--accent2);
+      border-radius: 20px;
+      padding: 3px 10px;
+      font-size: .75rem;
+      font-weight: 600
+    }
+
+    .problem {
+      color: var(--muted);
+      font-size: .84rem;
+      font-style: italic;
+      margin-bottom: 10px
+    }
+
+    .metrics {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      padding: 14px 24px;
+      border-top: 1px solid var(--border);
+      background: var(--bg)
+    }
+
+    .metric-chip {
+      background: var(--surface);
+      border-radius: 6px;
+      padding: 4px 10px;
+      font-size: .75rem;
+      color: var(--text2);
+      font-weight: 600;
+      white-space: nowrap
+    }
+
+    .card-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      color: var(--accent);
+      font-size: .85rem;
+      font-weight: 600;
+      margin-top: 4px
+    }
+
+    .card-cta .arrow {
+      transition: transform .2s;
+      display: inline-block
+    }
+
+    .card-cta:hover {
+      text-decoration: none
+    }
+
+    .card-cta:hover .arrow {
+      transform: translateX(4px)
+    }
+
+    a.card-link {
+      text-decoration: none;
+      color: inherit;
+      display: block
+    }
+
+    a.card-link:hover {
+      text-decoration: none;
+      color: inherit
+    }
+
+    .card.full-span {
+      grid-column: 1/-1
+    }
+
+    /* STATUS BADGES */
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: .75rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 10px
+    }
+
+    .status.amber {
+      background: var(--amber-lt);
+      color: var(--amber-dk)
+    }
+
+    .status.green {
+      background: var(--accent-lt);
+      color: var(--accent);
+    }
+
+    /* SKILLS */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px
+    }
+
+    .skill-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 22px;
+      transition: transform .2s, box-shadow .2s;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, .04)
+    }
+
+    .skill-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, .07)
+    }
+
+    .skill-card h3 {
+      font-size: .95rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text)
+    }
+
+    .skill-icon {
+      width: 20px;
+      height: 20px;
+      color: var(--accent)
+    }
+
+    .skill-card ul {
+      list-style: none;
+      padding: 0
+    }
+
+    .skill-card li {
+      color: var(--text2);
+      font-size: .84rem;
+      padding: 3px 0
+    }
+
+    /* EXPERIENCE CARDS */
+    .exp-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px
+    }
+
+    .exp-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      transition: transform .2s, box-shadow .2s, border-color .2s;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, .04)
+    }
+
+    .exp-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, .08);
+      border-color: var(--accent)
+    }
+
+    .exp-logo {
+      width: 44px;
+      height: 44px;
+      flex-shrink: 0;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--border)
+    }
+
+    .exp-logo img {
+      width: 44px;
+      height: 44px;
+      object-fit: contain
+    }
+
+    .logo-fallback {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 17px;
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+
+    .exp-info {
+      flex: 1;
+      min-width: 0
+    }
+
+    .exp-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 4px
+    }
+
+    .exp-role {
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.3
+    }
+
+    .exp-company {
+      font-size: .88rem;
+      font-weight: 500;
+      color: var(--text2)
+    }
+
+    .exp-date {
+      font-size: .78rem;
+      color: var(--muted);
+      white-space: nowrap;
+      flex-shrink: 0;
+      padding-top: 2px
+    }
+
+    .exp-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 8px 0 0
+    }
+
+    .exp-bullets li {
+      font-size: .82rem;
+      color: var(--text2);
+      line-height: 1.55;
+      padding: 2px 0 2px 14px;
+      position: relative
+    }
+
+    .exp-bullets li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 9px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--accent)
+    }
+
+    .exp-badge {
+      display: inline-block;
+      font-size: .68rem;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 20px;
+      margin-left: 6px;
+      vertical-align: middle;
+      line-height: 1.4
+    }
+
+    .exp-badge.intern {
+      background: var(--surface);
+      color: var(--muted)
+    }
+
+    .exp-badge.founder {
+      background: var(--accent-lt);
+      color: var(--accent)
+    }
+
+    .exp-card.founder-card {
+      border-left: 3px solid var(--accent)
+    }
+
+    /* CONTACT */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: start
+    }
+
+    .contact-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, .04)
+    }
+
+    .contact-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 6px
+    }
+
+    .contact-card p {
+      color: var(--text2);
+      font-size: .9rem;
+      margin-bottom: 16px
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      font-size: .88rem;
+      margin-bottom: 8px;
+      transition: all .2s;
+      font-weight: 500
+    }
+
+    .contact-link:hover {
+      border-color: var(--accent);
+      background: var(--accent-lt);
+      text-decoration: none;
+      color: var(--text)
+    }
+
+    .contact-link svg {
+      width: 18px;
+      height: 18px;
+      color: var(--muted);
+      flex-shrink: 0
+    }
+
+    .calendly-wrapper {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      margin-top: 16px
+    }
+
+    /* FLOAT BTN */
+    .calendly-float-btn {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      background: var(--accent);
+      color: #fff;
+      padding: 11px 20px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: .82rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(37, 99, 235, .25);
+      z-index: 999;
+      transition: transform .2s, box-shadow .2s;
+      letter-spacing: .01em
+    }
+
+    .calendly-float-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(37, 99, 235, .35);
+      color: #fff;
+      text-decoration: none
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 0;
+      color: var(--muted);
+      font-size: .84rem
+    }
+
+    footer .inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px
+    }
+
+    footer a {
+      color: var(--muted)
+    }
+
+    footer a:hover {
+      color: var(--accent)
+    }
+
+    /* OVERLAY */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(26, 26, 26, .5);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: all .25s
+    }
+
+    .overlay.active {
+      opacity: 1;
+      visibility: visible
+    }
+
+    .overlay-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      max-width: 720px;
+      width: 90%;
+      max-height: 80vh;
+      overflow-y: auto;
+      transform: scale(.94);
+      transition: transform .25s;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, .15)
+    }
+
+    .overlay.active .overlay-box {
+      transform: scale(1)
+    }
+
+    .sbtn {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text2);
+      padding: 8px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: .84rem;
+      font-weight: 500;
+      transition: all .2s
+    }
+
+    .sbtn:hover {
+      border-color: var(--accent);
+      color: var(--accent)
+    }
+
+    .sbtn.active {
+      background: var(--accent-lt);
+      border-color: var(--accent);
+      color: var(--accent);
+      font-weight: 600
+    }
+
+    .close-btn {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all .2s
+    }
+
+    .close-btn:hover {
+      border-color: var(--accent);
+      background: var(--accent-lt)
+    }
+
+    /* ANIMATIONS */
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity .5s ease, transform .5s ease
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0)
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:1100px) {
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+    }
+
+    @media(max-width:768px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 40px 0 28px;
+        text-align: center
+      }
+
+      .hero .lead {
+        margin: 0 auto 20px
+      }
+
+      .actions {
+        justify-content: center
+      }
+
+      .hero-img {
+        order: -1;
+        max-width: 280px;
+        margin: 0 auto
+      }
+
+      .grid2,
+      .skills-grid {
+        grid-template-columns: 1fr
+      }
+
+      .card.full-span {
+        grid-column: auto
+      }
+
+      nav {
+        display: none
+      }
+
+      .stats-bar {
+        flex-direction: column;
+        padding: 20px;
+        gap: 16px;
+        margin-left: 16px;
+        margin-right: 16px
+      }
+
+      .stat-divider {
+        width: 100%;
+        height: 1px
+      }
+
+      .stat-item {
+        justify-content: center
+      }
+
+      .stat-domains {
+        justify-content: center;
+        text-align: center
+      }
+
+      .domain-tags {
+        justify-content: center
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr
+      }
+
+      .section {
+        padding: 36px 0
+      }
+
+      .exp-card {
+        padding: 18px
+      }
+
+      .exp-top {
+        flex-direction: column;
+        gap: 2px
+      }
+
+      .exp-date {
+        white-space: normal
+      }
+
+      footer .inner {
+        justify-content: center;
+        text-align: center
+      }
+    }
   </style>
 </head>
-<body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <div class="logo">
-          <img src="attached_assets/vm-logo.svg" alt="Venkatesh Murthy initials logo - VM in stylized design" />
-        </div>
-        <strong><a href="index.html" style="color:inherit;text-decoration:none;">Venkatesh Murthy N S</a></strong>
-      </div>
-      <nav>
-        <a href="#projects">Case Studies</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+<!-- BODY -->
 
-    <section class="hero animate-fade-in">
-      <div>
-        <h1>Transforming Complexity into Clarity</h1>
-        <p class="lead">Results-driven Product Manager with 7+ years of experience turning complex, ambiguous problems into clear, scalable solutions. I specialize in product strategy, roadmap design, analytics, and 0→1 execution — translating user insights into impactful, data-backed products that deliver measurable business outcomes.</p>
-        <div class="actions">
-          <a class="btn primary" href="#projects">View Case Studies</a>
-          <a class="btn" href="attached_assets/VenkyPML_1761884036427.pdf" target="_blank" rel="noopener">Download Resume</a>
-        </div>
+<body>
+  <header>
+    <div class="inner">
+      <a href="index.html" class="brand"><img src="attached_assets/vm-logo.svg" alt="VM"><strong>Venkatesh Murthy N
+          S</strong></a>
+      <nav><a href="#projects">Case Studies</a><a href="#skills">Skills</a><a href="#building">Building</a><a
+          href="#experience">Experience</a><a href="#contact">Contact</a></nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <section class="hero">
+      <div class="reveal">
+        <h1>Transforming Complexity<br>into <span class="accent">Clarity</span></h1>
+        <p class="lead">Results-driven Product Manager with 8+ years of experience building and scaling products from 0
+          to 1 and 1 to 10 in fast-
+          paced, high-ambiguity environments. I specialize in product vision, strategy, roadmap planning,
+          prioritization, UI/UX and
+          analytics, translating user insights into impactful, data-backed products that deliver measurable business
+          outcomes.</p>
+        <div class="actions"><a class="btn primary" href="#projects">View Case Studies</a><a class="btn"
+            href="attached_assets/resume.pdf" target="_blank" rel="noopener">Download Resume</a></div>
       </div>
-      <div class="preview">
-        <div class="profile-image-container" onmouseenter="showProfileHover()" onmouseleave="hideProfileHover()" onclick="showHowIWork()">
-          <img src="attached_assets/profile-photo_1761884631575.jpg" alt="Professional headshot of Venkatesh Murthy N S, Product Manager, smiling in business attire" />
-          <div class="profile-hover-overlay" id="profile-hover">
-            <button class="how-i-work-btn">How I Work</button>
-          </div>
+      <div class="hero-img reveal">
+        <div class="profile-wrap" onclick="showHIW()">
+          <img src="attached_assets/profile-photo_1761884631575.jpg" alt="Venkatesh Murthy N S">
+          <div class="profile-overlay"><button class="hiw-btn">How I Work</button></div>
         </div>
       </div>
     </section>
+  </div>
 
-    <section id="skills" class="section animate-slide-up">
-      <h2>Skills & Expertise</h2>
-      <p class="muted">A comprehensive toolkit for driving product excellence</p>
-      <div class="grid">
-        <div class="card">
-          <h3>
-            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+  <div class="container" style="margin-bottom:8px">
+    <section class="stats-bar reveal">
+      <div class="stat-item"><span class="stat-number" data-target="8">0</span><span class="stat-suffix">+</span><span
+          class="stat-label">Years of Total Experience</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat-item"><span class="stat-number" data-target="4">0</span><span class="stat-suffix">+</span><span
+          class="stat-label">Years in Product Management</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat-item stat-domains"><span class="domains-title">Domains</span>
+        <div class="domain-tags">
+          <span>AI / Agentic</span><span>SafetyTech</span><span>HealthTech</span><span>IoT</span><span>Telematics</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-hd reveal">
+        <h2>Skills &amp; Expertise</h2>
+        <p>A comprehensive toolkit for driving product excellence</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card reveal">
+          <h3><svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <circle cx="12" cy="12" r="10" />
               <circle cx="12" cy="12" r="6" />
               <circle cx="12" cy="12" r="2" />
-            </svg>
-            Product Strategy
-          </h3>
+            </svg>Product Strategy</h3>
           <ul>
-            <li>Product Vision & Strategy</li>
-            <li>Roadmap & Prioritization</li>
-            <li>0 to 1 Product Management</li>
+            <li>Product Vision &amp; Strategy</li>
+            <li>Roadmap &amp; Prioritization</li>
+            <li>0→1 Product Management</li>
           </ul>
         </div>
-        <div class="card">
-          <h3>
-            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="11" cy="11" r="8"/>
-              <path d="m21 21-4.35-4.35"/>
-            </svg>
-            Product Discovery
-          </h3>
+        <div class="skill-card reveal">
+          <h3><svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.35-4.35" />
+            </svg>Product Discovery</h3>
           <ul>
-            <li>User and Market Research</li>
-            <li>Product Discovery Sessions</li>
-            <li>Problem Articulation</li>
+            <li>User &amp; Market Research</li>
+            <li>Discovery Sessions</li>
             <li>Opportunity Sizing</li>
-            <li>NPS & Feedback Analysis</li>
+            <li>NPS &amp; Feedback Analysis</li>
           </ul>
         </div>
-        <div class="card">
-          <h3>
-            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="18" y1="20" x2="18" y2="10"/>
-              <line x1="12" y1="20" x2="12" y2="4"/>
-              <line x1="6" y1="20" x2="6" y2="14"/>
-            </svg>
-            Analytics & Data
-          </h3>
+        <div class="skill-card reveal">
+          <h3><svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="20" x2="18" y2="10" />
+              <line x1="12" y1="20" x2="12" y2="4" />
+              <line x1="6" y1="20" x2="6" y2="14" />
+            </svg>Analytics &amp; Data</h3>
           <ul>
-            <li>Define and Track Metrics</li>
-            <li>User Behavior and Journey Analysis</li>
-            <li>Data Analysis</li>
-            <li>Tools: Amplitude, MoEngage, Google Analytics, New Relic, Datadog</li>
+            <li>Define &amp; Track Metrics</li>
+            <li>User Behavior Analysis</li>
+            <li>Amplitude, MoEngage, Google Analytics</li>
+            <li>New Relic, Datadog</li>
           </ul>
         </div>
-        <div class="card">
-          <h3>
-            <svg class="skill-icon" viewBox="0 0 24 24
-            " fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M6 20 L10 4 L14 20" />
-              <path d="M7.5 14 H12.5" /><path d="M18 4 L18 20" />
-              <path d="M16 4 H20" />
-              <path d="M16 20 H20" />
-            </svg>
-            Artificial Intelligence
-          </h3>
+        <div class="skill-card reveal">
+          <h3><svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 20L10 4l4 16" />
+              <path d="M7.5 14H12.5" />
+              <path d="M18 4v16" />
+              <path d="M16 4h4" />
+            </svg>Artificial Intelligence</h3>
           <ul>
-            <li>Generative AI</li>
-            <li>Agentic AI</li>
+            <li>Generative &amp; Agentic AI</li>
             <li>Prompt Engineering</li>
-            <li>Experiments & POCs</li>
-            <li>NLP & Knowledge Base</li>
+            <li>Vibe Coding</li>
             <li>Workflow Automation</li>
           </ul>
         </div>
-        <div class="card">
-          <h3>
-            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="16 18 22 12 16 6"/>
-              <polyline points="8 6 2 12 8 18"/>
-            </svg>
-            Technical Execution
-          </h3>
+        <div class="skill-card reveal">
+          <h3><svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="16 18 22 12 16 6" />
+              <polyline points="8 6 2 12 8 18" />
+            </svg>Technical Execution</h3>
           <ul>
             <li>Vendor API Evaluation</li>
             <li>JIRA Workflows</li>
-            <li>Model Evaluations & MCPs</li>
             <li>Sprint Planning</li>
             <li>Backlog Management</li>
           </ul>
         </div>
-        <div class="card">
-          <h3>
-            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 19l7-7 3 3-7 7-3-3z"/>
-              <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
-              <path d="M2 2l7.586 7.586"/>
-              <circle cx="11" cy="11" r="2"/>
-            </svg>
-            Design & Prototyping
-          </h3>
+        <div class="skill-card reveal">
+          <h3><svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 19l7-7 3 3-7 7-3-3z" />
+              <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+              <circle cx="11" cy="11" r="2" />
+            </svg>Design &amp; Prototyping</h3>
           <ul>
-            <li>Prototyping</li>
-            <li>Wireframing (AI-powered)</li>
+            <li>Prototyping &amp; Wireframing</li>
             <li>Design Strategy</li>
-            <li>UI/UX Design - Figma</li>
+            <li>UI/UX</li>
+            <li>Figma</li>
           </ul>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="projects" class="section animate-slide-up">
-      <h2>Featured Case Studies</h2>
-      <p class="muted">A selection of impactful case studies from products I've built and launched</p>
-      <div class="grid">
-        <a href="ai-safety-case-study.html" class="case-study-card">
-          <article class="card">
-            <img src="attached_assets/HSEObs.png" alt="Screenshot of AI Safety Platform dashboard showing safety metrics, incident reporting interface, and real-time monitoring tools for construction sites" class="card-image" />
-            <h3>AI-Powered Predictive Safety</h3>
-            <p>Navatech AI — Led end-to-end product lifecycle for AI-driven Safety Tech platform in construction, delivering measurable impact across safety operations and efficiency.</p>
-            <div class="tags">
-              <span class="tag">SafetyTech</span>
-              <span class="tag">AI</span>
-              <span class="tag">B2B</span>
-              <span class="tag">NLP</span>
+  <section id="projects" class="section section-alt">
+    <div class="container">
+      <div class="section-hd reveal">
+        <h2>Featured Case Studies</h2>
+        <p>Impactful case studies from products I've built and launched</p>
+      </div>
+      <div class="grid2">
+        <a href="ai-safety-case-study.html" class="card-link">
+          <article class="card reveal"><img src="attached_assets/HSEObs.png" alt="AI Safety Platform" class="card-img">
+            <div class="card-body">
+              <div class="tags"><span class="tag">SafetyTech</span><span class="tag">AI</span><span
+                  class="tag">B2B</span><span class="tag">NLP</span></div>
+              <h3>AI-Powered Predictive Safety</h3>
+              <p class="problem">"How do you reduce safety reporting time with AI?"</p>
+              <p>Navatech AI — Led end-to-end product lifecycle for AI-driven Safety Tech platform in construction.</p>
+              <span class="card-cta">Read Case Study <span class="arrow">→</span></span>
             </div>
-            <div class="case-study-cta">
-              Read Case Study →
-            </div>
+            <div class="metrics"><span class="metric-chip">⚡ 96% faster processing</span><span class="metric-chip">🛡️
+                90% incidents prevented</span><span class="metric-chip">⏱️ 12→3 min reporting</span></div>
           </article>
         </a>
-        <a href="n8n-rag-workflow-case-study.html" class="case-study-card">
-          <article class="card">
-            <img src="attached_assets/vibecoden8n.png" alt="n8n RAG workflow automation" class="card-image" />
-            <h3>n8n RAG Workflow Automation</h3>
-            <p>Built intelligent document processing workflows using n8n, RAG architecture, and AI models to automate knowledge extraction, reducing manual processing time by 85%.</p>
-            <div class="tags">
-              <span class="tag">AI</span>
-              <span class="tag">n8n</span>
-              <span class="tag">Automation</span>
-              <span class="tag">RAG</span>
+        <a href="n8n-rag-workflow-case-study.html" class="card-link">
+          <article class="card reveal"><img src="attached_assets/vibecoden8n.png" alt="n8n RAG workflow"
+              class="card-img">
+            <div class="card-body">
+              <div class="tags"><span class="tag">AI</span><span class="tag">n8n</span><span
+                  class="tag">Automation</span><span class="tag">RAG</span></div>
+              <h3>n8n RAG Workflow Automation</h3>
+              <p class="problem">"Can AI extract knowledge from docs without humans in the loop?"</p>
+              <p>Built intelligent document processing workflows using n8n, RAG architecture, and AI models.</p><span
+                class="card-cta">Read Case Study <span class="arrow">→</span></span>
             </div>
-            <div class="case-study-cta">
-              Read Case Study →
-            </div>
+            <div class="metrics"><span class="metric-chip">🤖 85% less manual work</span><span class="metric-chip">📄
+                Auto knowledge extraction</span><span class="metric-chip">🔄 Full workflow automation</span></div>
           </article>
         </a>
-        <!-- <a href="qr-generator-case-study.html" class="case-study-card">
-          <article class="card">
-<img src="attached_assets/qrcodegen.png" alt="QR Code generator made by vibe coding" class="card-image" />
-            <h3>QR Code Generator Platform</h3>
-            <p>Designed and built a comprehensive QR code generation platform with advanced customization, analytics tracking, and bulk generation capabilities for businesses.</p>
-            <div class="tags">
-              <span class="tag">SaaS</span>
-              <span class="tag">Analytics</span>
-              <span class="tag">B2B</span>
+        <a href="case-study.html" class="card-link">
+          <article class="card full-span reveal"><img src="attached_assets/QRCodeScanner.png" alt="Scan and Pay"
+              class="card-img">
+            <div class="card-body">
+              <div class="tags"><span class="tag">HealthTech</span><span class="tag">Payments</span><span
+                  class="tag">B2B2C</span></div>
+              <h3>Scan and Pay: Cashless Insurance</h3>
+              <p class="problem">"How do you enable cashless payments at non-network hospitals?"</p>
+              <p>Connect and Heal — Solved cashless payment at non-network hospitals with in-app Scan and Pay.</p><span
+                class="card-cta">Read Case Study <span class="arrow">→</span></span>
             </div>
-            <div class="case-study-cta">
-              Read Case Study →
-            </div>
-          </article>
-        </a> -->
-        <a href="case-study.html" class="case-study-card">
-          <article class="card">
-            <img src="attached_assets/QRCodeScanner.png" alt="Mobile app interface showing QR code scanner for cashless insurance payments at hospitals, with scan frame and payment confirmation screen" class="card-image" />
-            <h3>Scan and Pay: Cashless Insurance</h3>
-            <p>Connect and Heal — Solved cashless payment at non-network hospitals by introducing in-app Scan and Pay feature, eliminating operational risk and enhancing user experience.</p>
-            <div class="tags">
-              <span class="tag">HealthTech</span>
-              <span class="tag">Payments</span>
-              <span class="tag">B2B2C</span>
-            </div>
-            <div class="case-study-cta">
-              Read Case Study →
-            </div>
+            <div class="metrics"><span class="metric-chip">💰 2% revenue growth</span><span class="metric-chip">📉 3.5%
+                drop in cancellations</span><span class="metric-chip">🏥 Non-network hospital coverage</span></div>
           </article>
         </a>
-        <!-- <a href="sports-wearables-case-study.html" class="case-study-card">
-          <article class="card">
-            <img src="attached_assets/CricketBroad.png" alt="Cricket broadcast system interface displaying real-time player statistics, smart wearable data visualization, and match analytics dashboard" class="card-image" />
-            <h3>Smart Sports Wearables</h3>
-            <p>Smart Cricket Global — Played crucial role in product strategy and launch of sports tech products including broadcast data systems and smart wearables.</p>
-            <div class="tags">
-              <span class="tag">SportsTech</span>
-              <span class="tag">Hardware</span>
-              <span class="tag">Product Launch</span>
-            </div>
-            <div class="case-study-cta">
-              Read Case Study →
-            </div>
-          </article>
-        </a> -->
-        
-        <!-- <a href="drinkprime-case-study.html" class="case-study-card">
-          <article class="card">
-            <div class="img-placeholder" style="height:160px;margin-bottom:12px;">
-              <span>DrinkPrime Analysis</span>
-            </div>
-            <h3>DrinkPrime Product Breakdown</h3>
-            <p>Strategic product analysis of DrinkPrime's water RO subscription model, examining user experience, business model, and growth opportunities in the Indian market.</p>
-            <div class="tags">
-              <span class="tag">Product Analysis</span>
-              <span class="tag">Subscription</span>
-              <span class="tag">Strategy</span>
-            </div>
-            <div class="case-study-cta">
-              Read Case Study →
-            </div>
-          </article>
-        </a> -->
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="experience" class="section animate-slide-up">
-      <h2>Professional Experience</h2>
-      <p class="muted">Building innovative products across different industries</p>
-      <div class="twocol">
-        <div class="card">
-          <h3>
-            <img src="https://logo.clearbit.com/navatech.ai" alt="Navatech AI logo" class="company-logo" onerror="this.style.display='none'" />
-            Product Manager
-          </h3>
-          <p>Navatech AI | October 2024 – Current <span class="muted">(1+ year)</span></p>
-          <ul>
-            <li>Reduced reporting time from 12 mins to under 3 mins (75% efficiency boost) and processing time from 45 mins to under 2 mins (96% reduction)</li>
-            <li>Launched AI-powered workflow automations preventing 90% of potential incidents and accelerating investigations by 25%</li>
-            <li>Pioneered Agentic AI applications to automate PRDs, UI/UX design, and JIRA workflows</li>
-          </ul>
+  <section id="building" class="section">
+    <div class="container">
+      <div class="section-hd reveal">
+        <h2>What I'm Building</h2>
+        <p>Side explorations, experiments &amp; entrepreneurial bets</p>
+      </div>
+      <div class="grid2">
+        <div class="card reveal">
+          <div class="card-body"><span class="status amber">🔬 Researching</span>
+            <h3>Running a 20B Parameter GPT Model on Mobile</h3>
+            <p>Exploring the edge of on-device AI — figuring out if a 20B+ parameter language model can run locally on a
+              smartphone without cloud dependency. Investigating quantisation (GGUF/AWQ), memory constraints, and
+              inference speed.</p>
+            <div class="tags"><span class="tag">On-Device AI</span><span class="tag">LLM</span><span
+                class="tag">Mobile</span><span class="tag">Research</span></div><a
+              href="https://linkedin.com/in/iamvenky" target="_blank" class="card-cta">Follow Progress <span
+                class="arrow">→</span></a>
+          </div>
         </div>
-        <div class="card">
-          <h3>
-            <img src="https://logo.clearbit.com/connectandheal.com" alt="Connect and Heal logo" class="company-logo" onerror="this.style.display='none'" />
-            Product Manager
-          </h3>
-          <p>Connect and Heal Primary Care | June 2022 – Sep 2024 <span class="muted">(2.3 years)</span></p>
-          <ul>
-            <li>Developed Scan and Pay feature, achieving 2% revenue growth and 3.5% reduction in cancellation rates</li>
-            <li>Increased net revenue by 5% by optimizing sorting logic based on consumer behavior patterns</li>
-            <li>Digitized manual order booking flows reducing request-to-order creation time from 12 mins to 4 mins</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>
-            <img src="attached_assets/smartcricket.png" alt="Smart Cricket Global logo" class="company-logo" onerror="this.style.display='none'" />
-            Assistant Manager - Hardware Products
-          </h3>
-          <p>Smart Cricket Global | Jan 2021 – Jun 2022 <span class="muted">(1.5 years)</span></p>
-          <ul>
-            <li>Led product strategy and launch of sports tech products at domestic and international cricket matches</li>
-            <li>Reduced development time by 20% through market research and rapid prototyping</li>
-            <li>Saved ₹5+ lakhs and fast-tracked product launch through innovative electronics procurement</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>
-            <img src="https://logo.clearbit.com/intellicar.in" alt="Intellicar Telematics logo" class="company-logo" onerror="this.style.display='none'" />
-            Hardware Design Engineer
-          </h3>
-          <p>Intellicar Telematics | Jan 2019 – Dec 2020 <span class="muted">(2 years)</span></p>
-          <ul>
-            <li>Delivered Keyless entry systems, completing ₹1.5 Cr deal on time</li>
-            <li>Worked in Telematics (CAN, LIN), BLE, reverse engineering, and edge computing</li>
-            <li>Saved ₹5+ lakhs through cost-saving initiatives in Wiring Harness design</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>
-            <img src="https://logo.clearbit.com/intellicar.in" alt="Intellicar Telematics logo" class="company-logo" onerror="this.style.display='none'" />
-            Business Operations
-          </h3>
-          <p>Intellicar Telematics | Dec 2017 – Dec 2018 <span class="muted">(1 year)</span></p>
-          <ul>
-            <li>Established and maintained productive working relationships with internal and external stakeholders to resolve operational challenges</li>
-            <li>Led cross-functional team and successfully installed 400+ IoT devices across the nation in under 30 days</li>
-          </ul>
+        <div class="card reveal">
+          <div class="card-body"><span class="status amber">🔬 Researching</span>
+            <h3>Geo-Local Community: Posts &amp; Replies by Location</h3>
+            <p>Building a community platform where your feed is defined by where you are — posts, replies, and
+              discussions tied to your real-world location. Think hyperlocal Reddit meets anonymous notice board.</p>
+            <div class="tags"><span class="tag">Social</span><span class="tag">Geolocation</span><span
+                class="tag">0→1</span><span class="tag">Consumer</span></div><a href="https://calendly.com/venktastic"
+              target="_blank" class="card-cta">Interested? Connect <span class="arrow">→</span></a>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="contact" class="section animate-scale">
-      <h2>Get In Touch</h2>
-      <p class="muted">I'm always interested in discussing new opportunities, collaborations, or simply connecting with fellow product professionals. Whether you're looking for product leadership, want to share insights, or explore potential partnerships, I'd love to hear from you.</p>
-      <div class="twocol">
-        <div class="card">
-          <h3>Ready to Connect?</h3>
-          <p>Fill out a quick form to share your opportunity or details. I'll get back to you within 24 hours.</p>
-          <p><a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdQGomp1i1GLMJ1em49ru5Lz8jaOkWqkY4DvgYpnMb2keJwCQ/viewform?usp=header" target="_blank" rel="noopener">Fill Contact Form</a></p>
+  <section id="experience" class="section section-alt">
+    <div class="container">
+      <div class="section-hd reveal">
+        <h2>Professional Experience</h2>
+        <p>Building innovative products across industries</p>
+      </div>
+      <div class="exp-list">
+        <div class="exp-card reveal">
+          <div class="exp-logo"><img src="attached_assets/navatech-logo.png" alt="Navatech AI"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="logo-fallback" style="display:none">N</div>
+          </div>
+          <div class="exp-info">
+            <div class="exp-top">
+              <div>
+                <div class="exp-role">Product Manager</div>
+                <div class="exp-company">Navatech AI</div>
+              </div>
+              <div class="exp-date">Oct 2024 – Present · 1+ yr</div>
+            </div>
+            <ul class="exp-bullets">
+              <li>Reduced reporting 75% (12→3 min), processing 96% (45→2 min)</li>
+              <li>AI workflows preventing 90% incidents, investigations 25% faster</li>
+              <li>Pioneered Agentic AI for PRDs, UI design, JIRA automation</li>
+            </ul>
+          </div>
         </div>
-        <div class="card">
-          <h3>Direct Contact</h3>
-          <!-- LinkedIn Icon (Inline SVG) -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle; margin-right:6px;"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-            <a href="https://linkedin.com/in/iamvenky" target="_blank" rel="noopener">Connect on LinkedIn</a>
-          </p>
-          <p>
-            <!-- Mail Icon (Inline SVG) -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle; margin-right:6px;"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.83 1.83 0 0 1-2.06 0L2 7"/></svg>
-            <a href="mailto:venky890@gmail.com">Email</a>
-          </p>
+        <div class="exp-card reveal">
+          <div class="exp-logo"><img src="attached_assets/connectandheal-logo.png" alt="Connect and Heal"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="logo-fallback" style="display:none">C</div>
+          </div>
+          <div class="exp-info">
+            <div class="exp-top">
+              <div>
+                <div class="exp-role">Product Manager</div>
+                <div class="exp-company">Connect and Heal Primary Care</div>
+              </div>
+              <div class="exp-date">Jun 2022 – Sep 2024 · 2 yrs 3 mo</div>
+            </div>
+            <ul class="exp-bullets">
+              <li>Scan &amp; Pay: +2% revenue, -3.5% cancellations</li>
+              <li>+5% net revenue via sorting logic optimisation</li>
+              <li>Digitised order booking: 12→4 min creation time</li>
+            </ul>
+          </div>
+        </div>
+        <div class="exp-card reveal">
+          <div class="exp-logo"><img src="attached_assets/smartcricket.png" alt="Smart Cricket Global"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="logo-fallback" style="display:none">S</div>
+          </div>
+          <div class="exp-info">
+            <div class="exp-top">
+              <div>
+                <div class="exp-role">Asst. Manager – Hardware Products</div>
+                <div class="exp-company">Smart Cricket Global</div>
+              </div>
+              <div class="exp-date">Jan 2021 – Jun 2022 · 1 yr 6 mo</div>
+            </div>
+            <ul class="exp-bullets">
+              <li>Led sports tech strategy for domestic &amp; international matches</li>
+              <li>20% faster development via research &amp; rapid prototyping</li>
+              <li>Saved ₹5L+ via innovative electronics procurement</li>
+            </ul>
+          </div>
+        </div>
+        <div class="exp-card reveal">
+          <div class="exp-logo"><img src="attached_assets/intellicar-logo.png" alt="Intellicar Telematics"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="logo-fallback" style="display:none">I</div>
+          </div>
+          <div class="exp-info">
+            <div class="exp-top">
+              <div>
+                <div class="exp-role">Hardware Design Engineer</div>
+                <div class="exp-company">Intellicar Telematics</div>
+              </div>
+              <div class="exp-date">Jan 2019 – Dec 2020 · 2 yrs</div>
+            </div>
+            <ul class="exp-bullets">
+              <li>Keyless entry systems, ₹1.5 Cr deal delivered on time</li>
+              <li>Telematics (CAN, LIN), BLE, reverse engineering</li>
+              <li>₹5L+ saved in Wiring Harness design optimisation</li>
+            </ul>
+          </div>
+        </div>
+        <div class="exp-card founder-card reveal">
+          <div class="exp-logo"><img src="attached_assets/nixibox-logo.png" alt="Nixibox"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="logo-fallback" style="display:none">N</div>
+          </div>
+          <div class="exp-info">
+            <div class="exp-top">
+              <div>
+                <div class="exp-role">Founding Member &amp; CTO <span class="exp-badge founder">Startup ·
+                    Full-time</span></div>
+                <div class="exp-company">Nixibox India Pvt. Ltd.</div>
+              </div>
+              <div class="exp-date">Jan 2021 – Dec 2021 · 1 yr</div>
+            </div>
+            <ul class="exp-bullets">
+              <li>Spearheaded MVP design and development, driving product innovation from 0→1</li>
+              <li>Led vendor onboarding and partnership initiatives to establish market readiness</li>
+            </ul>
+          </div>
+        </div>
+        <div class="exp-card reveal">
+          <div class="exp-logo"><img src="attached_assets/intellicar-logo.png" alt="Intellicar Telematics"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="logo-fallback" style="display:none">I</div>
+          </div>
+          <div class="exp-info">
+            <div class="exp-top">
+              <div>
+                <div class="exp-role">Business Operations</div>
+                <div class="exp-company">Intellicar Telematics</div>
+              </div>
+              <div class="exp-date">Dec 2017 – Dec 2018 · 1 yr</div>
+            </div>
+            <ul class="exp-bullets">
+              <li>Built stakeholder relationships across teams</li>
+              <li>400+ IoT devices installed nationwide in 30 days</li>
+            </ul>
+          </div>
+        </div>
+        <div class="exp-card reveal">
+          <div class="exp-logo"><img src="attached_assets/beml-logo.png" alt="BEML Ltd."
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="logo-fallback" style="display:none">B</div>
+          </div>
+          <div class="exp-info">
+            <div class="exp-top">
+              <div>
+                <div class="exp-role">Research &amp; Development Intern <span class="exp-badge intern">Internship</span>
+                </div>
+                <div class="exp-company">BEML Ltd.</div>
+              </div>
+              <div class="exp-date">Jan 2017 – Feb 2017 · 2 mos</div>
+            </div>
+            <ul class="exp-bullets">
+              <li>Researched powertrain technologies for Metro Coaches in BEML's R&amp;D department</li>
+              <li>Designed PLC simulation using Controls for Door Actuation, Train Startup/Shutdown, Pantograph —
+                executed in SCADA at KGTTI</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <footer>
-      <div>
-        © <span id="year"></span> Venkatesh Murthy N S.
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-hd reveal">
+        <h2>Get In Touch</h2>
+        <p>Interested in discussing opportunities or product challenges?</p>
       </div>
-      <div>
-        <a href="#projects">Case Studies</a>
-        <span> · </span>
-        <a href="#skills">Skills</a>
-        <span> · </span>
-        <a href="#experience">Experience</a>
-        <span> · </span>
-        <a href="#contact">Contact</a>
-      </div>
-    </footer>
-  </div>
+      <div class="contact-grid reveal">
+        <div class="contact-card"
+          style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;height:100%">
+          <h3>Book a Meeting</h3>
+          <p style="margin-bottom:20px">Pick a time that works — I'll respond within 24 hours.</p>
+          <a href="https://calendly.com/venktastic" target="_blank" rel="noopener" class="btn primary"
+            style="font-size:.9rem">📅 Schedule on Calendly</a>
+        </div>
+        <div>
+          <div class="contact-card" style="margin-bottom:12px">
+            <h3>Direct Contact</h3><a href="https://linkedin.com/in/iamvenky" target="_blank" rel="noopener"
+              class="contact-link"><svg fill="currentColor" viewBox="0 0 24 24" width="18" height="18">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 110-4.125 2.062 2.062 0 010 4.125zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>Connect on LinkedIn</a><a href="mailto:venky890@gmail.com" class="contact-link"><svg fill="none"
+                stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" width="18" height="18">
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.83 1.83 0 01-2.06 0L2 7" />
+              </svg>venky890@gmail.com</a>
+          </div>
 
-  <!-- Schema.org structured data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Venkatesh Murthy N S",
-    "jobTitle": "Product Manager",
-    "description": "Results-driven Product Manager with 7+ years of experience turning complex, ambiguous problems into clear, scalable solutions.",
-    "url": "https://venkatesh-murthy.com",
-    "image": "https://venkatesh-murthy.com/attached_assets/profile-photo_1761884631575.jpg",
-    "sameAs": [
-      "https://linkedin.com/in/iamvenky"
-    ],
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Navatech AI"
-    },
-    "alumniOf": {
-      "@type": "Organization",
-      "name": "Connect and Heal Primary Care"
-    },
-    "knowsAbout": [
-      "Product Management",
-      "Artificial Intelligence",
-      "Product Strategy",
-      "Data Analytics",
-      "HealthTech",
-      "SafetyTech",
-      "SportsTech"
-    ]
-  }
-  </script>
-  
-  <!-- How I Work Overlay -->
-  <div id="how-i-work-overlay" class="how-i-work-overlay">
-    <div class="how-i-work-content">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem;">
-        <h2 style="color:white;font-size:2rem;font-weight:bold;margin:0;">How I Work</h2>
-        <button onclick="hideHowIWork()" class="close-btn">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
+        </div>
       </div>
-      
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0.75rem;margin-bottom:2rem;" id="skills-grid">
-        <button class="skill-btn active" onclick="showSkill('philosophy')" id="btn-philosophy">My Philosophy</button>
-        <button class="skill-btn" onclick="showSkill('ui-ux')" id="btn-ui-ux">UI/UX Design</button>
-        <button class="skill-btn" onclick="showSkill('ai-integration')" id="btn-ai-integration">AI Integration</button>
-        <button class="skill-btn" onclick="showSkill('roadmap')" id="btn-roadmap">Roadmap Planning</button>
-        <button class="skill-btn" onclick="showSkill('analytics')" id="btn-analytics">Data Analytics</button>
-        <button class="skill-btn" onclick="showSkill('agile')" id="btn-agile">Agile Methodology</button>
+    </div>
+  </section>
+
+  <footer>
+    <div class="inner">
+      <div>&copy; <span id="yr"></span> Venkatesh Murthy N S.</div>
+      <div><a href="#projects">Case Studies</a> &middot; <a href="#skills">Skills</a> &middot; <a
+          href="#building">Building</a> &middot; <a href="#experience">Experience</a> &middot; <a
+          href="#contact">Contact</a></div>
+    </div>
+  </footer>
+  <a href="https://calendly.com/venktastic" target="_blank" rel="noopener" class="calendly-float-btn">📅 Book a Call</a>
+
+  <div id="hiw" class="overlay">
+    <div class="overlay-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px">
+        <h2 style="font-family:'Lora',serif;font-size:1.5rem;font-weight:700;margin:0">How I Work</h2><button
+          onclick="hideHIW()" class="close-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg></button>
       </div>
-      
-      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:1.5rem;" id="skill-content">
-        <h3 style="color:white;font-size:1.5rem;margin:0 0 1rem 0;" id="skill-title">My Product Philosophy</h3>
-        <p style="color:rgba(255,255,255,0.9);line-height:1.6;margin:0;" id="skill-description">I believe great products are born from deep user empathy and relentless execution. My approach centers on understanding the real problems users face, not just what they say they want. I combine data-driven insights with intuitive design to create solutions that feel inevitable once users experience them.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px"><button class="sbtn active"
+          onclick="ssk('ph')" id="b-ph">Philosophy</button><button class="sbtn" onclick="ssk('ux')"
+          id="b-ux">UI/UX</button><button class="sbtn" onclick="ssk('ai')" id="b-ai">AI</button><button class="sbtn"
+          onclick="ssk('rm')" id="b-rm">Roadmap</button><button class="sbtn" onclick="ssk('da')"
+          id="b-da">Analytics</button><button class="sbtn" onclick="ssk('ag')" id="b-ag">Agile</button></div>
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:20px">
+        <h3 style="font-size:1.05rem;margin:0 0 8px;color:var(--accent);font-weight:700" id="st">My Product Philosophy
+        </h3>
+        <p style="color:var(--text2);line-height:1.65;margin:0;font-size:.88rem" id="sd">Great products emerge from deep
+          user empathy and relentless execution. I focus on real problems, combining data-driven insights with intuitive
+          design to create solutions that feel inevitable.</p>
       </div>
     </div>
   </div>
 
+  <script
+    type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Venkatesh Murthy N S","jobTitle":"Product Manager","url":"https://venkatesh-murthy.com","sameAs":["https://linkedin.com/in/iamvenky"],"worksFor":{"@type":"Organization","name":"Navatech AI"}}</script>
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    
-    // Intersection Observer for animations
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, observerOptions);
-    
-    // Observe all animated elements
-    document.addEventListener('DOMContentLoaded', () => {
-      const animatedElements = document.querySelectorAll('.animate-fade-in, .animate-slide-up, .animate-scale');
-      animatedElements.forEach(el => observer.observe(el));
-    });
-    
-    // How I Work functionality
-    const skills = {
-      'philosophy': {
-        title: 'My Product Philosophy',
-        description: 'Great products emerge from deep user empathy and relentless execution. I focus on understanding real problems, not just stated needs, combining data-driven insights with intuitive design to create solutions that feel inevitable. I balance user value with business impact, viewing every decision through both lenses. I partner with engineers as co-creators, understanding technical trade-offs to enable better decisions. My bias toward action means favoring rapid experimentation over prolonged analysis, pivoting quickly when evidence demands it.'
-      },
-      'ui-ux': {
-        title: 'UI/UX Design',
-        description: 'I leverage design thinking principles to create intuitive user experiences. Using tools like Figma, I prototype and wireframe solutions that balance user needs with business objectives. My approach involves user research, persona development, and iterative design based on feedback and analytics.'
-      },
-      'ai-integration': {
-        title: 'AI Integration',
-        description: 'I approach AI products by understanding the technology well enough to make smart product decisions. I work on AI-powered systems that transform unstructured data into actionable insights, defining requirements based on customer needs and business goals. To stay technically grounded, I build prototypes—experimenting with RAG pipelines, embeddings, and chunking strategies—so I understand feasibility and tradeoffs. I design AI features that augment human decisions through high-precision predictions and closed-loop feedback. Whether it is NLP, semantic search, or LLM features, I understand the constraints (tokens, costs, latency) that shape what is possible and design accordingly.'
-      },
-      'roadmap': {
-        title: 'Roadmap Planning',
-        description: 'I develop strategic product roadmaps that align with business goals and user needs. My process involves stakeholder alignment, priority frameworks, and continuous iteration based on market feedback. I ensure roadmaps are flexible yet focused on delivering measurable outcomes.'
-      },
-      'analytics': {
-        title: 'Data Analytics',
-        description: 'I use tools like Amplitude, MoEngage, and Google Analytics to drive product decisions. My approach involves setting up proper tracking, creating meaningful dashboards, and translating data insights into actionable product improvements. I focus on metrics that matter for business growth.'
-      },
-      'agile': {
-        title: 'Agile Methodology',
-        description: 'I implement agile practices that optimize team productivity and product delivery. This includes sprint planning, backlog management, and continuous improvement processes. I adapt agile frameworks to fit team needs while maintaining focus on delivering value to users.'
-      }
-    };
-    
-    function showHowIWork() {
-      document.getElementById('how-i-work-overlay').classList.add('active');
-    }
-    
-    function hideHowIWork() {
-      document.getElementById('how-i-work-overlay').classList.remove('active');
-    }
-    
-    function showSkill(skillKey) {
-      // Update active button
-      document.querySelectorAll('.skill-btn').forEach(btn => btn.classList.remove('active'));
-      document.getElementById('btn-' + skillKey).classList.add('active');
-      
-      // Update content
-      const skill = skills[skillKey];
-      document.getElementById('skill-title').textContent = skill.title;
-      document.getElementById('skill-description').textContent = skill.description;
-    }
-    
-    // Profile hover functions
-    function showProfileHover() {
-      document.getElementById('profile-hover').style.opacity = '1';
-    }
-    
-    function hideProfileHover() {
-      document.getElementById('profile-hover').style.opacity = '0';
-    }
-    
-    // Close overlay when clicking outside
-    document.getElementById('how-i-work-overlay').addEventListener('click', function(e) {
-      if (e.target === this) {
-        hideHowIWork();
-      }
-    });
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    var ro = new IntersectionObserver(function (e) { e.forEach(function (x, i) { if (x.isIntersecting) { setTimeout(function () { x.target.classList.add('visible') }, i * 80); ro.unobserve(x.target) } }) }, { threshold: .1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(function (el) { ro.observe(el) });
+    var co = new IntersectionObserver(function (e) { e.forEach(function (x) { if (x.isIntersecting) { var t = parseInt(x.target.dataset.target), c = 0, s = Math.ceil(t / 20), i = setInterval(function () { c = Math.min(c + s, t); x.target.textContent = c; if (c >= t) clearInterval(i) }, 50); co.unobserve(x.target) } }) }, { threshold: .5 });
+    document.querySelectorAll('.stat-number[data-target]').forEach(function (el) { co.observe(el) });
+    var sk = { ph: { t: 'My Product Philosophy', d: 'Great products emerge from deep user empathy and relentless execution. I focus on real problems, combining data-driven insights with intuitive design to create solutions that feel inevitable.' }, ux: { t: 'UI/UX Design', d: 'I use design thinking to create intuitive experiences. Using Figma, I prototype solutions that balance user needs with business objectives.' }, ai: { t: 'AI Integration', d: 'I build prototypes — experimenting with RAG pipelines, embeddings, and chunking — to understand feasibility and tradeoffs for AI-powered features.' }, rm: { t: 'Roadmap Planning', d: 'I develop strategic product roadmaps aligned with business goals through stakeholder alignment, priority frameworks, and continuous iteration.' }, da: { t: 'Data Analytics', d: 'I use Amplitude, MoEngage, and Google Analytics to drive decisions with proper tracking, dashboards, and actionable insights.' }, ag: { t: 'Agile Methodology', d: 'I implement agile practices optimising team productivity — sprint planning, backlog management, and continuous improvement focused on value.' } };
+    function showHIW() { document.getElementById('hiw').classList.add('active') }
+    function hideHIW() { document.getElementById('hiw').classList.remove('active') }
+    function ssk(k) { document.querySelectorAll('.sbtn').forEach(function (b) { b.classList.remove('active') }); document.getElementById('b-' + k).classList.add('active'); document.getElementById('st').textContent = sk[k].t; document.getElementById('sd').textContent = sk[k].d }
+    document.getElementById('hiw').addEventListener('click', function (e) { if (e.target === this) hideHIW() });
   </script>
 </body>
+
 </html>
