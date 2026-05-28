@@ -8,7 +8,7 @@ const App: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center p-4">
       {showComponent && (
         <HowIWork 
-          profileImage="/attached_assets/profile-photo_1761884631575.jpg"
+          profileImage="/attached_assets/profile-photo-new.png"
           onClose={() => setShowComponent(false)}
         />
       )}

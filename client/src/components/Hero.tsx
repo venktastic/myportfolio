@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Download } from "lucide-react";
-import heroImage from "@assets/profile-photo_1761884631575.jpg";
+import heroImage from "@assets/profile-photo-new.png";
 
 export default function Hero() {
   const handleViewProjects = () => {
