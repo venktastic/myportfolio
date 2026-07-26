@@ -727,8 +727,22 @@
       color: var(--accent)
     }
 
+    .exp-badge.pursuing {
+      background: var(--amber-lt);
+      color: var(--amber-dk)
+    }
+
     .exp-card.founder-card {
       border-left: 3px solid var(--accent)
+    }
+
+    .edu-year {
+      font-size: .88rem;
+      font-weight: 600;
+      color: var(--text2);
+      white-space: nowrap;
+      flex-shrink: 0;
+      padding-top: 2px
     }
 
     /* CONTACT */
@@ -1043,7 +1057,7 @@
       <a href="index.html" class="brand"><img src="attached_assets/vm-logo.svg" alt="VM"><strong>Venkatesh Murthy N
           S</strong></a>
       <nav><a href="#projects">Case Studies</a><a href="#skills">Skills</a><a href="#building">Building</a><a
-          href="#experience">Experience</a><a href="#contact">Contact</a></nav>
+          href="#experience">Experience</a><a href="#education">Education</a><a href="#contact">Contact</a></nav>
     </div>
   </header>
 
@@ -1411,6 +1425,61 @@
     </div>
   </section>
 
+  <section id="education" class="section">
+    <div class="container">
+      <div class="section-hd reveal">
+        <h2>Education</h2>
+      </div>
+      <div class="exp-list">
+        <div class="exp-card reveal">
+          <div class="exp-logo"><img src="attached_assets/bits-logo.svg" alt="BITS Pilani"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="logo-fallback" style="display:none">B</div>
+          </div>
+          <div class="exp-info">
+            <div class="exp-top">
+              <div>
+                <div class="exp-role">MBA (AI for Business) <span class="exp-badge pursuing">Pursuing</span></div>
+                <div class="exp-company">Birla Institute of Technology and Science (BITS), Pilani</div>
+              </div>
+              <div class="edu-year">2028</div>
+            </div>
+          </div>
+        </div>
+        <div class="exp-card reveal">
+          <div class="exp-logo"><img src="attached_assets/nhce-logo.png" alt="New Horizon College of Engineering"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="logo-fallback" style="display:none">N</div>
+          </div>
+          <div class="exp-info">
+            <div class="exp-top">
+              <div>
+                <div class="exp-role">B.E. (Electrical and Electronics Engineering)</div>
+                <div class="exp-company">New Horizon College of Engineering</div>
+              </div>
+              <div class="edu-year">2017</div>
+            </div>
+          </div>
+        </div>
+        <div class="exp-card reveal">
+          <div class="exp-logo"><img src="attached_assets/stjosephs-logo.jpeg" alt="St. Joseph's Pre University College"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="logo-fallback" style="display:none">S</div>
+          </div>
+          <div class="exp-info">
+            <div class="exp-top">
+              <div>
+                <div class="exp-role">PUC (PCMB)</div>
+                <div class="exp-company">St. Joseph's Pre University College</div>
+              </div>
+              <div class="edu-year">2013</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="contact" class="section">
     <div class="container">
       <div class="section-hd reveal">
@@ -1448,7 +1517,7 @@
       <div>&copy; <span id="yr"></span> Venkatesh Murthy N S.</div>
       <div><a href="#projects">Case Studies</a> &middot; <a href="#skills">Skills</a> &middot; <a
           href="#building">Building</a> &middot; <a href="#experience">Experience</a> &middot; <a
-          href="#contact">Contact</a></div>
+          href="#education">Education</a> &middot; <a href="#contact">Contact</a></div>
     </div>
   </footer>
   <a href="https://calendly.com/venktastic" target="_blank" rel="noopener" class="calendly-float-btn">📅 Book a Call</a>
